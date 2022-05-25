@@ -16,8 +16,504 @@ struct Node: Identifiable {
 
 let nodes = [
 
-    Node(id: <#T##Int#>,
+    Node(id: 1,
          paragraphs: [],
          image: <#T##String?#>,
-         edges: <#T##[Int]#>)
+         edges: [2]
+    ),
+    Node(id: 2,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [6]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 2,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [6]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 2,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [6]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 2,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [6]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 2,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [6]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    ),
+    Node(id: 1,
+         paragraphs: [],
+         image: <#T##String?#>,
+         edges: [2]
+    )
 ]
