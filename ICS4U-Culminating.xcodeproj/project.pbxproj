@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F2CA1AF283E6AA70089586D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1AE283E6AA70089586D /* main.swift */; };
+		0F2CA1B9283E6EBE0089586D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		0F2CA1AB283E6AA70089586D /* ICS4U-Culminating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ICS4U-Culminating"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2CA1AE283E6AA70089586D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0F2CA1B7283E6E040089586D /* input */ = {isa = PBXFileReference; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
+		0F2CA1B8283E6EBE0089586D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,27 @@
 		0F2CA1AD283E6AA70089586D /* ICS4U-Culminating */ = {
 			isa = PBXGroup;
 			children = (
+				0F2CA1B6283E6D990089586D /* Model */,
+				0F2CA1B5283E6D900089586D /* Graph */,
 				0F2CA1AE283E6AA70089586D /* main.swift */,
 			);
 			path = "ICS4U-Culminating";
+			sourceTree = "<group>";
+		};
+		0F2CA1B5283E6D900089586D /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				0F2CA1B7283E6E040089586D /* input */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		0F2CA1B6283E6D990089586D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F2CA1B8283E6EBE0089586D /* Node.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F2CA1AF283E6AA70089586D /* main.swift in Sources */,
+				0F2CA1B9283E6EBE0089586D /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
