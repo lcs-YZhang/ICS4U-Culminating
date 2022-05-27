@@ -9,3 +9,6 @@ import Foundation
 
 print("Hello, World!")
 
+var nodeIndex: Int = 0
+
+print(nodes[0].paragraphs)
