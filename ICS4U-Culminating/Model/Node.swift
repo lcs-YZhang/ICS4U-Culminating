@@ -9,8 +9,8 @@ import Foundation
 
 struct Node: Identifiable {
     let id: Int                  //The node id (e.g.: 1, 2, 3, etc)
-    let paragraphs: [nil]     //Models Paragraphs on a page of the book
-    let image: nil?           //name of image from assests oflder if one exists
+    let paragraphs: [String]     //Models Paragraphs on a page of the book
+    let image: String?           //name of image from assests oflder if one exists
     let edges: [Int]             //a list of id's of the nodes this node is connected to
 }
 
@@ -36,7 +36,7 @@ let nodes = [
     ),
     Node(id: 7,
          paragraphs: [],
-         image: <#T##String?#>,
+         image: nil,
          edges: [4,13]
 
     ),
@@ -127,7 +127,7 @@ let nodes = [
     ),
     Node(id: 2,
          paragraphs: [],
-         image: <#T##String?#>,
+         image: nil,
          edges: [6]
     ),
     Node(id: 1,
