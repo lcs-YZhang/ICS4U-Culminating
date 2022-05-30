@@ -39,6 +39,30 @@ let nodes = [
          image: <#T##String?#>,
          edges: [6]
     ),
+    Node(id: 3,
+         paragraphs: [
+                      "You have to admit that you are scared, but theman on the ground needs help. The only weaponyou can think of is the penknife that you alwayscarry in your pocket. You takeout the knifeand brandish it wildly as you run forward. Thechimpanzees seem to back off, but they are stillsnarling. Just as you reach the man on the ground,they lope off into the bizarre ruin near the house.They swing through the ragged network of twistedbeams for a few seconds and then vanish.",
+                      "You turn your attention back to the man on theground. His breath comes in short gasps that soundalmost like sobs.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 4,
+         paragraphs: [
+            "The Marsden residence turns out to be a large. modern house located in a fashionable suburb about a half-hour's drive from your house. You see it first through a tall iron fence running along the road. The house is set back behind a broad and well-tended lawn. You park your car down the road and walk back to the gatehouse that gives access to the estate. The gatehouse is strangely old-fashioned and ornate in contrast to the main house. The heavy iron gates, inside their framework of stone, stand slightly ajar, leaving just enough room for you to squeeze through if you want to. A bronze plaque is set into the stone on the outside of one of the walls. It reads:",
+            
+            "SITE OF HEDGE BROOK PRISON",
+            "WHICH WAS BURNED TO THE GROUND",
+            "DURING THE PRISON RIOT OF 1887.",
+            "ONE HUNDRED AND TWELVE PRISONERS",
+            "DIED IN THE FIRE",
+            "NOTHWIN HISTORICAL SOCIETY",
+            
+            "You glance again at the house. The front of it is constructed largely of glass. A short distance to one metal sculpture rising out of a number of huge blackened hunks of shattered concrete. A shudder goes through you as you realize that these forms of twisted metal might actually be the remnants of the old burned-out prison. Suddenly a man dashes out of the house",
+         ],
+         image: <#T##String?#>,
+         edges: [9]
+    ),
     Node(id: 6,
          paragraphs: [
             "\"Who are you?\" you ask.",
@@ -64,21 +88,42 @@ let nodes = [
          image: nil,
          edges: [4, 13]
     ),
-    Node(id: 4,
+    Node(id: 9,
          paragraphs: [
-            "The Marsden residence turns out to be a large. modern house located in a fashionable suburb about a half-hour's drive from your house. You see it first through a tall iron fence running along the road. The house is set back behind a broad and well-tended lawn. You park your car down the road and walk back to the gatehouse that gives access to the estate. The gatehouse is strangely old-fashioned and ornate in contrast to the main house. The heavy iron gates, inside their framework of stone, stand slightly ajar, leaving just enough room for you to squeeze through if you want to. A bronze plaque is set into the stone on the outside of one of the walls. It reads:",
-            
-            "SITE OF HEDGE BROOK PRISON",
-            "WHICH WAS BURNED TO THE GROUND",
-            "DURING THE PRISON RIOT OF 1887.",
-            "ONE HUNDRED AND TWELVE PRISONERS",
-            "DIED IN THE FIRE",
-            "NOTHWIN HISTORICAL SOCIETY",
-            
-            "You glance again at the house. The front of it is constructed largely of glass. A short distance to one metal sculpture rising out of a number of huge blackened hunks of shattered concrete. A shudder goes through you as you realize that these forms of twisted metal might actually be the remnants of the old burned-out prison. Suddenly a man dashes out of the house",
+            "\"Help! Help! They're after me,\" the man cries.Halfway to the gate, he drops to the ground as ifhe had been hit by an invisible hammer. You dashthrough the gate and run toward the fallen figure. But something stops you in your tracks. Threesnarling animals materialize in front of the house.",
+            "What are they? you wonder. Can they be hugechimpanzees? They look mean and angry. For amoment, you are frozen to the spot.",
+            "The man on the lawn can't move and needsvour help. But what good to him will you be ifyou're mauled by the angry chimps?",
+                     ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 10,
+         paragraphs: [
+            "You bend down and take the paper from hisfingers, and examine it for a message. It is blankon both sides. Just then the man gives one terriblegasp and lies still. Your knees are weak. This manhas been frightened to death!",
+            "The chimpanzees reappear in front of the house.One of them holds a long bamboo blowpipe. Heputs it to his lips and blows. You feel a breeze onyour cheek. Could it be from a dart whizzing byyour face?",
+            "You race back across the lawn, through thegate, and back to your car.",
+            "This feels like real danger, and you'd promisedyour parents you'd call the police if your safety wasever at risk, but if you wait, whoever or whateveris going on inside that house might have time toescape.",
          ],
-         image: <#T##String?#>,
-         edges: [9]
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 11,
+         paragraphs: [
+            "Things begin to add up in your mind. Thisplace is creepy enough, built next to the ruins ofthe old prison. Add to this the snarling images ofchimpanzees to scare off anyone getting too closeto the house. It's a perfect base of operations fora gang of counterfeiters.The unfortunate manwho died must have somehow stumbled into theirhideout.",
+            "You ease out of your observation post in thebushes and run back to the car. You drive to thenearest telephone to inform the police. Then youcheck your watch: 7:23 pm. Case solved in fourhours and forty-one minutes. Not bad!",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 12,
+         paragraphs: [
+            "Several thoughts spin across your mind. Wasthat man Henru Marsden? Was it his house? Washe a counterfeiter? Or was he trying to escape fromcounterfeiters? Trying to escape seems more likely.And what about those chimpanzees? Could therebe a counterfeiting animal trainer? No. That makesabout as much sense as a yodeling astronaut.",
+            "You drive home to see if Ricardo and Lisa havecalled. You check your cell phone. Nothing yet.You put some equipment into your shoulder bag:a pair of high-powered binoculars, a small tear-gasgun, and a high-speed camera with a zoom lens.",
+            "Then back to the Marsden place. You plantyourself in a clump of bushes across the street. Fromhere you can see the house, but no one can see you.",
+            "You scan the lawn with your binoculars. Thebody of the man has disappeared. All seems quiet.",
+         ],
+         image: nil,
+         edges: [2]
     ),
     Node(id: 13,
          paragraphs: [
@@ -88,6 +133,88 @@ let nodes = [
          ],
          image: nil,
          edges: [26]
+    ),
+    Node(id: 14,
+         paragraphs: [
+            "You drive about a mile away from the house andpark the car on the side of a tree-shaded road. Youcheck the time on vour watch that doubles as atwo-way radio. It is 4:35 PM. It has been almosttwo hours since you got that phone call.",
+            "You take out the piece of paper that you tookfrom the hand of the dying man. You realize that itis the corner of a larger sheet of paper. Two of theedges are cut straight, and the third side is raggedwhere it was torn off. You hold it up to the light,almost expecting a message to be somehow hiddeninside the paper itself. You start to stick the paperback into your pocket when something makes youhold the paper back up to the light again. Youhadn't noticed it before, but the paper has tinyflecks of red and blue in it. Now that rings a bell-of course! The special paper that U.S. currency isprinted on has those flecks in it.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 15,
+         paragraphs: [
+            "Thirty minutes later, the three of you arrive at the site where the old prison once stood You find that this location is now occupied by alarge, very modern house built- on the outside- almost entirely of reflecting glass. The front gate, by contrast, seems to be left over from the last century. A path leads from the gate across a wide lawn to the house. You drive by slowly and then park down the road. Walking back, you cross the lawn and double-check the number on the door. 1100 Hedge Brook. This is it, all right.",
+            "\"Who wants to knock?\" you ask. There is no answer from Ricardo or Lisa.",
+            "\"I'll do it,\" you say. You give a firm, loud knock. The only response is a hollow echo.",
+            "\"Are you sure the telephone call came from this place?\" asks Lisa.",
+            "\"Of course I'm sure,\" you reply.\"I know that\".",
+            "The heavy front door of the house starts to swing slowly open.",
+         ],
+         image: nil,
+         edges: [19]
+    ),
+    Node(id: 16,
+         paragraphs: [
+            "The next day the lead story in the NothwinTimes is:",
+            "On a tip from a well-known local detective,whosesuspicionswerearousedbystrangeoccurrences around the Hedge Brook Prison ruins,police raided a nearby house yesterday, exposinga counterfeiting operation. Seized were a numberof bogus printing plates and a large quantity ofcounterteit money.Three men were arrested andcharged with homicide as well as counterfeitingafter the body of another, as yet unidentified, manwas found in the basement of the house.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 18,
+         paragraphs: [
+            "You have no choice but to do as he says. Youturn right at the corner. Then, as directed by thevoice, you drive another 200 feet and turn again,this time onto an unfamiliar dirt road that leads intoa heavily wooded area.",
+            "\"Stop here,\" the voice orders. There is now abeeping sound in the back seat. You realize thatthe gun is away from your neck. The figure in theback seat is apparently fiddling with some sort ofelectronic device. While his attention is away fromyou for a few moments, you slip your hand quicklyand silently up under the dashboard of the car.",
+            "Your knockout-gas gun, disguised as a pen, isstill there.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 19,
+         paragraphs: [
+            "\"Hello?\" you call. No answer.",
+            "You peer inside.",
+            "\"Mr. Marsden? Hello?\"gloom of the house.you call again into the gloom of the house.",
+            "When your eyes adjust to the dim light inside,you see that the house is ornately furnished. Richred, blue, and yellow carpets cover the floors.Chinese screens, flanked by tall bamboo plants, areplaced against the walls of the entrance hallway.What appear to be ancient temple carvings fill thewalls and alcoves adjoining the hallway. The placelooks more like a museum than a house.",
+            "As you watch,a small concealed door opensin the side of the hallway. It had been completelyhidden by the intricate patterns of inlaid wood.Out of the door comes a tall, slender woman withhigh cheekbones and narrow eyes. Her skin is thecolor of ivory. She is dressed in a long, black, old-fashioned dress.\"Won't you three come in?\"she says in a high,unaccented voice.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 21,
+         paragraphs: [
+            "The three of you enter the house. As you do, thedoor behind you closes and locks with an ominousclick. You sense that there is definitely somethingevil-or at least alarming going on here.",
+            "The woman leads you down a long, dark hallwayto a solarium. The afternoon sunlight streams inthrough a high glass ceiling. White, yellow, andpurple orchids are arranged in neat rows along oneside of the room. On the other side of the room isa collection of plants that you don't immediately recognize.",
+            "\"I see youare admiring my babies,thewoman says.\"These are my Venus flytraps overhere. Are they not beautiful? We are all so happyhere.She picks up a trowel and tenderly starts totransplant one of them. A faint buzzing comes fromsomewhere in the room.",
+            "\"Ah, I see we have yet another visitor,\"says thewoman. Her face lights up with a kind of ecstasy.\"Come... come to my plants, little fly.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 22,
+         paragraphs: [
+            "You begin to notice a sweet smell-almostsickeningly sweet- that you hadn't noticed beforeIt is coming from the plants. The fly circles aroundand lands on one. Suddenly the fringed leaves snapshut and trap the fly inside.",
+            "The light of the room grows dim, as if a darkcloud has suddenly dritted between you and thesun. The glass walls of the house...the sweetsmell....Suddenly, you understand that you havewalked into a giant Venus flytrap yourself.",
+            "Something is happening to the woman. Herimage is beginning to fade. You realize that youcan see right through her. Her torm then beginsto grow and resolidity. It transtorms itself into theimage of a large,angry-looking man dressed ina Civil War uniform. He has a heavy whip in hishand. You look around you. The walls have turnedto a rough, darkened stone-and high above you,the skylight has been replaced by heavy bars.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 23,
+         paragraphs: [
+            "\"Now I'll deal with you rebels,growls theman.\"You think you can challenge the authorityof Henry Marsden.As he says this, he lashes outwith the whip. Sharp pain bites into your shoulder.You feel taint. As you lose consciousness and fallto the damp stone floor, you hear only the territiedscreams of Ricardo and Lisa."
+         ],
+         image: nil,
+         edges: [1]
+    ),
+    Node(id: 24,
+         paragraphs: [
+            "Just then a long blacklimousine drives up to thegatehouse. Two tough-looking men get out andwalk toward the house.When they are almostthere, the chimps appear.The men just ignore themand go into the house.Then the chimps vanishagain into thin air.",
+            "That's it! The chimpsare not real. 1hey mustbe filmed and projectedholograms-three-dimensional picturesmade with laser lightprogrammed to turnon and off wheneversomeone approachesthe house.Minutes later, thetwo men leave, carryingseveral small packages.",
+         ],
+         image: nil,
+         edges: [2]
     ),
     Node(id: 26,
          paragraphs: [
@@ -116,115 +243,139 @@ let nodes = [
          image: nil,
          edges: [15, 87]
     ),
-    Node(id: 15,
+    Node(id: 28,
          paragraphs: [
-            "Thirty minutes later, the three of you arrive at the site where the old prison once stood You find that this location is now occupied by alarge, very modern house built- on the outside- almost entirely of reflecting glass. The front gate, by contrast, seems to be left over from the last century. A path leads from the gate across a wide lawn to the house. You drive by slowly and then park down the road. Walking back, you cross the lawn and double-check the number on the door. 1100 Hedge Brook. This is it, all right.",
-            "\"Who wants to knock?\" you ask. There is no answer from Ricardo or Lisa.",
-            "\"I'll do it,\" you say. You give a firm, loud knock. The only response is a hollow echo.",
-            "\"Are you sure the telephone call came from this place?\" asks Lisa.",
-            "\"Of course I'm sure,\" you reply.\"I know that\".",
-            "The heavy front door of the house starts to swing slowly open.",
+            "\"We're here to see Mr. Marsden,\"you say.",
+            "\"Why, of course you are,\"she says.\"Is he all right?\"you ask.\"Earlier he called meon the phone and said he needed help.\"",
+            "The woman does not answer. She only beckonswith her finger for all of you to follow her.",
+                     ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 29,
+         paragraphs: [
+            "You decide that it is better to get back to yourcar--fast! You always drive with a first aid kit andsome basic defensive equipment, such as your\"pen\" that holds two cubic centimeters of a powerful knockout-gas.",
+            "You have the ignition key out of your pocketeven before you reach the car. As you quickly openthe door on the driver's side and jump in, you realizethat something is wrong. You are about to jump outwhen you feel it--a cold metal circle, like the endof a gun barrel, pressed to the back of your neck. Araspy voice commands,\"Just do what I tell you oryou'll be looking for a new head. Now get this carmoving and follow directions. Drive down to thecorner and turn right.\"",
          ],
          image: nil,
-         edges: [19]
+         edges: [2]
     ),
-    Node(id: 87,
+    Node(id: 31,
          paragraphs: [
-            "The three of you jump into your car and drive down to the Hedge Brook police station. Your old friend Sergeant Morrison is glad to see you and meet your friends. You tell the sergeant about th phone call and about the information in the history book.",
-            "\"I think you should tell all this to Detective Murphy.\" he says.\"There is definitely more to the old Marsden place than meets the eye.\"",
-            "Detective Murphy turns out to be a pipe smoking middle-aged man in a tweed jacket. He looks more like a college professor than a detective.",
-            "\"I already have a file on the Marsden place,\" says Detective Murphy.",
-            "\"That house has been deserted for years. I've come to the conclusion that it is haunted. Now I know that sounds unscientific and unprofessional, but it's the only idea I've been able to come up with in light of the evidence. The house is notorious in that neighborhood--strange lights at night, and strange noises at every time of day.\"",
-            "\"You mean you believe in ghosts?\" asks Lisa.",
-            "\"I'm sure your amateur detective friend here will confirm that we detectives do not believe in anything. We let the facts speak for themselves.\"",
-            "\"What is that supposed to mean?\"asks Lisa.",
-            "\"It means precisely what I mean it to mean,\" says Murphy, \"and furthermore, if you like, I'll turn the Marsden case over to the three of you.\"",
+            "You don't need the professor to tell you howto use your new powers. The energizing processhas awakened in your brain all the information youneed. The chimpanzees have similar powers, butsince you have started out at a much higher level.our powers are much stronger than theirs.",
+            "You can telepathically \"hear\" and \"feel\" theanger of the chimpanzees as they break open thedoor to the laboratory. But when they charge in,they are immediately frozen by your projectedforce field.",
+            "\"Wow! Did I do that?\"you ask.\"That is only the beginning of your new powers,says the professor.Your new mind immediately probes out throughthe underground complex.\"This way, Professor,you say.\"I know the way out.\"",
          ],
-         image: <#T##String?#>,
-         edges: [90]
-
+         image: nil,
+         edges: [2]
     ),
-    Node(id: 1,
+    Node(id: 32,
+         paragraphs: [
+            "In a split second, you turn in your seat andfire the gun at the figure in the back. As you fire,you see the\"man\" in the back seat for the firsttime. You hardly know who has the more startledexpression- you or the talking chimpanzee- as heloses consciousness. You back up the car and drivedirectly to the police station.",
+            "\"I have an unconscious chimpanzee in the backseat of my car,\"you explain to the officer at the desk.",
+            "Then I suggest that you drive straight to the zoo,\" replies the officer.",
+            "\"But this is a talking chimpanzee,\" you protest,\"and he tried to kidnap me with a gun.\"",
+            "The officer and his assistant look at each otheras if to say,\"We've got a live one here.\" However,they come out to the car with you.",
+            "\"This is a chimpanzee, all right,\" says the officer.\"Certainly is a big one. Not doing much talking atthe moment, though.\"",
+            "You search around in the back seat next to the unconscious chimpanzee. You find a small control box of some sort, but you can't find a gun. What you do find is a flat metal ring. That is how he did it! After all, that's all you really felt against your neck.",
+            "A door to your right flies open, throwing a brilian shaft of light into the corridor. Suddely you are surrounded by a circle of snarling chimpanzees.",
+            "They begin to close in.",
+         ],
+         image: nil,
+         edges: [1]
+    ),
+    Node(id: 34,
+         paragraphs: [
+            "You slip the pen into your shirt pocket. Maybe pwill help you escape later.",
+            "You come to what looks like a giant crater in theground. A wide ramp leads down into it. The figurein the back seat orders you to drive down. At thebottom is an entrance large enough for a car. Youenter and drive through a short tunnel into a largeunderground garage.",
+            "A number of trucklike vehicles are parked againsta loading platform on one side of the garage. Theylook more like huge eggs with doors in the sides,and you can't see any wheels underneath. A dozenor so strange creatures- wow!- the chimpanzeesagain- are loading the \"eggs\" with large boxes.",
+            "\"All right,now, out, \"commands thevoice behind you,above your head. \"and keep your hands \" You see your captor forthe first time. No wonder his voice soundedodd. He is one of the chimpanzees.",
+            "You are led to a door on the far side of the garage.The chimpanzee inserts a plastic card in* slot. There is a slight electronic whine as thedoor slides back on silent hinges. Before you is along corridor. It is lit by what look like fluorescent bulbs--but the light from them makes your skin look purple. The corridor ends abruptly at a metal door. Again the chimpanzee uses the plastic card. Thedoor opens. The chimpanzee pushes you roughly inside, but stays outside while the door closes.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 36,
+         paragraphs: [
+            "It is pitch dark inside the room. You are alone ;some kind of cell. Wait You can hear the sound of breathing. You feel around in the dark. Your hanTouches something warm. Whatever it is wakes uwith a cry.",
+            "\"Don't touch me... don't touch--me..\" a man'svoice says in an anguished tone. The voice soundsvery much like the one you heard on the phone.",
+            "\"Aren't you the man who called earlier today?\" you ask.",
+            "\"Why, yes, I did make a call. The chimpanzeestook my assistant, Jethro, and me to another partof this underground complex for questioning. Onthe way back to this cell, Jethro and I managed tobreak away. I think Jethro escaped to the outside,but I haven't seen him since. I have a feelingsomething has happened to him.\"",
+            "\"I locked myself in a room with a telephone. Iwas so desperate that I dialed a number at random.I had only a few seconds before the chimpanzeeswere going to break in.\"",
+            "\"But you called twice,\" you say.",
+            "\"That's right. I got a second chance. While theywere breaking down the door to one room, I fledto an adjoining room that also had a telephone. Iremembered the number that I had dialed the firsttime and tried it again.\"",
+            "\"What's the story with these talking chimps?\"you ask.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 37,
+         paragraphs: [
+            "The energizing chamber is a large glass cylinderwith a door in the side, just large enough for aperson to get inside.\"I'm going to activate thealpha force nowthe professor shouts from thecontrol board outside the room.\"Do you feel that?\"",
+            "You do. \"It's like every cell in my body is jumpingup and down!\" you shout.\"Woo-hoo!\"",
+            "\"Your hair is standing on end,\" he observes.\"In a few minutes you'll have mental and psychicpowers that will let you see miles into the distance,through mountains and walls. You'll be able to liftobjects with your thoughts, and also read minds.\"",
+            "The chimpanzees are battering at the door,trying to get in.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 38,
+         paragraphs: [
+            "You release the suspended box and refreezethe chimpanzees. The howling behind you stopsas suddenly as if a radio had been turned off. Thebox comes crashing down on the concrete floor ofthe garage. It breaks open, sending a cascade ofmoney into the air.",
+            "You don't have to examine the money to knowthat it is counterfeit. Your heightened senses tellyou that. You mind-scan the underground complexagain.",
+            "This time you find the engraving equipment,the printing presses, and the trimming machines-everything needed to produce counterfeit money.And you see huge stacks of counterfeit bills. There'scurrency from virtually every country in the world.",
+            "\"The chimps developed these egg-shaped flying machines you see in the garage,says theprofessor.\" They planned to use them to fly allover the world, dropping money from the sky onmany countries and destabilizing all of the world'seconomies-the ultimate'gorillawarfare. Afterthis, they had planned to become the controlling power in the world.",
+            "The struggle to escapeyour force field hasdestroyed all the chimps' special powers. Now they'renothing more than just ordinary chimpanzees.",
+            "But you will keep your heightened powers forsome time.",
+         ],
+         image: nil,
+         edges: [1]
+    ),
+    Node(id: 40,
+         paragraphs: [
+            "You and the professor run down a lons, curvingpassageway that leads back to the undergroundgarage. As you emerge from the passageway, thechimpanzee remaining in the garage hurls one ofthe heavy boxes at you. Your mind-force catchesit and stops it in midair. Unfortunately, in order toconcentrate on the box, your mind releases thechimpanzees back in the laboratory.",
+            "They run howling into the other endof thepassageway after you.",
+            "\"I'll have to work on this mind-power!\" you say.",
+         ],
+         image: nil,
+         edges: [2]
+    ),
+    Node(id: 41,
          paragraphs: [],
          image: nil,
          edges: [2]
     ),
-    Node(id: 1,
+    Node(id: 43,
          paragraphs: [],
          image: nil,
          edges: [2]
     ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 1,
-         paragraphs: [],
-         image: nil,
-         edges: [2]
-    ),
-    Node(id: 2,
+    Node(id: 44,
          paragraphs: [],
          image: nil,
          edges: [6]
     ),
-    Node(id: 1,
+    Node(id: 46,
          paragraphs: [],
          image: nil,
          edges: [2]
     ),
-    Node(id: 1,
+    Node(id: 46,
          paragraphs: [],
          image: nil,
          edges: [2]
     ),
-    Node(id: 1,
+    Node(id: 47,
          paragraphs: [],
          image: nil,
          edges: [2]
     ),
-    Node(id: 1,
+    Node(id: 49,
          paragraphs: [],
          image: nil,
          edges: [2]
     ),
-    Node(id: 1,
+    Node(id: 50,
          paragraphs: [],
          image: nil,
          edges: [2]
