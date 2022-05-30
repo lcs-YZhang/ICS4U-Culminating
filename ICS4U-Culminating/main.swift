@@ -20,9 +20,9 @@ for _ in 1...nodes.count {
     } else {
         let currentDecision = Int(readLine()!)!
         if currentDecision == 1 {
-            nodeIndex = nodes[nodeIndex].edges[0] - 1
+           // nodeIndex = nodes[nodeIndex].edges[0] - 1
         } else {
-            nodeIndex = nodes[nodeIndex].edges[1] - 1
+           // nodeIndex = nodes[nodeIndex].edges[1] - 1
         }
     }
 }
