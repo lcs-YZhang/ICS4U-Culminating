@@ -11,7 +11,13 @@ struct Node: Identifiable {
     let id: Int                  //The node id (e.g.: 1, 2, 3, etc)
     let paragraphs: [String]     //Models Paragraphs on a page of the book
     let image: String?           //name of image from assests oflder if one exists
-    let edges: [Int]             //a list of id's of the nodes this node is connected to
+    let edges: [Edge]           //a list of id's of the nodes this node is connected to
+    let ending: Bool
+}
+
+struct Edge {
+    let destinationId: Int
+    let prompt: String
 }
 
 let nodes = [
