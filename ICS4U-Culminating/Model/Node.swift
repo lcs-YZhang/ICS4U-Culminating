@@ -123,7 +123,7 @@ let nodes = [
             "The heavy front door of the house starts to swing slowly open.",
          ],
          image: nil,
-         edges: [2]
+         edges: [19]
     ),
     Node(id: 87,
          paragraphs: [
