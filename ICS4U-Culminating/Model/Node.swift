@@ -130,28 +130,15 @@ let nodes = [
             "The three of you jump into your car and drive down to the Hedge Brook police station. Your old friend Sergeant Morrison is glad to see you and meet your friends. You tell the sergeant about th phone call and about the information in the history book.",
             "\"I think you should tell all this to Detective Murphy.\" he says.\"There is definitely more to the old Marsden place than meets the eye.\"",
             "Detective Murphy turns out to be a pipe smoking middle-aged man in a tweed jacket. He looks more like a college professor than a detective.",
-            "\"I already have a file on the Marsden place,\" says Detective Murphy.
-                      "That house has been
-                      deserted for years. I've come to the conclusion that
-                      it is haunted. Now I know that sounds unscientific
-                      and unprofessional, but it's the only idea I've been
-                      able to come up with in light of the evidence. The
-                      house is notorious in that neighborhood--strange
-                      lights at night, and strange noises at every time of
-                      day.
-                      99
-                      "You mean you believe in ghosts?" asks Lisa.
-                      "I'm sure your amateur detective friend here
-                      will confirm that we detectives do not believe in
-                      anything. We let the facts speak for themselves.
-                      "What is that supposed to mean?"
-                      • asks Lisa.
-                      "It means precisely what I mean it to mean,
-                      says Murphy,
-                      "and furthermore, if you like, I'll turn
-                      the Marsden case over to the three of you.],
+            "\"I already have a file on the Marsden place,\" says Detective Murphy.",
+            "\"That house has been deserted for years. I've come to the conclusion that it is haunted. Now I know that sounds unscientific and unprofessional, but it's the only idea I've been able to come up with in light of the evidence. The house is notorious in that neighborhood--strange lights at night, and strange noises at every time of day.\"",
+            "\"You mean you believe in ghosts?\" asks Lisa.",
+            "\"I'm sure your amateur detective friend here will confirm that we detectives do not believe in anything. We let the facts speak for themselves.\"",
+            "\"What is that supposed to mean?\"asks Lisa.",
+            "\"It means precisely what I mean it to mean,\" says Murphy, \"and furthermore, if you like, I'll turn the Marsden case over to the three of you.\"",
+         ],
          image: <#T##String?#>,
-         edges: [2]
+         edges: [90]
     ),
     Node(id: 1,
          paragraphs: [],
