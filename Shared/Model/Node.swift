@@ -20,6 +20,10 @@ struct Edge {
     let prompt: String
 }
 
+// MARK: Notes
+
+//endings: 16, 94, 81, 88, 33, 59, 82, 101, 108, 105, 106, 49, 44, 23, 43, 69, 62, 57, 39, ??
+
 let nodes = [
 
     Node(id: 1,
