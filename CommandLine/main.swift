@@ -24,6 +24,7 @@ func NodeIteration() {
             newLine()
             replayResponse = String(readLine()!)
             break NodeLoop
+
         } else {
             let currentDecision = Int(readLine()!)!
             if currentDecision == 1 {
@@ -45,3 +46,4 @@ print("Thanks for playing!")
 func newLine() {
     print("")
 }
+
