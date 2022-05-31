@@ -11,6 +11,7 @@ var nodeIndex: Int = 0
 var paragraphIndex: Int = 0
 var ending: Bool = false
 
+print("CHOOSE YOUR OWN ADVENTURE!")
 for _ in 1...nodes.count {
     for paragraph in 0...nodes[nodeIndex].paragraphs.count - 1 {
         print(nodes[nodeIndex].paragraphs[paragraph])

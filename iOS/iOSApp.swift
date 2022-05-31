@@ -1,5 +1,5 @@
 //
-//  ICS4U_CYOAApp.swift
+//  iOSApp.swift
 //  ICS4U-CYOA
 //
 //  Created by Devon Kenneth Hansen on 2022-05-30.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ICS4U_CYOAApp: App {
+struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

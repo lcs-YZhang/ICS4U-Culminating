@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F2CA1AF283E6AA70089586D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1AE283E6AA70089586D /* main.swift */; };
 		0F2CA1B9283E6EBE0089586D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
-		0FE25C872845263B00FAE19E /* ICS4U_CYOAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C862845263B00FAE19E /* ICS4U_CYOAApp.swift */; };
+		0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C862845263B00FAE19E /* iOSApp.swift */; };
 		0FE25C892845263B00FAE19E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C882845263B00FAE19E /* ContentView.swift */; };
 		0FE25C8B2845263C00FAE19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8A2845263C00FAE19E /* Assets.xcassets */; };
 		0FE25C8E2845263C00FAE19E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8D2845263C00FAE19E /* Preview Assets.xcassets */; };
@@ -29,12 +29,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F2CA1AB283E6AA70089586D /* ICS4U-Culminating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ICS4U-Culminating"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F2CA1AB283E6AA70089586D /* CommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommandLine; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2CA1AE283E6AA70089586D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0F2CA1B7283E6E040089586D /* input */ = {isa = PBXFileReference; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
 		0F2CA1B8283E6EBE0089586D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		0FE25C842845263B00FAE19E /* ICS4U-CYOA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ICS4U-CYOA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FE25C862845263B00FAE19E /* ICS4U_CYOAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICS4U_CYOAApp.swift; sourceTree = "<group>"; };
+		0FE25C842845263B00FAE19E /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE25C862845263B00FAE19E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		0FE25C882845263B00FAE19E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0FE25C8A2845263C00FAE19E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE25C8D2845263C00FAE19E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				0FE25C922845265300FAE19E /* Shared */,
-				0F2CA1AD283E6AA70089586D /* ICS4U-Culminating */,
-				0FE25C852845263B00FAE19E /* ICS4U-CYOA */,
+				0F2CA1AD283E6AA70089586D /* CommandLine */,
+				0FE25C852845263B00FAE19E /* iOS */,
 				0F2CA1AC283E6AA70089586D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,19 +71,19 @@
 		0F2CA1AC283E6AA70089586D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F2CA1AB283E6AA70089586D /* ICS4U-Culminating */,
-				0FE25C842845263B00FAE19E /* ICS4U-CYOA.app */,
+				0F2CA1AB283E6AA70089586D /* CommandLine */,
+				0FE25C842845263B00FAE19E /* iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F2CA1AD283E6AA70089586D /* ICS4U-Culminating */ = {
+		0F2CA1AD283E6AA70089586D /* CommandLine */ = {
 			isa = PBXGroup;
 			children = (
-				0FBED51F2845243600A3A7DA /* Views */,
+				0F2CA1AE283E6AA70089586D /* main.swift */,
 				0F2CA1B5283E6D900089586D /* Graph */,
 			);
-			path = "ICS4U-Culminating";
+			path = CommandLine;
 			sourceTree = "<group>";
 		};
 		0F2CA1B5283E6D900089586D /* Graph */ = {
@@ -97,7 +97,6 @@
 		0F2CA1B6283E6D990089586D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0F2CA1AE283E6AA70089586D /* main.swift */,
 				0F2CA1B8283E6EBE0089586D /* Node.swift */,
 			);
 			path = Model;
@@ -106,19 +105,21 @@
 		0FBED51F2845243600A3A7DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0FE25C882845263B00FAE19E /* ContentView.swift */,
 			);
-			path = Views;
+			name = Views;
+			path = ../CommandLine/Views;
 			sourceTree = "<group>";
 		};
-		0FE25C852845263B00FAE19E /* ICS4U-CYOA */ = {
+		0FE25C852845263B00FAE19E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				0FE25C862845263B00FAE19E /* ICS4U_CYOAApp.swift */,
-				0FE25C882845263B00FAE19E /* ContentView.swift */,
+				0FE25C862845263B00FAE19E /* iOSApp.swift */,
+				0FBED51F2845243600A3A7DA /* Views */,
 				0FE25C8A2845263C00FAE19E /* Assets.xcassets */,
 				0FE25C8C2845263C00FAE19E /* Preview Content */,
 			);
-			path = "ICS4U-CYOA";
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		0FE25C8C2845263C00FAE19E /* Preview Content */ = {
@@ -140,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F2CA1AA283E6AA70089586D /* ICS4U-Culminating */ = {
+		0F2CA1AA283E6AA70089586D /* CommandLine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F2CA1B2283E6AA70089586D /* Build configuration list for PBXNativeTarget "ICS4U-Culminating" */;
+			buildConfigurationList = 0F2CA1B2283E6AA70089586D /* Build configuration list for PBXNativeTarget "CommandLine" */;
 			buildPhases = (
 				0F2CA1A7283E6AA70089586D /* Sources */,
 				0F2CA1A8283E6AA70089586D /* Frameworks */,
@@ -152,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = "ICS4U-Culminating";
+			name = CommandLine;
 			productName = "ICS4U-Culminating";
-			productReference = 0F2CA1AB283E6AA70089586D /* ICS4U-Culminating */;
+			productReference = 0F2CA1AB283E6AA70089586D /* CommandLine */;
 			productType = "com.apple.product-type.tool";
 		};
-		0FE25C832845263B00FAE19E /* ICS4U-CYOA */ = {
+		0FE25C832845263B00FAE19E /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FE25C912845263C00FAE19E /* Build configuration list for PBXNativeTarget "ICS4U-CYOA" */;
+			buildConfigurationList = 0FE25C912845263C00FAE19E /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
 				0FE25C802845263B00FAE19E /* Sources */,
 				0FE25C812845263B00FAE19E /* Frameworks */,
@@ -169,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = "ICS4U-CYOA";
+			name = iOS;
 			productName = "ICS4U-CYOA";
-			productReference = 0FE25C842845263B00FAE19E /* ICS4U-CYOA.app */;
+			productReference = 0FE25C842845263B00FAE19E /* iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -205,8 +206,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F2CA1AA283E6AA70089586D /* ICS4U-Culminating */,
-				0FE25C832845263B00FAE19E /* ICS4U-CYOA */,
+				0F2CA1AA283E6AA70089586D /* CommandLine */,
+				0FE25C832845263B00FAE19E /* iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +240,7 @@
 			files = (
 				0FE25C932845267C00FAE19E /* Node.swift in Sources */,
 				0FE25C892845263B00FAE19E /* ContentView.swift in Sources */,
-				0FE25C872845263B00FAE19E /* ICS4U_CYOAApp.swift in Sources */,
+				0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,8 +389,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ICS4U-CYOA/Preview Content\"";
-				DEVELOPMENT_TEAM = 7LW5X6636W;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -419,8 +420,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ICS4U-CYOA/Preview Content\"";
-				DEVELOPMENT_TEAM = 7LW5X6636W;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -456,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F2CA1B2283E6AA70089586D /* Build configuration list for PBXNativeTarget "ICS4U-Culminating" */ = {
+		0F2CA1B2283E6AA70089586D /* Build configuration list for PBXNativeTarget "CommandLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F2CA1B3283E6AA70089586D /* Debug */,
@@ -465,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0FE25C912845263C00FAE19E /* Build configuration list for PBXNativeTarget "ICS4U-CYOA" */ = {
+		0FE25C912845263C00FAE19E /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FE25C8F2845263C00FAE19E /* Debug */,
