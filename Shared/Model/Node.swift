@@ -861,7 +861,7 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 67,
-                 prompt: "")
+                 prompt: "Turn to page 67")
             ],
          ending: false
     ),
@@ -873,7 +873,7 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 68,
-                 prompt: "")
+                 prompt: "Turn to page 68")
             ],
          ending: true
     ),
