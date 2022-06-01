@@ -381,7 +381,7 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 21,
-                 prompt: "If you accept her invitation to go in. Turn to page 21")
+                 prompt: "If you accept her invitation to go in. Turn to page 21"),
             
             Edge(destinationId: 41,
                  prompt: "If you sence a trap, and find a reason for leaving. Turn too page 41")
