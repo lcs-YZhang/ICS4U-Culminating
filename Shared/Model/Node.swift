@@ -15,10 +15,12 @@ struct Node: Identifiable {
     let ending: Bool
 }
 
-struct Edge {
+struct Edge: Hashable {
     let destinationId: Int
     let prompt: String
 }
+
+let emptyNode = Node(id: 0, paragraphs: [""], image: nil, edges: [Edge(destinationId: 0, prompt: "")], ending: false)
 
 let nodes = [
 
@@ -51,7 +53,9 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 6,
+
                  prompt: "Turn to page 6")
+
             ],
          ending: false
     ),
@@ -62,9 +66,11 @@ let nodes = [
          ],
          image: nil,
          edges: [
+
             
             Edge(destinationId: 10, prompt: "Turn to page 10")
             
+
             ],
          ending: false
     ),
@@ -81,7 +87,8 @@ let nodes = [
             
             "You glance again at the house. The front of it is constructed largely of glass. A short distance to one metal sculpture rising out of a number of huge blackened hunks of shattered concrete. A shudder goes through you as you realize that these forms of twisted metal might actually be the remnants of the old burned-out prison. Suddenly a man dashes out of the house",
          ],
-         image: <#T##String?#>,
+
+         image: nil,
          edges: [
             
             Edge(destinationId: 9, prompt: "Turn to page 9")
@@ -105,7 +112,9 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 7,
+
                  prompt: "Turn to the next page")
+
             ],
          ending: false
     ),
@@ -120,10 +129,12 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 4,
+
                  prompt: "If you decide you should go immediately to thr address obtained by the phone-tracing machine. Turn to page 4. "),
             
             Edge(destinationId: 13,
                  prompt: "If you decide to give Ricardo and Lisa a chance to call back. Yurn to page 13."),
+
             ],
          ending: false
     ),
@@ -726,19 +737,661 @@ let nodes = [
          ending: false
     ),
     Node(id: 57,
-         paragraphs: [
-            "\"I will go to your planet,\" you say, \"as long as my friend, the professor, can go, too.\"",
-            "\"Very well.\" the alien emissary says. Suddenlyyou see the professor standing next to you. The strangest thing--your body is with him, thoughyour mind is still across the room. Within seconds,youI've joined it again.",
-            "\"Imagine,\" says theprofessor as the two ofyou take your first steps into the alien ship.\"Justimagine that we are the first...\" Before he can finish, everything goes blank.",
-            "When you come to, you and the professor are inthe midst of a crystalline city where light has neverlooked so beautiful, and air has never smelled so clean.",
-            "You spend several years there, learning thesecrets of their advanced technology, before youreturn to planet Earth.",
-         ],
+         paragraphs: ["\"I will go to your planet, you say, \"as long as my friend, the professor, can go, too.",
+                       "\"Very well, the alien emissary says. Suddenly you see the professor standing next to you. The strangest thing- your body is with him, though your mind is still across the room. Within seconds, you've joined it again.",
+                       "\"Imagine, says the professor as the two of you take your first steps into the alien ship. \" Just imagine that we are the first.. \" Before he can finish, everything goes blank.",
+                       "When you come to, you and the professor are in the midst of a crystalline city where light has never looked so beautiful, and air has never smelled so clean.",
+                       "You spend several years there, learning the secrets of their advanced technology, before you return to planet Earth.",
+                     "THE END"],
          image: nil,
          edges: [
          
             Edge(destinationId: 1,
-                 prompt: "The End")
+                 prompt: "The END")
             ],
          ending: true
     ),
-]
+    Node(id: 58,
+         paragraphs: ["The crashing stones so startle the single guard that you have no trouble giving him shot of knockout-gas full in the face. The guard drops to the floor with a thud. You run across the room and slam the door. Fortunately, it locks from the inside. Just to make sure it stays shut, you push a heavy piece of lab equipment in front of it.",
+                      "\"Now!\" cries the professor. \"Get into the chamber over there. No time to waste!\"",
+                      "\"Are you sure it's safe?\" you ask.",
+                      "\"I would go in myself, says the professor. \"But my heart can't take the shock. I'm afraid even for someone as young as you there's a risk of cardiac arrest, and permanent damage to your brain function."
+                      
+                     ],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 37,
+                 prompt: "If you decide to go into the super-energizing chamber, turn to page 37."),
+            Edge(destinationId: 43,
+                 prompt: "If you feel that the chamber is too dangerous and try to escape another way, turn to page 43.")
+            ],
+         ending: false
+    ),
+    Node(id: 59,
+         paragraphs: ["The chimpanzee is still unconscious when the zoo workers come and take him off in a big cage.",
+                      "As soon as you tell the officer about the man the house in a patrol car. on the lawn, he and his partner take you back to \"He was right there,\" you insist, pointing at the blank green space. \"But now he's gone.\"",
+                      "\"We can search the woods, the officer suggests, but you're too late. The body is nowhere to be found.",
+                      "\"The house is empty as well,\" the officer's partner says, emerging from the front door. \"Though there's definitely evidence some kind of animal has recently been inside. And the phone's working, which is weird- the phone company has no record of anyone living here.\"",
+                      "The following week, you go out to the zoo to have another look at the chimpanzee. You can tell that he recognizes you from the angry expression on his face when he sees you. Somehow you feel sorry for him, since you know that he can talk and now has no one to talk to -that is, unless he wants to give himself away.",
+                      "You wonder where the rest of the chimpanzees have gone. No doubt they have a new hideout somewhere. You also wonder if they have claimed any new victims, like that poor man on the lawn.",
+                      "The End"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 60,
+         paragraphs: ["\"For a mind-search, \" says the professor. project your consciousness itself, the same way you projected your concentrated enerey against the Force field. Have your mind leave your body. It will return if your body is threatened.",
+                       "You leave your body in the care of the professor and begin to travel on mind-energy through the house. He's right-it is just a matter of complete concentration.",
+                       "You trace the source of the strong energy to the center of the prison structure. There, you find a large lead-covered vault. Your mind cannot penetrate it. Instead you throw a force field around it.",
+                       "A wave of anguish comes from the vault. The vault almost seems to be pleading for mercy. You release your force field. As you do, you feel a surge of even greater energy inside of you.",
+                       "Suddenly the lead shield falls away to reveal an intricate crystalline structure inside. You recognize it immediately as an alien life form. It communicates with you telepathically in a strange code--which you somehow understand. The alien life form explains its predicament."],
+         ],
+         image: nil,
+         edges: [
+         
+
+            Edge(destinationId: 1,
+                 prompt: "The End")
+            ],
+         ending: false
+    ),
+    Node(id: 62,
+         paragraphs: ["\"I would love to visit your world you say, T have too many things to finish on this one night now. \"",
+                       "\"Very well,\" the alien emissary responds. \"I will leave this crystal pendant with you. It is a hyperspace communicator. When you are ready to visit us, you need only activate its core with your mind, and a spaceship will be sent to you. Now, before I go, I must repay 'hospitality' of the creatures that tricked me into coming here. \"",
+                       "You hear a chorus of anguished animal cries throughout the house. Then silence. Your mind-scan tells you that the chimpanzees have been thrown into a hyperspace prison. There they will float in a nameless void until they have served out their sentence.",
+                       "The spaceship vanishes. When you return to your body, you find the crystal pendant hanging around your neck. The prison itself has vanished along with the house that stood over it, and you and the professor find yourselves standing in the center of a broad, empty lawn.",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 63,
+         paragraphs: ["You decide you'd better call the police. This could be too much to handle alone.",
+                      "You pick up the radio-telephone in your car, dial your friend Sergeant Morrison, and explain briefly what has happened.",
+                      "\"I get a lot of complaints about that place, says the sergeant. \"People talk about bright, flashing lights before dawn. loud electronic noises, and weird-looking trucks going in and out at night. Not to mention the chimpanzees acting as guard dogs. We'd always assumed it was the neighbors' imaginations. If what you're telling me is true, we could have a dangerous situation on our hands.",
+                      "\"Do you want me to investigate more?\" you ask.",
+                      "\"No, stay there, he says. \"I'll be over in the squad car right away. Don't do anything. Just wait a couple of blocks from the house until I get there.\"",
+                      "A squad car? Like all detectives, you know that it's almost impossible to catch criminals in the act after the cops have arrived.",
+                      "If you follow his instructions and wait in the car, turn to the next page.",
+                      "If you can't resist the temptation to go back for another look, turn to page 77."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 64,
+                 prompt: "If you follow his instructions and wait in the car, turn to the next page."),
+            Edge(destinationId: 77,
+                 prompt: "If you can't resist the temptation to go back for another look, turn to page 77.")
+            ],
+         ending: false
+    ),
+    Node(id: 64,
+         paragraphs: ["While vou wait, you try Ricardo and Lisa again Yes! They're home. You explain the situation And you give your location, and soon they arrive on their bicycles. The three of you sit in your ge discussing the case.",
+                      "\"Hey, says Lisa, \"just suppose that Marsden is a ghost in human form.",
+                      "\"Can't be,“ replies Ricardo. \"Ghosts don't take solid, human form. Sure, you can see a ghost's image, but they don't have real bodies. I don't think y: so, anyway.",
+                      "\"We still don't know whether Henry Marsden is a ghost or a real person, \" you remind them. \"So let's not jump to any conclusions before we have a few more facts.",
+                      "\"I'd like to go up the road and get a look at this house, \"says Ricardo.",
+                      "\"Sergeant Morrison said to wait here until he gets here, you say. don't \" \"He's going to be mad if we don't.\"",
+                      "The car phone rings. It is the police operator calling to say that Sergeant Morrison will be delayed on an emergency call.",
+                      "\"That does it. \" says Lisa. \"I think we should leave a note on the car for him and then do a little investigating on our own.\""],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 65,
+                 prompt: "If you are firm about waiting for the sergant, go on to the next page."),
+            Edge(destinationId: 79,
+                 prompt: "If you let Ricardo and Lisa talk you into going up to the house, turn to page 79.")
+            ],
+         ending: false
+    ),
+    Node(id: 65,
+         paragraphs: ["\"We have to wait for the sergeant, \" you say. \"But I think we can get a glimpse of the house from a little way up the road, and still see the squad car when he arrives.\"",
+                       "\"I saw a restaurant about a half-mile back down the road, says Ricardo. \"I'm going to bike down there and pick up some cheeseburgers, fries, and milkshakes for all of us. Might as well make a picnic dinner of it while we keep an eye on things. I bet nothing's going to happen anyway.",
+                       "Ricardo is back in fifteen minutes with the food. You find a spot under a tree not far from the fence that borders the land around the house. You are close enough to catch a glimpse of the house through the trees, but not close enough to be noticed by anyone inside.",
+                       "It is already late afternoon. The summer sun slants through the trees, but it is still hot out. The air itself is still and stifling, without a hint of a breeze. You sit back against a tree, a burger in one hand and a shake in the other. Mmmm! They're delicious. Why does drinking the shake make you feel so sleepy? In a minute you feel yourself falling asleep.",
+                       "Suddenly you wake up. It is pitch-black all around you. What is this? Your hands and feet are bound with cord. Where are Ricardo and Lisa?"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 67,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 67,
+         paragraphs: ["You are still groggy with the kind of grogginess that you had from the anesthesia when vou had your tooth pulled. You smell a strange aroma. It could be rotting flowers. Roses? Marigolds?",
+                      "Furthermore, you are not alone. There is someone or something breathing--almost whimpering-near vou. You struggle for a moment with the cords on your wrists and ankles. Then you remember your ring with the small, but very sharp, concealed blade. You scrape the ring against the hard surface under you to release the spring mechanism of the blade. Fortunately, the ring is positioned so that you can just cut the cord without cutting your wrist.",
+                      "With your hands free, you quickly cut the cord binding your feet. You rub your arms and legs to restore circulation. They are still numb, but feeling is coming back--all pins and needles for a while. When your eyes grow adjusted to the darkness, you see that you are in a room with stone walls and a concrete floor. In the far corner stands a white- haired man, bent with age."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 68,
+                 prompt: "")
+            ],
+         ending: true
+    ),
+
+    Node(id: 68,
+         paragraphs: ["Carefully you rise and advance toward him. He stands mute and still, as if paralyzed. He doesn't seem to know that you are there.",
+                      "\"Hello?\" you say. There is no response.",
+                      "Then vou notice the chains fastened to his feet. You bend down and examine the shackles to see if there is any way to get them off, but they are old and rusty with rather primitive locks. You straighten up, but the man still doesn't seem to notice you. He seems to be in a trance.",
+                      "If you try to wake him, he may help you figure out where you are and what is going on. But what are you going to do about his chains? It might be faster to leave him alone and come back later with help."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 72,
+                 prompt: "If you decide to stay with the old man and try to help him, turn to page 72."),
+            Edge(destinationId: 97,
+                 prompt: "If you think it would be best to go in search of help, turn to page 97.")
+            ],
+         ending: false
+    ),
+    Node(id: 69,
+         paragraphs: ["You turn your mental powers against the door of the cell. You stand straight but not rigid, and focus your psychic energy on the locking mechanism, You feel the energy flowing from you. Harder now. concentrate! Your mind traces the intricate locking sequence. There! It's open.",
+                      "You and the professor start down the corridor toward the garage when ZAP! The two of you are frozen in mid-step by a force far greater than the chimpanzees possess. In their tinkering with the physical and psychic world, the chimpanzees have unleashed an evil force- -a force powerful beyond human understanding.",
+                      "As the force intensifies, you fight back with the vast power of your own mind. The corridor begins to glow with a soft orange color. Flashes of artificial lightning play along the walls. Your energy begins to drain. The violence of the conflict between you and this evil force is so great that it begins to destroy the fabric of time and space itself. Slowly you and the professor fade until you disappear into another dimension of the universe.",
+                      "The End"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 70,
+         paragraphs: ["\"My name is Marsden, Professor Marsden. I was using the chimpanzees in my experiments to create superhumans. Instead I created superchimps.",
+                       "\"How did you--?\"",
+                       "\" you begin to ask. \"I developed a super-energizing chamber that will give anyone advanced mental powers. And I think I have an idea for how it can help us get out of here.",
+                       "\"The cell we're in right now is part of an old prison complex built just after the Civil War. The prisoners in the old prison had been trying to dig a tunnel to freedom from this very cell, but they only succeeded in digging to another part of the prison. The tunnel leads directly to my laboratory!\"",
+                       "\"Okay, Professor, let's go, you say.",
+                       "You go tirst, crawling on your hands and knees and feeling your way along the tunnel. Soon you come to the inside of a loosely constructed stone wall. You can see into the brightly lit laboratory through the small cracks in the wall.",
+                       "\"I only see one chimp in there, \" you whisper. \"If I can get in there, I can get him with my knockout-gas gun.\"",
+                       "\"One good push,\" the professor whispers back, \"and this part of the wall will fall outward." ],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 58,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 72,
+         paragraphs: ["You take your penknife out of your pocket. Maybe the blade is small enough… Yes! You're able to slide it into the mechanism. You feel the tumbler turn. In no time at all, you have the shackles off the man's feet. Then you shake him gently by the shoulders. He pulls away and cowers against the wall.",
+                      "\"Don't hit me! Don't hit me!\" he moans.",
+                      "\"I'm not going to hurt you, \" you say.",
+                      "The old man looks up with a startled expression \"Who... who are you?\" he asks.",
+                      "\"I got a phone call from somebody named Marsden, and I traced the call to this house, you answer. \"Thank God, then,\" he says, \"my call got through. I read about you in the papers. I knew you would help me.\" hand. The old man extends a shaky hand.",
+                      "\"I am Henry Marsden. I live next to the ruins of my great-grandfather's prison. Part of the ruins extend under the house--that is where we are now. I have always been a recluse. A cruel gang of counterfeiters found out about it. They broke into my house and took it over as their headquarters.\"",
+                      "\"Can you walk?\"",
+                      "\"I don't know, \" he says. \"You'd better go on without me. I'll just slow you down."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 73,
+                 prompt: "If you think you might find out more if you explore the old prison complex first, go on to the next page."),
+            Edge(destinationId: 75,
+                 prompt: "If you decide that you must escape immediately with the old man, turn to page 75.")
+            ],
+         ending: false
+    ),
+    Node(id: 73,
+         paragraphs: ["\"You'd better stay here until I can take a careful look around. you say. \"I want to find out what we're up against.",
+                       "\"Be careful. says the old man. \"The counter- feiters will stop at nothing.",
+                      "\"I'll be careful. You start out the door. You find yourself in a long, wide corridor with empty cells on either side.",
+                       "Suddenly excited shouts and gunshots come from somewhere near the other end of the corridor. There is silence for a few moments. Then you are caught in the beam of a powerful electric light."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 74,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 74,
+         paragraphs: ["\"Thank goodness you're there,\" someone says. It is the voice of Sergeant Morrison. He shouts back behind him, \"Lisa, Ricardo, come quick! I've found our missing detective. \"",
+                       "Ricardo and Lisa come running toward you. You greet each other happily. Ricardo and Lisa, you find out, had been tied up in another part of the underground complex. The police had found them first when they raided the place and arrested the gang.",
+                       "\"You deserve a lot of credit,\" says Sergeant Morrison, \"for alerting us to this place. We have the gang on charges of counterfeiting, homicide we found the body of that man you told us about down here- -kidnapping, and keeping chimpanzees within the city limits without a license.\"",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 75,
+         paragraphs: ["\"Let's get out of here. Come on, follow me, you say to the old man.",
+                      "\"I can't move too fast, .\" he protests. \"It might be better if you leave me here and go for help.\"",
+                       "\"If I leave you here, you say, \"the counterfeiters might come back and kill you before I can return. This door seems to be unlocked, but it's stuck. Let's see if we can get it open.\"",
+                       "You push as hard as you can, but the door moves only a fraction of an inch.",
+                       "\"Here, let me try that, says the old man. He pushes the door lightly, and it goes flying off its hinges and down the hallway.",
+                       "\"You're really strong for an old man, you say.",
+                       "\"Nothing to it,\" says the old man. \"I've got some life in me yet. \"",
+                       "You are really amazed at how strong the old man has suddenly become, but you don't have time to think about it at the moment. The most important thing now is to get out of this dungeon."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 81,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 77,
+         paragraphs: ["You're too tense to wait for Sergeant Morrison. You leave a note on your windshield for him and go back to the fence around the house. You creep along the outside of the fence. After a few hundred feet, the fence leads into dense woods. Not far into the woods, you come to another gate- a small one in the fence. An overgrown road leads to the estate through this gate. You are trying to decide if you should follow the road in when a man with a broad scar across his face steps from behind a tree. He's wearing an old-fashioned prison uniform, but the laser pistol he has in his hand certainly looks modern enough.",
+                      "\"Okay, now turn around and go through that gate, and around to the back of the house, \" orders the man, \"and no funny business. I'm behind you all the way with this gun. \"",
+                      "You have no choice but to do as he says. Even your karate training will not help you here. He has you covered",],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 78,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 78,
+         paragraphs: ["As the two of you approach the house, the back door opens automatically. Inside there is a long corridor. As you walk down it, your footsteps are muted by the thick green carpeting on the floor The corridor seems endless, but finally, you come to a large steel door. You and the man behind you stop.",
+                      "The man places his right hand on a small light blue screen next to the door. A beam of laser light passes up and down the screen, scanning his handprint.",
+                      "There is a click. Then a hard metallic voice comes from a speaker over the door. \"Identify yourselves. State purpose of visit. Remain standing exactly where you are. Repeat, do not move. Remain where you are \"",
+                      "\"Security Agent 31X reporting with intruder.\"",
+                      "There is silence for a moment, with only the sound of the air conditioning and exhaust fans buzzing in your ears. Then the door swings open, and the man behind you pushes you roughly into the room."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 80,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 79,
+         paragraphs: ["The three of you walk up the road to a spot along the fence where you have a clear view of the house.",
+                      "\"I think we should get as close as possible, Lisa. says",
+                      "\"Look over there,\" says Ricardo. \"There are lots of bushes on the other side of the house. I think we could get right up close without being seen.\"",
+                      "\"You're forgetting those crazy chimpanzees I told you about, you say.",
+                      "As you try to decide what to do, you hear a faint scream from the direction of the house.",
+                      "\"Did you hear that?\" asks Lisa. \"Now we have to investigate. \"",
+                      "\"All right, you say, \"but let's be very careful.\"",
+                      "The three of you run along the fence, which is broken in places, until you find a break in it large enough to squeeze through. Being careful to keep the shrubbery between you and the house, the three of you sneak up to the basement windows. You try to peer inside, but the windows are all silvered from the inside, like mirrors. All you see are your own faces.",
+                      "Then, before you know it, all three of you are surrounded by five snarling chimpanzees. They're huge, and their teeth look very sharp."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 84,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 80,
+         paragraphs: ["A group of men and women sit at an oval table. In front of each person is a glass of water, a pad of paper, and a pen. They are well-dressed and all seem to be about 50 to 60 years old. The scene looks for all the world like a typical business meeting of any large corporation. They all turn to look as you enter. They look serious, but not really hostile.",
+                      "A white-haired man in a dark blue pinstripe suit smiles briefly and asks, \"Well, now that you are here, what can we do for you?\"",
+                      "\"I was investigating a telephone call asking for my help. The call came from this address.",
+                      "The man speaks again. \"The telephone call was unfortunate. It came from someone who has recently been released from a foreign prison. He was a brave man- -a scientist and a leader for freedom in his country. He was in a bad mental state. We regret that our care did not keep him alive. His fears were too much for him. Do you understand?\"",
+                      "\"Perhaps, \" you say, \"but I need more of an explanation than that. This whole setup looks peculiar to me. \"",
+                      "\"Very well, says the man, \"I will explain.\""],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 82,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 81,
+         paragraphs: ["The door leads to a hallwau filled with dazzling white light. You enter the hallway with the old man following you. You turn to look at him for a second. He seems to be getting younger by the minute. His hair is now dark. He looks a lot like your father. Wait! It is your father. He is saying \"Wake up.. wake up...",
+                      "You're still in the woods outside the house. Ricardo and Lisa are there too. And so is Sergeant Morrison.",
+                      "\"I wasn't captured?\" you ask. \"Wasn't the milk- shake drugged?\"",
+                      "\"I think you were just feeling the effects of the warm weather, says your father.",
+                      "\"It was probably best you were asleep, adds Sergeant Morrison. \"We raided the house and arrested the whole gang. Even recovered a dead body as they were trying to bury it in the basement. Your father came right over when I called him a short time ago. He was worried about you.\"",
+                      "\"Don't feel bad about not being in on the action at the end says your father. \"You did your part and the police did theirs. That's the way it should be. We are still mighty proud of you.\"",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 82,
+         paragraphs: ["\"We are the international Planning Group, a privale organization made up of representatives from different parts of the world. We are dedicated to there conservation and the peaceful developmen of natural resources everywhere.",
+                      "\"But why hide out here in this little town?\" you ask.",
+                      "\"This is only one of our meeting groups. We have many other places such as this, as well as various research facilities throughout the world. In this location we use the name of Marsden as cover. Our security agents in prison dress, and their trained chimpanzees, scare off most intruders. We would be honored if you would join our organization. We try to recruit the best minds in each of our with fresh viewpoints. operational areas, and we need younger minds with fresh viewpoints."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 83,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 83,
+         paragraphs: ["All the faces in the room are looking at you and smiling.",
+                      "\"You don't have to make up your mind right now, \" says the man. \"Take your time, and contact us when you have made a decision. Any young friends of yours that you could recommend will also be welcome in our organization.\"",
+                      "As you walk back to your car to meet Sergeant Morrison, you still don't know what to believe, but you have a lot to think about.",
+                      "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 84,
+         paragraphs: ["As the chimpanzees get closer, it becomes clear that they are trying to back you up against the basement door. You have no choice but to open the door and go in. It is pitch-black inside. You feel along the side of the door and find a light switch. You flip it.",
+                      "The three of you are in a large, modern office with mahogany paneling and steel and glass desks. In the center of the room is a large conference table. On it, spread from one end to the other, is a collection of blueprints. You go over and take a look. One of the papers is labeled: TOP SECRET INVASION PLANS EARTH-WESTERN HEMISPHERE- PHASE ALPHA",
+                      "You rifle through more of the papers. They are filled with dates, graphs, and calculations of various sorts--figures for agricultural output, natural resources, and energy production of various power plants.",
+                      "As you look through the papers, a tall, very thin man-like creature with an oversized head enters the office at the far end. What is he? You've never seen anyone or thing--like him."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 85,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 85,
+         paragraphs: ["\"Ah, my inquisitive friends, examining our plans, he says. I see you are \"Go ahead, be my guests. Look all you want. It does not matter. Our plans are already in motion.\"",
+                       "\"Are you- you stammer. \"Are you...an alien?\" You've read about them but never been sure they were out there.",
+                       "The alien seems to look at the three of you with both intensity and amusement.",
+                       "\"I make a proposal, \" he says. \"Why not join us? We could use Earthlings like you to help us. Earlier today, we tried to recruit another Earthling, but he ran out on us. However, I think you three will be more sensible. \"",
+                       "There's no way you will seriously take him up on his offer. But by going along with him, you might find a way to stop the aliens' plan. On the other hand, it might be better just to stand and fight."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 86,
+                 prompt: "If you pretend to join, turn to the next page."),
+            Edge(destinationId: 88,
+                 prompt: "If you refuse, turn to page 88.")
+            ],
+         ending: false
+    ),
+    Node(id: 86,
+         paragraphs: ["You figure the best thing to do is to humor this creature. And you have to admit, you are curious. Where did he come from?",
+                      "\"Come now, my friends, \" says the man. \"]t? 'S not all that bad. We will train you for your new positions. We guarantee job security, and even a pension after a certain number of years. Perhaps one of you would like to be an Earth project manager, or perhaps an Invasion Commander like myself."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 94,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 87,
+         paragraphs: ["The three of you jump into your car and drive down to the Hedge Brook police station. Your old friend Sergeant Morrison is glad to see you and meet your friends. You tell the sergeant about the phone call and about the information in the history book.",
+                      
+                      "\"I think you should tell all this to Detective Murphy, he says. \"There is definitely more to the old Marsden place than meets the eye.",
+
+                      "Detective Murphy turns out to be a pipe smoking middle-aged man in a tweed jacket. He looks more like a college professor than a detective.",
+
+                      "\"I already have a file on the Marsden place, says Detective Murphy. \"That house has been deserted for years. I've come to the conclusion that it is haunted. Now I know that sounds unscientific and unprofessional, but it's the only idea I've been able to come up with in light of the evidence. The house is notorious in that neighborhood--strange lights at night, and strange noises at every time of day.\"",
+
+                      "\"You mean you believe in ghosts?\" asks Lisa.",
+
+                      "\"Tm sure your amateur detective friend here will confirm that we detectives do not believe in anything. We let the facts speak for themselves. \"",
+
+                      "What is that supposed to mean?\" asks Lisa. \"",
+
+                      "\"It means precisely what I mean it to mean. says Murphy, \"and furthermore, if you like, I'll turn the Marsden case over to the three of you."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 90,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 88,
+         paragraphs: ["\"No, thanks, you say. \"We're not interested.\"",
+                       "\"You refuse, do you?\" shouts the creature. \"Well, we have another use for humans. In fact, it is our main use for humans.",
+                       "With that, he takes out a small device from his pocket and aims it at the three of you. A beam of incredibly cold light--its temperature hundreds of degrees below zero- freezes you, Lisa, and Ricardo into solid blocks of ice.",
+                       "Then the man takes out a rubber stamp from his other pocket and stamps your forehead:",
+                       "HUMAN MEAT- GALACTIC PRIME SOURCE-",
+                       "PLANET EARTH",
+                       "GRADE A",
+                       "The End"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 90,
+         paragraphs: ["Detective Murphy sits back in his chair and takes a few puffs on his pipe. For a moment, he looks deep in thought.",
+                      "\"What I want you three to do is to keep a watch on that place- -from a safe distance, and only during the day. Is that understood?\" he says.",
+                      "The three of you leave the police station. You're hooked. This is your kind of adventure.",
+                      "First you go back to your house to pick up your two-way radio-communicator. Each is small enough to be hidden inside a pocket, and they have a range of over seven miles.",
+                      "Then you drive over to the Marsden house. As you drive by slowly, you see that it is a large, modern house set back from the main road.",
+                      "\"I thought only old houses could look spooky. you say."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 91,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 91,
+         paragraphs: ["You park the car across the road and sit watching the house for an hour or so. All the windows of the house are closed, and all of the curtains are drawn. The front door looks partly open, though.",
+                      "\"It certainly is stuffy in the car.says Lisa.",
+                      "\"More like boring, I'd say, says Ricardo.",
+                      "\"What do you say we go over and take a closer look?? says Lisa. \"Ghosts only come out at night anyway- if there are such things. \"",
+                      "\"Detective Murphy told us not to, but I think we should. \" you say."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 92,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 92,
+         paragraphs: ["The three of you reach the front door. It is slightly ajar and opens with a light touch. You peer inside. No furniture. Nothing. No sign of life.",
+                      "\"I'll go and investigate,\" you say. \"Let's keep in touch with the two-way radios. I have one of them here in my shirt pocket, and the other is in the car. When I know that it's safe, I'll radio for you two to come in. I don't know why, but something tells me this place is dangerous.\"",
+                      "You step inside.",
+                      "WHAM! The front door slams shut behind you. You try the doorknob. No good! It won't budge. Then you notice that there are no windows in the foyer, which leads into a hallway, also without windows. Yet there is a strange half-light coming from somewhere. The air is stiflingly hot. It seems to grow hotter by the minute. You try your radio, but only get static."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 93,
+                 prompt: "If you concentrate on trying to get the front door open, go on to the next page."),
+            Edge(destinationId: 99,
+                 prompt: "If you decide to search the rest of the house, turn to page 99.")
+            ],
+         ending: false
+    ),
+    Node(id: 93,
+         paragraphs: ["You push against the door. No good. You take out your penknife and probe inside the keynole-te feel out the mechanism. A little leverage, and the humbler turns. You try the doorknob, and the door pulls open.",
+                      "But what is this?",
+                      "The door doesn't open to the outside any more. in front of you is a wide stone stairway leading down into the ground. Something beyond vou control seems to compel you to go down. At the bottom of the stairway, you find yourself in a large underground room. In the half-gloom, you make out what look like thick stone walls. At the far end of the room is a row of dark prison cells. In one of the cells you see a faint phosphorescent glow several feet from the floor. The glow emits a low hum. Mesmerized, you walk toward it. The hum becomes louder and begins to change into an eerie buzzing voice.",
+                      "\"ZZZZZZZZZ ..........myzzz ..........nameizzzz Henry Marzzz.......... den.\"",
+                      "The voice becomes more distinct. \"I need your help..help...\"",
+                      "The glow begins to expand. A ghostly form starts to materialize."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 102,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 94,
+         paragraphs: ["As he is talking, the man walks over and opens the outside door. He beckons to you to go out. As you step out, you realize that you are in big trouble. The sky is almost covered by an enormous space vehicle. It is bright gold in color and it hovers overhead with a low humming sound.",
+                      "You wonder if you will enjoy your new life.",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 96,
+         paragraphs: ["\"You can be anyone, anyone in history the figure says. \"All you have to do is choose.",
+                       
+                    "\"I'll give it a try, you say. \"Can I come back when I want to, like before?\"",
+
+                    "\"That depends on who you choose. You have to wish it, and that might not be so easy \"",
+
+                    "For several minutes you think about all the famous people you have heard of or read about. Then a wild impulse leaps to your mind -so wild that you are embarrassed to mention it. You'll think of another.."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 101,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 97,
+         paragraphs: ["You feel that it is important to help the old man, but you must also find out if Ricardo and Lisa are all right. The last thing you remember is that the three of you were having a picnic under a tree. If you can get out of this place and contact Sergeant Morrison, you can come back and rescue the old man.",
+                      "On one side of the dungeon room is a large closed door made of rough wood and bolted with wide iron bars. Cautiously you try the heavy metal latch. The door moves. It's unlocked. Whoever tied you up probably never thought you would be able to get loose. You push open the door very slowly, hoping it won't creak. You peer out into the dark gloom of the corridor. It is empty and silent. Quickly and silently you head for the door at the end of the corridor. Halfway there it happens.",
+                      "WHAM!"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 33,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 99,
+         paragraphs: ["You run down the dimly lit hallway and come to a large windowless room. Darn! Why doesn't this place have any windows? You saw enough of them from the outside. There is a deep alcove set in the wall on one side of the room. A light in the alcove flicks on, revealing the figure of a man. You can see only his head and face, which are horribly burned The rest of the figure is shrouded in a dark cape.",
+                      "\"I am the ghost of Henry Marsden. Here on this site, where my evil actions cost so many their lives, I have been given a machine by the spirits machine that defies time: past, present, and future. To atone for my sins, I must forever act as a teacher, to lead whoever comes here to greater wisdom and humility than my own. Turn and look behind you. \""],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 100,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 100,
+         paragraphs: ["You do as he says and two figures materialize- one is a baby, the other is an old man. You can't tell if they are real people, or images made of light. Every few seconds they flicker and twist.",
+                      "\"Hey, that's my watch. you say, stepping closer to the old man. Suddenly you understand. \"Hey,\" you say, \"Is that- -?\"",
+                      "\"They're both you, \" says the ghost. \"You as a baby, and as an old man. \"",
+                      "\"Why are they here?\"",
+                      "\"It is a test. Choose one.\"",
+                      "You are dying with curiosity. Being a baby that's something you'll never be able to remember on your own. But as an old man, you'd know everything that was going to happen to you in your life."],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 104,
+                 prompt: "If you choose to be a baby, turn to page 104."),
+            Edge(destinationId: 105,
+                 prompt: "If you choose old age, turn to page 105.")
+            ],
+         ending: false
+    ),
+    Node(id: 101,
+         paragraphs: ["But once the wish is formed, the process begins. No! You want to take it back. You don't really want to be Genghis Khan.",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 102,
+         paragraphs: ["\"I need your help. My spirit is condemned to haunt this godforsaken prison until my soul is released. You can help me.",
+                       "\"Who, me?\" you ask.",
+                       "\"Yes. I beg you to release my soul. I ask forgiveness. If you only say you forgive me, I will be released. Say it. Please say it.\""],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 103,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 103,
+         paragraphs: ["\"Now hold on a moment. \" you say. \"First I need some facts to go on before I forgive anyone. I read the history book account. It says you were the warden of this place.\"",
+                       "\"That's right, I was. \"",
+                       "\"And the conditions were terrible in the prison, you say.",
+                       "\"But I had no money to help. I only had funds enough to give the prisoners turnip soup, and a tew potatoes now and then. I ate no better, I swear it.",
+                       "\"Then why is your soul condemned to suffer, if it wasn't your fault?\" \"It was the tire, you see. I set it. But I did not intend to kill anybody. I only wanted to destroy the prison. The prisoners were always ready to riot. I lived in constant fear of them I thought they would all escape the fire. I did not know any of them would be trapped inside. I died in the fire myself.\"",
+                       "\"Then why is your soul...?\"",
+                       "\"I still blame myself. I cannot forgive myself for my stupidity-even if my intentions were good. Only a human soul can forgive me.\"",
+                       "\"All right, then, you are forgiven. \""],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 106,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 104,
+         paragraphs: ["A baby again. For some period of time-it -it could be minutes, it could be years, babies don't understand time--you just enjoy the sensation of amplified sound and wonder. You see the world through new eyes. You cannot understand what the giant people are saying. You try to stand. Oops! You fall down. The floor is so hard. How helpless you feel. You struggle with your first words.",
+                      "You are filled with a sense of energy. You can do anything! You use that energy to remember that you are not a baby…And somewhere in your mind you remember. You are not a baby. -I've got to get back. \" \"I'm a detective you say to yourself.",
+                      "ZAP! You renter your own age. It feels like an electric shock. You are a bit stiff after the staring at you again. experience. You look up. The figure in the cape is staring at you again.",
+                      "\"You did that well, \" he says. \"Now you can leave. Or, if you are feeling adventurous, how would you like the experience of being another person?\""],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 105,
+                 prompt: "")
+            ],
+         ending: false
+    ),
+    Node(id: 105,
+         paragraphs: ["Why did you choose old age? Curiosity, you quess. At least you know you'll live a long, long time. You see that you have cracked and very wrinkled hands. Your body trembles slightly. Your eyesight seems good, but you can't hear very well. You search your mind for memories of the years since you were a teenager. Funny, you can't seem to remember anything. They have all faded away.","You are so tired. You will just sleep for a while. Thinking takes so much energy.",
+            "You drop off into a light sleep. Your heart slows, skips a beat or so, then stops. It is all over.",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 106,
+         paragraphs: ["There is a blinding flash of light. You shade your eyes from it.",
+                      "You hear, \"Thank you, thank yoooo..\"",
+                      "The image of Marsden is gone. You run up the stone stairway and through the door at the top, But as you do, you find yourself running outside. smack into Ricardo, Lisa, and Detective Murphy. You almost knock them down.",
+                      "\"I thought I told you just to watch the house from a safe distance.'says Detective Murphy, very sternly, 'but anyway, I'm glad you're all right. You are all right, aren't you?\"",
+                      "\"I sure am,'you say,'and I don't think we'll be seeing any weird lights from this place from now on.\"",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    ),
+    Node(id: 108,
+         paragraphs: ["You remember that Ricardo and Lisa are waiting outside. You callthem on your radio.",
+                      "\"Hello, Ricardo... Lisa.. are you there?\"",
+                      "\"We hear you. Everything all right in there?\"",
+                      "\"I'm all right, I guess. Kind of hard to explain. I'm getting some kind of lessons from the ghost of Henry Marsden. I'll be out soon, I hope.\"",
+                      "Then static.",
+                      "The ghostly figure gestures toward you again.",
+                      "\"I said you could leave, but I didn't say with whom.\"",
+                      "As he says this, Marsden's head grows larger and larger, until it turns into an enormous disc shaped object. It begins to glow with a unique brightness. Then the room disappears, and the disc expands to huge size. Portholes appear around its middle. A hatch swings open. Music comes from inside-electronic music. You enter this machine, and in a millisecond you are whisked away to other galaxies.",
+                      "You don't know if you are going to like this lesson or not.",
+                     "THE END"],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1,
+                 prompt: "The END")
+            ],
+         ending: true
+    )
+ ]
+
