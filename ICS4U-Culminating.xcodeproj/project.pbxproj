@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F2CA1AF283E6AA70089586D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1AE283E6AA70089586D /* main.swift */; };
 		0F2CA1B9283E6EBE0089586D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
+		0F4C095E2847ABF70040B992 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C095D2847ABF70040B992 /* NodeView.swift */; };
 		0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C862845263B00FAE19E /* iOSApp.swift */; };
 		0FE25C892845263B00FAE19E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C882845263B00FAE19E /* ContentView.swift */; };
 		0FE25C8B2845263C00FAE19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8A2845263C00FAE19E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		0F2CA1AE283E6AA70089586D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0F2CA1B7283E6E040089586D /* input */ = {isa = PBXFileReference; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
 		0F2CA1B8283E6EBE0089586D /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		0F4C095D2847ABF70040B992 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		0FE25C842845263B00FAE19E /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE25C862845263B00FAE19E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		0FE25C882845263B00FAE19E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				0FE25C882845263B00FAE19E /* ContentView.swift */,
+				0F4C095D2847ABF70040B992 /* NodeView.swift */,
 			);
 			name = Views;
 			path = ../CommandLine/Views;
@@ -240,6 +243,7 @@
 			files = (
 				0FE25C932845267C00FAE19E /* Node.swift in Sources */,
 				0FE25C892845263B00FAE19E /* ContentView.swift in Sources */,
+				0F4C095E2847ABF70040B992 /* NodeView.swift in Sources */,
 				0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7LW5X6636W;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -375,7 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7LW5X6636W;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

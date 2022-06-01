@@ -15,10 +15,12 @@ struct Node: Identifiable {
     let ending: Bool
 }
 
-struct Edge {
+struct Edge: Hashable {
     let destinationId: Int
     let prompt: String
 }
+
+let emptyNode = Node(id: 0, paragraphs: [""], image: nil, edges: [Edge(destinationId: 0, prompt: "")], ending: false)
 
 let nodes = [
 
