@@ -34,7 +34,7 @@ let nodes = [
          edges: [
          
             Edge(destinationId: 2,
-                 prompt: "")
+                 prompt: "Turn to the next page")
             ],
          ending: false
     ),
@@ -50,8 +50,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 6,
+                 prompt: "Turn to page 6")
             ],
          ending: false
     ),
@@ -61,7 +61,12 @@ let nodes = [
                       "You turn your attention back to the man on theground. His breath comes in short gasps that soundalmost like sobs.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 10, prompt: "Turn to page 10")
+            
+            ],
+         ending: false
     ),
     Node(id: 4,
          paragraphs: [
@@ -77,7 +82,12 @@ let nodes = [
             "You glance again at the house. The front of it is constructed largely of glass. A short distance to one metal sculpture rising out of a number of huge blackened hunks of shattered concrete. A shudder goes through you as you realize that these forms of twisted metal might actually be the remnants of the old burned-out prison. Suddenly a man dashes out of the house",
          ],
          image: <#T##String?#>,
-         edges: [9]
+         edges: [
+            
+            Edge(destinationId: 9, prompt: "Turn to page 9")
+            
+            ],
+         ending: false
     ),
     Node(id: 6,
          paragraphs: [
@@ -94,8 +104,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 7,
+                 prompt: "Turn to the next page")
             ],
          ending: false
     ),
@@ -109,8 +119,11 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 4,
+                 prompt: "If you decide you should go immediately to thr address obtained by the phone-tracing machine. Turn to page 4. "),
+            
+            Edge(destinationId: 13,
+                 prompt: "If you decide to give Ricardo and Lisa a chance to call back. Yurn to page 13."),
             ],
          ending: false
     ),
@@ -121,7 +134,14 @@ let nodes = [
             "The man on the lawn can't move and needsvour help. But what good to him will you be ifyou're mauled by the angry chimps?",
                      ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 3, prompt: "If you decide that the chippanzees are not as dangerous as they look and rush to give aid to the man. Turn to page 3"),
+            
+            Edge(destinationId: 29, prompt: "If you make a hasty retreat to your car. Turn to page 29"),
+            
+            ],
+         ending: false
     ),
     Node(id: 10,
          paragraphs: [
@@ -131,7 +151,14 @@ let nodes = [
             "This feels like real danger, and you'd promisedyour parents you'd call the police if your safety wasever at risk, but if you wait, whoever or whateveris going on inside that house might have time toescape.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 14, prompt: "If you decide to come back later and sneak up on the house from a different direction. Turn to page 14"),
+            
+            Edge(destinationId: 63, prompt: "If you decide to call the ploice and report a possible murder. Turn to page 63"),
+            
+            ],
+         ending: false
     ),
     Node(id: 11,
          paragraphs: [
@@ -139,7 +166,12 @@ let nodes = [
             "You ease out of your observation post in thebushes and run back to the car. You drive to thenearest telephone to inform the police. Then youcheck your watch: 7:23 pm. Case solved in fourhours and forty-one minutes. Not bad!",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 16, prompt: "Turn to page 16")
+            
+            ],
+         ending: false
     ),
     Node(id: 12,
          paragraphs: [
@@ -149,7 +181,12 @@ let nodes = [
             "You scan the lawn with your binoculars. Thebody of the man has disappeared. All seems quiet.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 24, prompt: "Turn to page 24")
+            
+            ],
+         ending: false
     ),
     Node(id: 13,
          paragraphs: [
@@ -160,8 +197,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 26,
+                 prompt: "Turn to page 26")
             ],
          ending: false
     ),
@@ -171,7 +208,12 @@ let nodes = [
             "You take out the piece of paper that you tookfrom the hand of the dying man. You realize that itis the corner of a larger sheet of paper. Two of theedges are cut straight, and the third side is raggedwhere it was torn off. You hold it up to the light,almost expecting a message to be somehow hiddeninside the paper itself. You start to stick the paperback into your pocket when something makes youhold the paper back up to the light again. Youhadn't noticed it before, but the paper has tinyflecks of red and blue in it. Now that rings a bell-of course! The special paper that U.S. currency isprinted on has those flecks in it.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 12, prompt: "Turn to page 12")
+            
+            ],
+         ending: false
     ),
     Node(id: 15,
          paragraphs: [
@@ -183,7 +225,12 @@ let nodes = [
             "The heavy front door of the house starts to swing slowly open.",
          ],
          image: nil,
-         edges: [19]
+         edges: [
+            
+            Edge(destinationId: 19, prompt: "Turn to page 19")
+            
+            ],
+         ending: false
     ),
     Node(id: 16,
          paragraphs: [
@@ -191,7 +238,12 @@ let nodes = [
             "On a tip from a well-known local detective,whosesuspicionswerearousedbystrangeoccurrences around the Hedge Brook Prison ruins,police raided a nearby house yesterday, exposinga counterfeiting operation. Seized were a numberof bogus printing plates and a large quantity ofcounterteit money.Three men were arrested andcharged with homicide as well as counterfeitingafter the body of another, as yet unidentified, manwas found in the basement of the house.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 1, prompt: "The End")
+            
+            ],
+         ending: true
     ),
     Node(id: 18,
          paragraphs: [
@@ -200,7 +252,14 @@ let nodes = [
             "Your knockout-gas gun, disguised as a pen, isstill there.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 32, prompt: "if you decide that now is the time to use your knockout-gas gun. Turn to page 32"),
+
+            Edge(destinationId: 34, prompt: "If you decide that this is too dangerous to try right now. Turn to page 34"),
+            
+            ],
+         ending: false
     ),
     Node(id: 19,
          paragraphs: [
@@ -211,7 +270,12 @@ let nodes = [
             "As you watch,a small concealed door opensin the side of the hallway. It had been completelyhidden by the intricate patterns of inlaid wood.Out of the door comes a tall, slender woman withhigh cheekbones and narrow eyes. Her skin is thecolor of ivory. She is dressed in a long, black, old-fashioned dress.\"Won't you three come in?\"she says in a high,unaccented voice.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 28, prompt: "Turn to gage 28")
+            
+            ],
+         ending: false
     ),
     Node(id: 21,
          paragraphs: [
@@ -221,7 +285,12 @@ let nodes = [
             "\"Ah, I see we have yet another visitor,\"says thewoman. Her face lights up with a kind of ecstasy.\"Come... come to my plants, little fly.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 22, prompt: "Turn to the next page")
+            
+            ],
+         ending: false
     ),
     Node(id: 22,
          paragraphs: [
@@ -230,14 +299,24 @@ let nodes = [
             "Something is happening to the woman. Herimage is beginning to fade. You realize that youcan see right through her. Her torm then beginsto grow and resolidity. It transtorms itself into theimage of a large,angry-looking man dressed ina Civil War uniform. He has a heavy whip in hishand. You look around you. The walls have turnedto a rough, darkened stone-and high above you,the skylight has been replaced by heavy bars.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 23, prompt: "Turn to the next page")
+            
+            ],
+         ending: false
     ),
     Node(id: 23,
          paragraphs: [
             "\"Now I'll deal with you rebels,growls theman.\"You think you can challenge the authorityof Henry Marsden.As he says this, he lashes outwith the whip. Sharp pain bites into your shoulder.You feel taint. As you lose consciousness and fallto the damp stone floor, you hear only the territiedscreams of Ricardo and Lisa."
          ],
          image: nil,
-         edges: [1]
+         edges: [
+            
+            Edge(destinationId: 1, prompt: "The End")
+            
+            ],
+         ending: false
     ),
     Node(id: 24,
          paragraphs: [
@@ -245,7 +324,12 @@ let nodes = [
             "That's it! The chimpsare not real. 1hey mustbe filmed and projectedholograms-three-dimensional picturesmade with laser lightprogrammed to turnon and off wheneversomeone approachesthe house.Minutes later, thetwo men leave, carryingseveral small packages.",
          ],
          image: nil,
-         edges: [2]
+         edges: [
+            
+            Edge(destinationId: 11, prompt: "Turn to page 11")
+            
+            ],
+         ending: true
     ),
     Node(id: 26,
          paragraphs: [
@@ -256,8 +340,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 27,
+                 prompt: "Turn to the next page")
             ],
          ending: false
     ),
@@ -279,8 +363,11 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 15,
+                 prompt: "If you decide to go to the site of the ol prison. Turn to page 15"),
+            
+            Edge(destinationId: 87,
+                 prompt: "If you decide togo to the police with your story. Turn to page 87")
             ],
          ending: false
     ),
@@ -293,8 +380,11 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 21,
+                 prompt: "If you accept her invitation to go in. Turn to page 21")
+            
+            Edge(destinationId: 41,
+                 prompt: "If you sence a trap, and find a reason for leaving. Turn too page 41")
             ],
          ending: false
   ),
@@ -306,8 +396,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 18,
+                 prompt: "Turn to page 18")
             ],
          ending: false
     ),
@@ -320,8 +410,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 40,
+                 prompt: "Turn to page 40")
             ],
          ending: false
     ),
@@ -340,11 +430,26 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 59,
+                 prompt: "Turn to gage 59")
             ],
          ending: false
     ),
+    
+    Node(id: 33,
+         paragraphs: [
+            "A door to your right flies open, throwing a brilian shaft of light into the corridor. Suddely you are surrounded by a circle of snarling chimpanzees.",
+            "They begin to close in.",
+         ],
+         image: nil,
+         edges: [
+         
+            Edge(destinationId: 1, prompt: "The End")
+         
+            ],
+         ending: true
+    ),
+    
     Node(id: 34,
          paragraphs: [
             "You slip the pen into your shirt pocket. Maybe pwill help you escape later.",
@@ -356,10 +461,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 36,
+                 prompt: "Turn to the next page")
             ],
-         ending: false
+         ending: true
     ),
     Node(id: 36,
          paragraphs: [
@@ -375,8 +480,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 70,
+                 prompt: "Turn to page 70")
             ],
          ending: false
     ),
@@ -390,8 +495,11 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 31,
+                 prompt: "If you try to use your new mental and psychic power right away. Turn to page 31"),
+            
+            Edge(destinationId: 50,
+                 prompt: "If you decide to retreat back through the tunnel and have the professor explain how to use the power on the way. Turn to page 50"),
             ],
          ending: false
     ),
@@ -408,8 +516,8 @@ let nodes = [
 
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 1,
+                 prompt: "The End")
             ],
          ending: false
     ),
@@ -422,10 +530,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 38,
+                 prompt: "turn to page 38")
             ],
-         ending: false
+         ending: true
     ),
     Node(id: 41,
          paragraphs: [
@@ -442,8 +550,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 46,
+                 prompt: "Turn to page 46")
             ],
          ending: false
     ),
@@ -461,10 +569,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 1,
+                 prompt: "The End")
             ],
-         ending: false
+         ending: true
     ),
     Node(id: 44,
          paragraphs: [
@@ -474,10 +582,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 1,
+                 prompt: "The End")
             ],
-         ending: false
+         ending: true
     ),
     Node(id: 46,
          paragraphs: [
@@ -493,8 +601,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 52,
+                 prompt: "Turn to page 52")
             ],
          ending: false
     ),
@@ -508,8 +616,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 49,
+                 prompt: "Turn to page 49")
             ],
          ending: false
     ),
@@ -525,8 +633,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 1,
+                 prompt: "The End")
             ],
          ending: false
     ),
@@ -546,8 +654,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 51,
+                 prompt: "Turn to next page")
             ],
          ending: false
     ),
@@ -560,8 +668,8 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 54,
+                 prompt: "Turn to page 54")
             ],
          ending: false
     ),
@@ -576,8 +684,11 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 44,
+                 prompt: "If you run and hide behind a tree to watch the action from a safe distance. Turn to page 44"),
+            
+            Edge(destinationId: 47,
+                 prompt: "If you stay on the road to help the soldiers. Turn to page 47")
             ],
          ending: false
     ),
@@ -590,9 +701,12 @@ let nodes = [
          ],
          image: nil,
          edges: [
-         
-            Edge(destinationId: 2,
-                 prompt: "")
+    
+            Edge(destinationId: 60,
+                 prompt: "If you go on a mind-search of the house. Turn to page 60"),
+            
+            Edge(destinationId: 69,
+                 prompt: "If you decide that now is the time to try to escape. Turn to page 69")
             ],
          ending: false
     ),
@@ -603,8 +717,11 @@ let nodes = [
          image: nil,
          edges: [
          
+            Edge(destinationId: 57,
+                 prompt: "If you decide to accept. Turn to page 57"),
+            
             Edge(destinationId: 2,
-                 prompt: "")
+                 prompt: "If you decline respectfully. Turn to page 62")
             ],
          ending: false
     ),
@@ -619,9 +736,9 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 2,
-                 prompt: "")
+            Edge(destinationId: 1,
+                 prompt: "The End")
             ],
-         ending: false
+         ending: true
     ),
- 
+]
