@@ -674,7 +674,6 @@ let nodes = [
                        "You trace the source of the strong energy to the center of the prison structure. There, you find a large lead-covered vault. Your mind cannot penetrate it. Instead you throw a force field around it.",
                        "A wave of anguish comes from the vault. The vault almost seems to be pleading for mercy. You release your force field. As you do, you feel a surge of even greater energy inside of you.",
                        "Suddenly the lead shield falls away to reveal an intricate crystalline structure inside. You recognize it immediately as an alien life form. It communicates with you telepathically in a strange code--which you somehow understand. The alien life form explains its predicament."],
-         ],
          image: nil,
          edges: [
          
