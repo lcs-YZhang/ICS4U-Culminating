@@ -19,6 +19,8 @@ struct NodeView: View {
         return node.image ?? ""
     }
     
+    // Thing
+    
     var page: [String] {
         let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
         var pageText: [String] = []
