@@ -43,7 +43,7 @@ let nodes = [
     Node(id: 2,
 
          paragraphs: [
-            "The phone rings again, and this time you areready. You pick up the receiver before the first ringdies out.",
+            "The phone rings again, and this time you are ready. You pick up the receiver before the first ringdies out.",
             "At the same time, you activate the phonetracker and voice recorder programs running on your laptop and note the time: 2:42.",
             "\"Hello, you say.\"",
             "\"Help,\"",
