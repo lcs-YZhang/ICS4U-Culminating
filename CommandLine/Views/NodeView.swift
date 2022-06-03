@@ -19,6 +19,15 @@ struct NodeView: View {
         return node.image ?? ""
     }
     
+    // Thing
+    
+    var page: [String] {
+        let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
+        var pageText: [String] = []
+        pageText.append(allParagraphs)
+        return pageText
+    }
+    
     var body: some View {
         
         ScrollView {
@@ -31,14 +40,22 @@ struct NodeView: View {
                     .foregroundColor(.white)
                     .retroFont(size: 19.0)
                 
-                // Iterate over all the paragraphs
-                ForEach(node.paragraphs, id: \.self) { currentParagraph in
-                    TypedText(currentParagraph)
+                 // Iterate over all the paragraphs
+//                ForEach(node.paragraphs, id: \.self) { currentParagraph in
+//                    TypedText(currentParagraph)
+//                        .padding()
+//                        .foregroundColor(.white)
+//                        .retroFont(.pixelEmulator)
+//                }
+                
+                ForEach(page, id: \.self) { page in
+                    TypedText(page)
                         .padding()
                         .foregroundColor(.white)
                         .retroFont(.pixelEmulator, size: 18.0)
                 
                 }
+
                 
                 // Show the image, if there is one
                 Image(image)

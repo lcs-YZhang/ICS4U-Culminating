@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "retrotext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/russellgordon/RetroText",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b23714fb5beb4d2331e5b0691b6913a43833f201"
+      }
+    }
+  ],
+  "version" : 2
+}
