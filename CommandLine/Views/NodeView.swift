@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetroText
 
 struct NodeView: View {
     
@@ -16,6 +17,13 @@ struct NodeView: View {
     // MARK: Computed properties
     var image: String {
         return node.image ?? ""
+    }
+    
+    var page: [String] {
+        let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
+        var pageText: [String] = []
+        pageText.append(allParagraphs)
+        return pageText
     }
     
     var body: some View {
@@ -30,13 +38,21 @@ struct NodeView: View {
                     .foregroundColor(.white)
                     .retroFont()
                 
-                // Iterate over all the paragraphs
-                ForEach(node.paragraphs, id: \.self) { currentParagraph in
-                    Text(currentParagraph)
+                 // Iterate over all the paragraphs
+//                ForEach(node.paragraphs, id: \.self) { currentParagraph in
+//                    TypedText(currentParagraph)
+//                        .padding()
+//                        .foregroundColor(.white)
+//                        .retroFont(.pixelEmulator)
+//                }
+                
+                ForEach(page, id: \.self) { page in
+                    TypedText(page)
                         .padding()
                         .foregroundColor(.white)
                         .retroFont(.pixelEmulator)
                 }
+
                 
                 // Show the image, if there is one
                 Image(image)
