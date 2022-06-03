@@ -39,19 +39,20 @@ struct ContentView: View {
             VStack {
                             
                 Text("House")
-                    .font(.system(size: 50))
+                    .font(.largeTitle)
                     .foregroundColor(.black)
                 
                 Text("Of")
-                    .font(.system(size: 40))
+                    .font(.largeTitle)
                     .foregroundColor(.black)
                 
                 Text("Danger")
-                    .font(.system(size: 50))
+                    .font(.largeTitle)
                     .foregroundColor(.black)
                 
                 // Welcome screen
                 Image("HouseOfDanger-1")
+                    .resizable()
                     .scaledToFit()
                     .padding(.bottom)
                     .padding(.trailing)
