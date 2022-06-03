@@ -27,11 +27,15 @@ struct NodeView: View {
                 // Page number
                 Text("\(node.id)")
                     .padding()
+                    .foregroundColor(.white)
+                    .retroFont()
                 
                 // Iterate over all the paragraphs
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
                     Text(currentParagraph)
                         .padding()
+                        .foregroundColor(.white)
+                        .retroFont(.pixelEmulator)
                 }
                 
                 // Show the image, if there is one
@@ -51,12 +55,15 @@ struct NodeView: View {
                                 // Advance to whatever node this prompt is for
                                 activeNode = currentEdge.destinationId
                             }
+                            .foregroundColor(.gray)
+                            .retroFont()
                     }
                 }
                
             }
             
         }
+        .background(Color.black)
         
     }
 }
