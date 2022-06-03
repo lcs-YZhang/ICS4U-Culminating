@@ -35,7 +35,7 @@ struct NodeView: View {
                     Text(currentParagraph)
                         .padding()
                         .foregroundColor(.white)
-                        .retroFont()
+                        .retroFont(.pixelEmulator)
                 }
                 
                 // Show the image, if there is one
