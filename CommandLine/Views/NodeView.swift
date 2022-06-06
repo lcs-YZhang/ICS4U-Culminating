@@ -51,6 +51,7 @@ struct NodeView: View {
                         .padding()
                         .foregroundColor(.white)
                         .retroFont(.pixelEmulator, size: 18.0)
+                        
                 
                 }
 
