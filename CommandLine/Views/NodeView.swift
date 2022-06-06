@@ -36,7 +36,7 @@ struct NodeView: View {
                 Text("\(node.id)")
                     .padding()
                     .foregroundColor(.white)
-                    .retroFont()
+                    .retroFont(size: 19.0)
                 
                  // Iterate over all the paragraphs
 //                ForEach(node.paragraphs, id: \.self) { currentParagraph in
@@ -50,7 +50,8 @@ struct NodeView: View {
                     TypedText(page)
                         .padding()
                         .foregroundColor(.white)
-                        .retroFont(.pixelEmulator)
+                        .retroFont(.pixelEmulator, size: 18.0)
+                
                 }
 
                 
@@ -62,8 +63,6 @@ struct NodeView: View {
                 // Show choices, when they exist
                 ForEach(node.edges, id: \.self) { currentEdge in
                     HStack {
-                        Spacer()
-                        
                         Text(currentEdge.prompt)
                             .padding()
                             .multilineTextAlignment(.trailing)
@@ -72,7 +71,7 @@ struct NodeView: View {
                                 activeNode = currentEdge.destinationId
                             }
                             .foregroundColor(.gray)
-                            .retroFont()
+                            .retroFont(size: 18.0)
                     }
                 }
                
@@ -80,7 +79,13 @@ struct NodeView: View {
             
         }
         .background(Color.black)
-        
+//        if nodes[activeNode].ending == false {
+//            .background(Color.black)
+//
+//        } else {
+//            .background(Color.red)
+//        }
+//
     }
 }
 

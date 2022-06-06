@@ -10,8 +10,6 @@
 		0F2CA1AF283E6AA70089586D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1AE283E6AA70089586D /* main.swift */; };
 		0F2CA1B9283E6EBE0089586D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
 		0F4C095E2847ABF70040B992 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C095D2847ABF70040B992 /* NodeView.swift */; };
-		0F8CAF18284A3E1E00BE56B6 /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8CAF17284A3E1E00BE56B6 /* RetroText */; };
-		0F8CAF1B284A3EFC00BE56B6 /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8CAF1A284A3EFC00BE56B6 /* RetroText */; };
 		0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C862845263B00FAE19E /* iOSApp.swift */; };
 		0FE25C892845263B00FAE19E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C882845263B00FAE19E /* ContentView.swift */; };
 		0FE25C8B2845263C00FAE19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8A2845263C00FAE19E /* Assets.xcassets */; };
@@ -49,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8CAF18284A3E1E00BE56B6 /* RetroText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8CAF1B284A3EFC00BE56B6 /* RetroText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +166,6 @@
 			);
 			name = CommandLine;
 			packageProductDependencies = (
-				0F8CAF17284A3E1E00BE56B6 /* RetroText */,
 			);
 			productName = "ICS4U-Culminating";
 			productReference = 0F2CA1AB283E6AA70089586D /* CommandLine */;
@@ -190,7 +185,6 @@
 			);
 			name = iOS;
 			packageProductDependencies = (
-				0F8CAF1A284A3EFC00BE56B6 /* RetroText */,
 			);
 			productName = "ICS4U-CYOA";
 			productReference = 0FE25C842845263B00FAE19E /* iOS.app */;
@@ -224,7 +218,6 @@
 			);
 			mainGroup = 0F2CA1A2283E6AA70089586D;
 			packageReferences = (
-				0F8CAF16284A3E1E00BE56B6 /* XCRemoteSwiftPackageReference "RetroText" */,
 			);
 			productRefGroup = 0F2CA1AC283E6AA70089586D /* Products */;
 			projectDirPath = "";
@@ -389,7 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -400,7 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -415,7 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -446,7 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -501,30 +494,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0F8CAF16284A3E1E00BE56B6 /* XCRemoteSwiftPackageReference "RetroText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/russellgordon/RetroText";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0F8CAF17284A3E1E00BE56B6 /* RetroText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0F8CAF16284A3E1E00BE56B6 /* XCRemoteSwiftPackageReference "RetroText" */;
-			productName = RetroText;
-		};
-		0F8CAF1A284A3EFC00BE56B6 /* RetroText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0F8CAF16284A3E1E00BE56B6 /* XCRemoteSwiftPackageReference "RetroText" */;
-			productName = RetroText;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F2CA1A3283E6AA70089586D /* Project object */;
 }

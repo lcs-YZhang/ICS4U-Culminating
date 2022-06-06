@@ -40,15 +40,15 @@ struct ContentView: View {
                             
                 Text("House")
                     .font(.largeTitle)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 
                 Text("Of")
                     .font(.largeTitle)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 
                 Text("Danger")
                     .font(.largeTitle)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 
                 // Welcome screen
                 Image("HouseOfDanger-1")
@@ -60,6 +60,7 @@ struct ContentView: View {
                         startGame()
                     }
             }
+            .background(Color.black)
             
         } else {
             
