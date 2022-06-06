@@ -7,18 +7,57 @@
 
 import Foundation
 
+enum EndingClassification: String, CaseIterable {
+    case great = "Great"
+    case favorable = "Favorable"
+    case mediocre = "Mediocre"
+    case disappointing = "Disappointing"
+    case catastrophic = "Catastrophic"
+}
+
+struct Ending {
+    let classification: EndingClassification
+    let description: String
+    var color: String {
+        switch self.classification {
+        case .great:
+            return "#90C8E0"  // Light blue
+        case .favorable:
+            return "#FFDE5F"  // Pale yellow
+        case .mediocre:
+            return "#D7883C"  // Orange
+        case .disappointing:
+            return "#C1531E"  // Deep orange
+        case .catastrophic:
+            return "#AB1800"  // Deep red
+        }
+    }
+}
+
+struct StoryInformation {
+    let title: String
+    let authorOrAuthors: String
+    let seriesInfo: String
+    let publisherInfo: String
+}
+
 struct Node: Identifiable {
     let id: Int                  //The node id (e.g.: 1, 2, 3, etc)
     let paragraphs: [String]     //Models Paragraphs on a page of the book
     let image: String?           //name of image from assests oflder if one exists
     let edges: [Edge]           //a list of id's of the nodes this node is connected to
-    let ending: Bool
+    let ending: Ending?
 }
 
 struct Edge: Hashable {
     let destinationId: Int
     let prompt: String
 }
+
+let storyInfo = StoryInformation(title: "House of Horrors",
+                                 authorOrAuthors: "R.A. Montgomery",
+                                 seriesInfo: "CHOOSE YOUR OWN ADVENTURE #",
+                                 publisherInfo: "Chooseco LLC, Waitsfield, Vermont, 2006")
 
 let emptyNode = Node(id: 0, paragraphs: [""], image: nil, edges: [Edge(destinationId: 0, prompt: "")], ending: false)
 
@@ -38,7 +77,7 @@ let nodes = [
             Edge(destinationId: 2,
                  prompt: "Turn to the next page")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 2,
 
@@ -57,7 +96,7 @@ let nodes = [
                  prompt: "Turn to page 6")
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 3,
          paragraphs: [
@@ -72,7 +111,7 @@ let nodes = [
             
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 4,
          paragraphs: [
@@ -94,7 +133,7 @@ let nodes = [
             Edge(destinationId: 9, prompt: "Turn to page 9")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 6,
          paragraphs: [
@@ -116,7 +155,7 @@ let nodes = [
                  prompt: "Turn to the next page")
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 7,
          paragraphs: [
@@ -136,7 +175,7 @@ let nodes = [
                  prompt: "If you decide to give Ricardo and Lisa a chance to call back. Yurn to page 13."),
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 9,
          paragraphs: [
@@ -152,7 +191,7 @@ let nodes = [
             Edge(destinationId: 29, prompt: "If you make a hasty retreat to your car. Turn to page 29"),
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 10,
          paragraphs: [
@@ -169,7 +208,7 @@ let nodes = [
             Edge(destinationId: 63, prompt: "If you decide to call the ploice and report a possible murder. Turn to page 63"),
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 11,
          paragraphs: [
@@ -182,7 +221,7 @@ let nodes = [
             Edge(destinationId: 16, prompt: "Turn to page 16")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 12,
          paragraphs: [
@@ -197,7 +236,7 @@ let nodes = [
             Edge(destinationId: 24, prompt: "Turn to page 24")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 13,
          paragraphs: [
@@ -211,7 +250,7 @@ let nodes = [
             Edge(destinationId: 26,
                  prompt: "Turn to page 26")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 14,
          paragraphs: [
@@ -224,7 +263,7 @@ let nodes = [
             Edge(destinationId: 12, prompt: "Turn to page 12")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 15,
          paragraphs: [
@@ -241,7 +280,7 @@ let nodes = [
             Edge(destinationId: 19, prompt: "Turn to page 19")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 16,
          paragraphs: [
@@ -254,7 +293,7 @@ let nodes = [
             Edge(destinationId: 1, prompt: "The End")
             
             ],
-         ending: true
+         ending: Ending(classification: .favorable, description: "")
     ),
     Node(id: 18,
          paragraphs: [
@@ -270,7 +309,7 @@ let nodes = [
             Edge(destinationId: 34, prompt: "If you decide that this is too dangerous to try right now. Turn to page 34"),
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 19,
          paragraphs: [
@@ -286,7 +325,7 @@ let nodes = [
             Edge(destinationId: 28, prompt: "Turn to gage 28")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 21,
          paragraphs: [
