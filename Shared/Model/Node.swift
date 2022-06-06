@@ -290,7 +290,7 @@ let nodes = [
          image: nil,
          edges: [
             
-            Edge(destinationId: 1, prompt: "The End")
+            Edge(destinationId: 0, prompt: "The End")
             
             ],
          ending: Ending(classification: .favorable, description: "")
@@ -379,7 +379,7 @@ let nodes = [
             Edge(destinationId: 11, prompt: "Turn to page 11")
             
             ],
-         ending: true
+         ending: false
     ),
     Node(id: 26,
          paragraphs: [
@@ -494,7 +494,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1, prompt: "The End")
+            Edge(destinationId: 0, prompt: "The End")
          
             ],
          ending: true
@@ -619,7 +619,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The End")
             ],
          ending: true
@@ -632,7 +632,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The End")
             ],
          ending: true
@@ -683,10 +683,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The End")
             ],
-         ending: false
+         ending: true
     ),
     Node(id: 50,
          paragraphs: [
@@ -785,7 +785,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -818,7 +818,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -847,7 +847,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -940,7 +940,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1002,7 +1002,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1094,7 +1094,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1119,7 +1119,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1200,7 +1200,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1271,7 +1271,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1338,7 +1338,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1392,7 +1392,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1407,7 +1407,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
@@ -1426,7 +1426,7 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
          ending: true
