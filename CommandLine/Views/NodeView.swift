@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RetroText
 
 struct NodeView: View {
     
@@ -18,6 +19,13 @@ struct NodeView: View {
         return node.image ?? ""
     }
     
+    var page: [String] {
+        let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
+        var pageText: [String] = []
+        pageText.append(allParagraphs)
+        return pageText
+    }
+    
     var body: some View {
         
         ScrollView {
@@ -27,12 +35,26 @@ struct NodeView: View {
                 // Page number
                 Text("\(node.id)")
                     .padding()
+                    .foregroundColor(.white)
+                    .retroFont(size: 19.0)
                 
-                // Iterate over all the paragraphs
-                ForEach(node.paragraphs, id: \.self) { currentParagraph in
-                    Text(currentParagraph)
+                 // Iterate over all the paragraphs
+//                ForEach(node.paragraphs, id: \.self) { currentParagraph in
+//                    TypedText(currentParagraph)
+//                        .padding()
+//                        .foregroundColor(.white)
+//                        .retroFont(.pixelEmulator)
+//                }
+                
+                ForEach(page, id: \.self) { page in
+                    TypedText(page)
                         .padding()
+                        .foregroundColor(.white)
+                        .retroFont(.pixelEmulator, size: 18.0)
+                        
+                
                 }
+
                 
                 // Show the image, if there is one
                 Image(image)
@@ -42,8 +64,6 @@ struct NodeView: View {
                 // Show choices, when they exist
                 ForEach(node.edges, id: \.self) { currentEdge in
                     HStack {
-                        Spacer()
-                        
                         Text(currentEdge.prompt)
                             .padding()
                             .multilineTextAlignment(.trailing)
@@ -51,13 +71,22 @@ struct NodeView: View {
                                 // Advance to whatever node this prompt is for
                                 activeNode = currentEdge.destinationId
                             }
+                            .foregroundColor(.gray)
+                            .retroFont(size: 18.0)
                     }
                 }
                
             }
             
         }
-        
+        .background(Color.black)
+//        if nodes[activeNode].ending == false {
+//            .background(Color.black)
+//
+//        } else {
+//            .background(Color.red)
+//        }
+//
     }
 }
 

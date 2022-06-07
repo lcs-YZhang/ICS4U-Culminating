@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import RetroText
 
 @main
 struct iOSApp: App {
+    
+    init() {
+            RetroText.registerFonts()
+        }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

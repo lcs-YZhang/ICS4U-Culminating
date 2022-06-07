@@ -33,14 +33,34 @@ struct ContentView: View {
     
     // User interface
     var body: some View {
-        
+                
         if gameIsOn == false {
             
-            // Welcome screen
-            Text("Welcome!")
-                .onTapGesture {
-                    startGame()
-                }
+            VStack {
+                            
+                Text("House")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Text("Of")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Text("Danger")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                // Welcome screen
+                Image("HouseOfDanger-1")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.bottom)
+                    .padding(.trailing)
+                    .onTapGesture {
+                        startGame()
+                    }
+            }
+            .background(Color.black)
             
         } else {
             

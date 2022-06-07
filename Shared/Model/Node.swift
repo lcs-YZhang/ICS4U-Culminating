@@ -7,12 +7,46 @@
 
 import Foundation
 
+enum EndingClassification: String, CaseIterable {
+    case great = "Great"
+    case favourable = "Favourable"
+    case mediocre = "Mediocre"
+    case disappointing = "Disappointing"
+    case catastrophic = "Catastrophic"
+}
+
+struct Ending {
+    let classification: EndingClassification
+    let description: String
+    var color: String {
+        switch self.classification {
+        case .great:
+            return "#90C8E0"  // Light blue
+        case .favourable:
+            return "#FFDE5F"  // Pale yellow
+        case .mediocre:
+            return "#D7883C"  // Orange
+        case .disappointing:
+            return "#C1531E"  // Deep orange
+        case .catastrophic:
+            return "#AB1800"  // Deep red
+        }
+    }
+}
+
+struct StoryInformation {
+    let title: String
+    let authorOrAuthors: String
+    let seriesInfo: String
+    let publisherInfo: String
+}
+
 struct Node: Identifiable {
     let id: Int                  //The node id (e.g.: 1, 2, 3, etc)
     let paragraphs: [String]     //Models Paragraphs on a page of the book
     let image: String?           //name of image from assests oflder if one exists
     let edges: [Edge]           //a list of id's of the nodes this node is connected to
-    let ending: Bool
+    let ending: Ending?
 }
 
 struct Edge: Hashable {
@@ -20,7 +54,12 @@ struct Edge: Hashable {
     let prompt: String
 }
 
-let emptyNode = Node(id: 0, paragraphs: [""], image: nil, edges: [Edge(destinationId: 0, prompt: "")], ending: false)
+let storyInfo = StoryInformation(title: "House of Horrors",
+                                 authorOrAuthors: "R.A. Montgomery",
+                                 seriesInfo: "CHOOSE YOUR OWN ADVENTURE #",
+                                 publisherInfo: "Chooseco LLC, Waitsfield, Vermont, 2006")
+
+let emptyNode = Node(id: 0, paragraphs: [""], image: nil, edges: [Edge(destinationId: 0, prompt: "")], ending: nil)
 
 let nodes = [
 
@@ -38,12 +77,12 @@ let nodes = [
             Edge(destinationId: 2,
                  prompt: "Turn to the next page")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 2,
 
          paragraphs: [
-            "The phone rings again, and this time you areready. You pick up the receiver before the first ringdies out.",
+            "The phone rings again, and this time you are ready. You pick up the receiver before the first ringdies out.",
             "At the same time, you activate the phonetracker and voice recorder programs running on your laptop and note the time: 2:42.",
             "\"Hello, you say.\"",
             "\"Help,\"",
@@ -57,7 +96,7 @@ let nodes = [
                  prompt: "Turn to page 6")
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 3,
          paragraphs: [
@@ -72,7 +111,7 @@ let nodes = [
             
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 4,
          paragraphs: [
@@ -94,7 +133,7 @@ let nodes = [
             Edge(destinationId: 9, prompt: "Turn to page 9")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 6,
          paragraphs: [
@@ -116,7 +155,7 @@ let nodes = [
                  prompt: "Turn to the next page")
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 7,
          paragraphs: [
@@ -136,7 +175,7 @@ let nodes = [
                  prompt: "If you decide to give Ricardo and Lisa a chance to call back. Yurn to page 13."),
 
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 9,
          paragraphs: [
@@ -152,7 +191,7 @@ let nodes = [
             Edge(destinationId: 29, prompt: "If you make a hasty retreat to your car. Turn to page 29"),
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 10,
          paragraphs: [
@@ -169,7 +208,7 @@ let nodes = [
             Edge(destinationId: 63, prompt: "If you decide to call the ploice and report a possible murder. Turn to page 63"),
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 11,
          paragraphs: [
@@ -182,7 +221,7 @@ let nodes = [
             Edge(destinationId: 16, prompt: "Turn to page 16")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 12,
          paragraphs: [
@@ -197,7 +236,7 @@ let nodes = [
             Edge(destinationId: 24, prompt: "Turn to page 24")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 13,
          paragraphs: [
@@ -211,7 +250,7 @@ let nodes = [
             Edge(destinationId: 26,
                  prompt: "Turn to page 26")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 14,
          paragraphs: [
@@ -224,7 +263,7 @@ let nodes = [
             Edge(destinationId: 12, prompt: "Turn to page 12")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 15,
          paragraphs: [
@@ -241,7 +280,7 @@ let nodes = [
             Edge(destinationId: 19, prompt: "Turn to page 19")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 16,
          paragraphs: [
@@ -251,10 +290,10 @@ let nodes = [
          image: nil,
          edges: [
             
-            Edge(destinationId: 1, prompt: "The End")
+            Edge(destinationId: 0, prompt: "The End")
             
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 18,
          paragraphs: [
@@ -270,7 +309,7 @@ let nodes = [
             Edge(destinationId: 34, prompt: "If you decide that this is too dangerous to try right now. Turn to page 34"),
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 19,
          paragraphs: [
@@ -286,7 +325,7 @@ let nodes = [
             Edge(destinationId: 28, prompt: "Turn to gage 28")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 21,
          paragraphs: [
@@ -301,7 +340,7 @@ let nodes = [
             Edge(destinationId: 22, prompt: "Turn to the next page")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 22,
          paragraphs: [
@@ -315,7 +354,7 @@ let nodes = [
             Edge(destinationId: 23, prompt: "Turn to the next page")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 23,
          paragraphs: [
@@ -327,7 +366,7 @@ let nodes = [
             Edge(destinationId: 1, prompt: "The End")
             
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 24,
          paragraphs: [
@@ -340,7 +379,7 @@ let nodes = [
             Edge(destinationId: 11, prompt: "Turn to page 11")
             
             ],
-         ending: true
+         ending: nil
     ),
     Node(id: 26,
          paragraphs: [
@@ -354,7 +393,7 @@ let nodes = [
             Edge(destinationId: 27,
                  prompt: "Turn to the next page")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 27,
          paragraphs: [
@@ -380,7 +419,7 @@ let nodes = [
             Edge(destinationId: 87,
                  prompt: "If you decide togo to the police with your story. Turn to page 87")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 28,
          paragraphs: [
@@ -397,7 +436,7 @@ let nodes = [
             Edge(destinationId: 41,
                  prompt: "If you sence a trap, and find a reason for leaving. Turn too page 41")
             ],
-         ending: false
+         ending: nil
   ),
     Node(id: 29,
          paragraphs: [
@@ -410,7 +449,7 @@ let nodes = [
             Edge(destinationId: 18,
                  prompt: "Turn to page 18")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 31,
          paragraphs: [
@@ -424,7 +463,7 @@ let nodes = [
             Edge(destinationId: 40,
                  prompt: "Turn to page 40")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 32,
          paragraphs: [
@@ -444,7 +483,7 @@ let nodes = [
             Edge(destinationId: 59,
                  prompt: "Turn to gage 59")
             ],
-         ending: false
+         ending: nil
     ),
     
     Node(id: 33,
@@ -455,10 +494,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1, prompt: "The End")
+            Edge(destinationId: 0, prompt: "The End")
          
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     
     Node(id: 34,
@@ -475,7 +514,7 @@ let nodes = [
             Edge(destinationId: 36,
                  prompt: "Turn to the next page")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 36,
          paragraphs: [
@@ -494,7 +533,7 @@ let nodes = [
             Edge(destinationId: 70,
                  prompt: "Turn to page 70")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 37,
          paragraphs: [
@@ -512,7 +551,7 @@ let nodes = [
             Edge(destinationId: 50,
                  prompt: "If you decide to retreat back through the tunnel and have the professor explain how to use the power on the way. Turn to page 50"),
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 38,
          paragraphs: [
@@ -530,7 +569,7 @@ let nodes = [
             Edge(destinationId: 1,
                  prompt: "The End")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 40,
          paragraphs: [
@@ -544,7 +583,7 @@ let nodes = [
             Edge(destinationId: 38,
                  prompt: "turn to page 38")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 41,
          paragraphs: [
@@ -564,7 +603,7 @@ let nodes = [
             Edge(destinationId: 46,
                  prompt: "Turn to page 46")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 43,
          paragraphs: [
@@ -580,10 +619,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The End")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 44,
          paragraphs: [
@@ -593,10 +632,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The End")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 46,
          paragraphs: [
@@ -615,7 +654,7 @@ let nodes = [
             Edge(destinationId: 52,
                  prompt: "Turn to page 52")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 47,
          paragraphs: [
@@ -630,7 +669,7 @@ let nodes = [
             Edge(destinationId: 49,
                  prompt: "Turn to page 49")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 49,
          paragraphs: ["The firelighters are ready with their steam-drivenwater pump, spraying water into the open mouth the front gate. Soon the fire has died downenough for you and the soldiers to start carryingout the more badly burned prisoners on stretchers.",
@@ -644,10 +683,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The End")
             ],
-         ending: false
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 50,
          paragraphs: [
@@ -668,7 +707,7 @@ let nodes = [
             Edge(destinationId: 51,
                  prompt: "Turn to next page")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 51,
          paragraphs: [
@@ -682,7 +721,7 @@ let nodes = [
             Edge(destinationId: 54,
                  prompt: "Turn to page 54")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 52,
          paragraphs: [
@@ -701,7 +740,7 @@ let nodes = [
             Edge(destinationId: 47,
                  prompt: "If you stay on the road to help the soldiers. Turn to page 47")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 54,
          paragraphs: [
@@ -719,7 +758,7 @@ let nodes = [
             Edge(destinationId: 69,
                  prompt: "If you decide that now is the time to try to escape. Turn to page 69")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 55,
          paragraphs: [
@@ -734,7 +773,7 @@ let nodes = [
             Edge(destinationId: 2,
                  prompt: "If you decline respectfully. Turn to page 62")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 57,
          paragraphs: ["\"I will go to your planet, you say, \"as long as my friend, the professor, can go, too.",
@@ -746,10 +785,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 58,
          paragraphs: ["The crashing stones so startle the single guard that you have no trouble giving him shot of knockout-gas full in the face. The guard drops to the floor with a thud. You run across the room and slam the door. Fortunately, it locks from the inside. Just to make sure it stays shut, you push a heavy piece of lab equipment in front of it.",
@@ -766,7 +805,7 @@ let nodes = [
             Edge(destinationId: 43,
                  prompt: "If you feel that the chamber is too dangerous and try to escape another way, turn to page 43.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 59,
          paragraphs: ["The chimpanzee is still unconscious when the zoo workers come and take him off in a big cage.",
@@ -779,10 +818,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 60,
          paragraphs: ["\"For a mind-search, \" says the professor. project your consciousness itself, the same way you projected your concentrated enerey against the Force field. Have your mind leave your body. It will return if your body is threatened.",
@@ -797,7 +836,7 @@ let nodes = [
             Edge(destinationId: 1,
                  prompt: "The End")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 62,
          paragraphs: ["\"I would love to visit your world you say, T have too many things to finish on this one night now. \"",
@@ -808,10 +847,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 63,
          paragraphs: ["You decide you'd better call the police. This could be too much to handle alone.",
@@ -830,7 +869,7 @@ let nodes = [
             Edge(destinationId: 77,
                  prompt: "If you can't resist the temptation to go back for another look, turn to page 77.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 64,
          paragraphs: ["While vou wait, you try Ricardo and Lisa again Yes! They're home. You explain the situation And you give your location, and soon they arrive on their bicycles. The three of you sit in your ge discussing the case.",
@@ -849,7 +888,7 @@ let nodes = [
             Edge(destinationId: 79,
                  prompt: "If you let Ricardo and Lisa talk you into going up to the house, turn to page 79.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 65,
          paragraphs: ["\"We have to wait for the sergeant, \" you say. \"But I think we can get a glimpse of the house from a little way up the road, and still see the squad car when he arrives.\"",
@@ -863,7 +902,7 @@ let nodes = [
             Edge(destinationId: 67,
                  prompt: "Turn to page 67")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 67,
          paragraphs: ["You are still groggy with the kind of grogginess that you had from the anesthesia when vou had your tooth pulled. You smell a strange aroma. It could be rotting flowers. Roses? Marigolds?",
@@ -875,7 +914,7 @@ let nodes = [
             Edge(destinationId: 68,
                  prompt: "Turn to page 68")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
 
     Node(id: 68,
@@ -891,7 +930,7 @@ let nodes = [
             Edge(destinationId: 97,
                  prompt: "If you think it would be best to go in search of help, turn to page 97.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 69,
          paragraphs: ["You turn your mental powers against the door of the cell. You stand straight but not rigid, and focus your psychic energy on the locking mechanism, You feel the energy flowing from you. Harder now. concentrate! Your mind traces the intricate locking sequence. There! It's open.",
@@ -901,10 +940,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 70,
          paragraphs: ["\"My name is Marsden, Professor Marsden. I was using the chimpanzees in my experiments to create superhumans. Instead I created superchimps.",
@@ -921,7 +960,7 @@ let nodes = [
             Edge(destinationId: 58,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 72,
          paragraphs: ["You take your penknife out of your pocket. Maybe the blade is small enough… Yes! You're able to slide it into the mechanism. You feel the tumbler turn. In no time at all, you have the shackles off the man's feet. Then you shake him gently by the shoulders. He pulls away and cowers against the wall.",
@@ -940,7 +979,7 @@ let nodes = [
             Edge(destinationId: 75,
                  prompt: "If you decide that you must escape immediately with the old man, turn to page 75.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 73,
          paragraphs: ["\"You'd better stay here until I can take a careful look around. you say. \"I want to find out what we're up against.",
@@ -953,7 +992,7 @@ let nodes = [
             Edge(destinationId: 74,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 74,
          paragraphs: ["\"Thank goodness you're there,\" someone says. It is the voice of Sergeant Morrison. He shouts back behind him, \"Lisa, Ricardo, come quick! I've found our missing detective. \"",
@@ -963,10 +1002,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 75,
          paragraphs: ["\"Let's get out of here. Come on, follow me, you say to the old man.",
@@ -983,7 +1022,7 @@ let nodes = [
             Edge(destinationId: 81,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 77,
          paragraphs: ["You're too tense to wait for Sergeant Morrison. You leave a note on your windshield for him and go back to the fence around the house. You creep along the outside of the fence. After a few hundred feet, the fence leads into dense woods. Not far into the woods, you come to another gate- a small one in the fence. An overgrown road leads to the estate through this gate. You are trying to decide if you should follow the road in when a man with a broad scar across his face steps from behind a tree. He's wearing an old-fashioned prison uniform, but the laser pistol he has in his hand certainly looks modern enough.",
@@ -995,7 +1034,7 @@ let nodes = [
             Edge(destinationId: 78,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 78,
          paragraphs: ["As the two of you approach the house, the back door opens automatically. Inside there is a long corridor. As you walk down it, your footsteps are muted by the thick green carpeting on the floor The corridor seems endless, but finally, you come to a large steel door. You and the man behind you stop.",
@@ -1009,7 +1048,7 @@ let nodes = [
             Edge(destinationId: 80,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 79,
          paragraphs: ["The three of you walk up the road to a spot along the fence where you have a clear view of the house.",
@@ -1027,7 +1066,7 @@ let nodes = [
             Edge(destinationId: 84,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 80,
          paragraphs: ["A group of men and women sit at an oval table. In front of each person is a glass of water, a pad of paper, and a pen. They are well-dressed and all seem to be about 50 to 60 years old. The scene looks for all the world like a typical business meeting of any large corporation. They all turn to look as you enter. They look serious, but not really hostile.",
@@ -1042,7 +1081,7 @@ let nodes = [
             Edge(destinationId: 82,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 81,
          paragraphs: ["The door leads to a hallwau filled with dazzling white light. You enter the hallway with the old man following you. You turn to look at him for a second. He seems to be getting younger by the minute. His hair is now dark. He looks a lot like your father. Wait! It is your father. He is saying \"Wake up.. wake up...",
@@ -1055,10 +1094,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 82,
          paragraphs: ["\"We are the international Planning Group, a privale organization made up of representatives from different parts of the world. We are dedicated to there conservation and the peaceful developmen of natural resources everywhere.",
@@ -1070,7 +1109,7 @@ let nodes = [
             Edge(destinationId: 83,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 83,
          paragraphs: ["All the faces in the room are looking at you and smiling.",
@@ -1080,10 +1119,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 84,
          paragraphs: ["As the chimpanzees get closer, it becomes clear that they are trying to back you up against the basement door. You have no choice but to open the door and go in. It is pitch-black inside. You feel along the side of the door and find a light switch. You flip it.",
@@ -1096,7 +1135,7 @@ let nodes = [
             Edge(destinationId: 85,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 85,
          paragraphs: ["\"Ah, my inquisitive friends, examining our plans, he says. I see you are \"Go ahead, be my guests. Look all you want. It does not matter. Our plans are already in motion.\"",
@@ -1112,7 +1151,7 @@ let nodes = [
             Edge(destinationId: 88,
                  prompt: "If you refuse, turn to page 88.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 86,
          paragraphs: ["You figure the best thing to do is to humor this creature. And you have to admit, you are curious. Where did he come from?",
@@ -1123,7 +1162,7 @@ let nodes = [
             Edge(destinationId: 94,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 87,
          paragraphs: ["The three of you jump into your car and drive down to the Hedge Brook police station. Your old friend Sergeant Morrison is glad to see you and meet your friends. You tell the sergeant about the phone call and about the information in the history book.",
@@ -1147,7 +1186,7 @@ let nodes = [
             Edge(destinationId: 90,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 88,
          paragraphs: ["\"No, thanks, you say. \"We're not interested.\"",
@@ -1161,10 +1200,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 90,
          paragraphs: ["Detective Murphy sits back in his chair and takes a few puffs on his pipe. For a moment, he looks deep in thought.",
@@ -1179,7 +1218,7 @@ let nodes = [
             Edge(destinationId: 91,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 91,
          paragraphs: ["You park the car across the road and sit watching the house for an hour or so. All the windows of the house are closed, and all of the curtains are drawn. The front door looks partly open, though.",
@@ -1193,7 +1232,7 @@ let nodes = [
             Edge(destinationId: 92,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 92,
          paragraphs: ["The three of you reach the front door. It is slightly ajar and opens with a light touch. You peer inside. No furniture. Nothing. No sign of life.",
@@ -1208,7 +1247,7 @@ let nodes = [
             Edge(destinationId: 99,
                  prompt: "If you decide to search the rest of the house, turn to page 99.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 93,
          paragraphs: ["You push against the door. No good. You take out your penknife and probe inside the keynole-te feel out the mechanism. A little leverage, and the humbler turns. You try the doorknob, and the door pulls open.",
@@ -1223,7 +1262,7 @@ let nodes = [
             Edge(destinationId: 102,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 94,
          paragraphs: ["As he is talking, the man walks over and opens the outside door. He beckons to you to go out. As you step out, you realize that you are in big trouble. The sky is almost covered by an enormous space vehicle. It is bright gold in color and it hovers overhead with a low humming sound.",
@@ -1232,10 +1271,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 96,
          paragraphs: ["\"You can be anyone, anyone in history the figure says. \"All you have to do is choose.",
@@ -1251,7 +1290,7 @@ let nodes = [
             Edge(destinationId: 101,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 97,
          paragraphs: ["You feel that it is important to help the old man, but you must also find out if Ricardo and Lisa are all right. The last thing you remember is that the three of you were having a picnic under a tree. If you can get out of this place and contact Sergeant Morrison, you can come back and rescue the old man.",
@@ -1263,7 +1302,7 @@ let nodes = [
             Edge(destinationId: 33,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 99,
          paragraphs: ["You run down the dimly lit hallway and come to a large windowless room. Darn! Why doesn't this place have any windows? You saw enough of them from the outside. There is a deep alcove set in the wall on one side of the room. A light in the alcove flicks on, revealing the figure of a man. You can see only his head and face, which are horribly burned The rest of the figure is shrouded in a dark cape.",
@@ -1274,7 +1313,7 @@ let nodes = [
             Edge(destinationId: 100,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 100,
          paragraphs: ["You do as he says and two figures materialize- one is a baby, the other is an old man. You can't tell if they are real people, or images made of light. Every few seconds they flicker and twist.",
@@ -1291,7 +1330,7 @@ let nodes = [
             Edge(destinationId: 105,
                  prompt: "If you choose old age, turn to page 105.")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 101,
          paragraphs: ["But once the wish is formed, the process begins. No! You want to take it back. You don't really want to be Genghis Khan.",
@@ -1299,10 +1338,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 102,
          paragraphs: ["\"I need your help. My spirit is condemned to haunt this godforsaken prison until my soul is released. You can help me.",
@@ -1314,7 +1353,7 @@ let nodes = [
             Edge(destinationId: 103,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 103,
          paragraphs: ["\"Now hold on a moment. \" you say. \"First I need some facts to go on before I forgive anyone. I read the history book account. It says you were the warden of this place.\"",
@@ -1331,7 +1370,7 @@ let nodes = [
             Edge(destinationId: 106,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 104,
          paragraphs: ["A baby again. For some period of time-it -it could be minutes, it could be years, babies don't understand time--you just enjoy the sensation of amplified sound and wonder. You see the world through new eyes. You cannot understand what the giant people are saying. You try to stand. Oops! You fall down. The floor is so hard. How helpless you feel. You struggle with your first words.",
@@ -1344,7 +1383,7 @@ let nodes = [
             Edge(destinationId: 105,
                  prompt: "")
             ],
-         ending: false
+         ending: nil
     ),
     Node(id: 105,
          paragraphs: ["Why did you choose old age? Curiosity, you quess. At least you know you'll live a long, long time. You see that you have cracked and very wrinkled hands. Your body trembles slightly. Your eyesight seems good, but you can't hear very well. You search your mind for memories of the years since you were a teenager. Funny, you can't seem to remember anything. They have all faded away.","You are so tired. You will just sleep for a while. Thinking takes so much energy.",
@@ -1353,10 +1392,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 106,
          paragraphs: ["There is a blinding flash of light. You shade your eyes from it.",
@@ -1368,10 +1407,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     ),
     Node(id: 108,
          paragraphs: ["You remember that Ricardo and Lisa are waiting outside. You callthem on your radio.",
@@ -1387,10 +1426,10 @@ let nodes = [
          image: nil,
          edges: [
          
-            Edge(destinationId: 1,
+            Edge(destinationId: 0,
                  prompt: "The END")
             ],
-         ending: true
+         ending: Ending(classification: .favourable, description: "")
     )
  ]
 
