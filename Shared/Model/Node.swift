@@ -295,7 +295,9 @@ let nodes = [
             
 
             ],
+
          ending: Ending(classification: .favourable, description: "Newspaper report")
+
     ),
     Node(id: 18,
 
@@ -368,10 +370,12 @@ let nodes = [
             
             Edge(destinationId: 1, prompt: "The End")
             
+
          ],
          ending: nil
         ),
     24 : Node (id: 24,
+               
          paragraphs: [
             "Just then a long blacklimousine drives up to thegatehouse. Two tough-looking men get out andwalk toward the house.When they are almostthere, the chimps appear.The men just ignore themand go into the house.Then the chimps vanishagain into thin air.",
             "That's it! The chimpsare not real. 1hey mustbe filmed and projectedholograms-three-dimensional picturesmade with laser lightprogrammed to turnon and off wheneversomeone approachesthe house.Minutes later, thetwo men leave, carryingseveral small packages.",
