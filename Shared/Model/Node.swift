@@ -293,10 +293,12 @@ let nodes = [
             
             Edge(destinationId: 0, prompt: "The End")
             
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    18 : Node (id: 18,
+
+            ],
+         ending: Ending(classification: .favourable, description: "Newspaper report")
+    ),
+    Node(id: 18,
+
          paragraphs: [
             "You have no choice but to do as he says. Youturn right at the corner. Then, as directed by thevoice, you drive another 200 feet and turn again,this time onto an unfamiliar dirt road that leads intoa heavily wooded area.",
             "\"Stop here,\" the voice orders. There is now abeeping sound in the back seat. You realize thatthe gun is away from your neck. The figure in theback seat is apparently fiddling with some sort ofelectronic device. While his attention is away fromyou for a few moments, you slip your hand quicklyand silently up under the dashboard of the car.",
@@ -475,8 +477,6 @@ let nodes = [
             "The officer and his assistant look at each otheras if to say,\"We've got a live one here.\" However,they come out to the car with you.",
             "\"This is a chimpanzee, all right,\" says the officer.\"Certainly is a big one. Not doing much talking atthe moment, though.\"",
             "You search around in the back seat next to the unconscious chimpanzee. You find a small control box of some sort, but you can't find a gun. What you do find is a flat metal ring. That is how he did it! After all, that's all you really felt against your neck.",
-            "A door to your right flies open, throwing a brilian shaft of light into the corridor. Suddely you are surrounded by a circle of snarling chimpanzees.",
-            "They begin to close in.",
          ],
          image: nil,
          edges: [
@@ -496,10 +496,12 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 0, prompt: "The End")
-            
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
+
+         
+            ],
+         ending: Ending(classification: .catastrophic, description: "Killed by chimpanzees")
+    ),
+
     
     34 : Node (id: 34,
          paragraphs: [
@@ -514,10 +516,12 @@ let nodes = [
             
             Edge(destinationId: 36,
                  prompt: "Turn to the next page")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    36 : Node (id: 36,
+
+            ],
+         ending: nil
+    ),
+    Node(id: 36,
+
          paragraphs: [
             "It is pitch dark inside the room. You are alone ;some kind of cell. Wait You can hear the sound of breathing. You feel around in the dark. Your hanTouches something warm. Whatever it is wakes uwith a cry.",
             "\"Don't touch me... don't touch--me..\" a man'svoice says in an anguished tone. The voice soundsvery much like the one you heard on the phone.",
@@ -583,10 +587,12 @@ let nodes = [
             
             Edge(destinationId: 38,
                  prompt: "turn to page 38")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    41 : Node (id: 41,
+
+            ],
+         ending: nil
+    ),
+    Node(id: 41,
+
          paragraphs: [
             "\"I think we'll visit some other time,\"to the woman.you say to the women. \"We just stopped by to make sure everything is alright.\"",
             "The three of you back away from the door andstart toward the car.",
@@ -614,7 +620,7 @@ let nodes = [
             "\"Come to think of it, there's a side door overhere that isn't used much. It leads to a narrowcorridor that goes directly to the garage.\"",
             "\"Let's get out of here, then,\" you say.",
             "\"Follow me.\"",
-            "You and the professor run down the corridortoward the garage when suddenly several doorsopening off the corridor open, and a small army ofchimpanzees swarm out of them, all carrying laserruns. You are surrounded.",
+            "You and the professor run down the corridortoward the garage when suddenly several doorsopening off the corridor open, and a small army of chimpanzees swarm out of them, all carrying laserruns. You are surrounded.",
             "\"Wait, stop!\"you shout, but the chimps fire. You and the professor are instantly vaporized.",
          ],
          image: nil,
@@ -622,10 +628,12 @@ let nodes = [
             
             Edge(destinationId: 0,
                  prompt: "The End")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    44 : Node (id: 44,
+
+            ],
+         ending: Ending(classification: .catastrophic, description: "Killed by chimpanzees")
+    ),
+    Node(id: 44,
+
          paragraphs: [
             "From a safe distance, the three of you watch thesoldiers break open the front gate of the prison andthe firefighters spray water on the flames. Badlyburned prisoners are carried out and taken awayto the hospital in horse-drawn wagons, which passyou on the road. The sun is setting.",
             "You find your way into town, which, in thepresent year of 1887, is two miles away. You wereborn in the late twentieth century, but you will finishout your life almost a hundred years earlier. Youwill have the distinction of being your own great-great-grandfather with knowledge that no one elsepossesses.",
@@ -635,10 +643,12 @@ let nodes = [
             
             Edge(destinationId: 0,
                  prompt: "The End")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    46 : Node (id: 46,
+
+            ],
+         ending: Ending(classification: .favourable, description: "Becomes your own great-great-grandfather")
+    ),
+    Node(id: 46,
+
          paragraphs: [
             "\"That lady in the house cast some kind of spellon us. We're dreaming all this,\" says Ricardo.",
             "\"Here, pinch me,\" says Lisa to Ricardo. \"Ow!I didn't mean that hard. Doesn't that prove we'renot dreaming?\"",
@@ -671,25 +681,31 @@ let nodes = [
                  prompt: "Turn to page 49")
          ],
          ending: nil
-        ),
-    49 : Node (id: 49,
-         paragraphs: ["The firelighters are ready with their steam-drivenwater pump, spraying water into the open mouth the front gate. Soon the fire has died downenough for you and the soldiers to start carryingout the more badly burned prisoners on stretchers.",
-                      "Someone shouts,\"The prisoners in the dungeonsare all right. Just the upper part of the prison is burning.\"",
-                      "\"Where's Marsden?\"you ask.",
-                      "\"He has joined his brother the devil in theflames,\" someone replies.",
-                      "The three of you work with all your energy forthe next few hours, doing your best to help theburned and wounded prisoners. You are exhausted.It's late afternoon now, but the day is still terriblyhot. You have to take a few minutes to rest. You sitagainst a tree and close your eyes for a moment. Itfeels so good to relax.",
-                      "When you open your eyes, the prison is gone.The modern glass house is back in its place. Thethree of you are sitting against a tree on the sideof the road.",
-                      "\"That was quite a dream,\" says Ricardo, pulling himself groggily to his feet.\"If that was just a dream,\" says Lisa,\"what isthis Civil War soldier's hat doing over there on theside of the road? And why did we all have the samedream?\"",
-                      "\"Dream or not.\"you say,\"at least we're backin our own time. I won't forget this day for a longtime!\"",],
+
+    ),
+    Node(id: 49,
+         paragraphs: [
+            "The firelighters are ready with their steam-drivenwater pump, spraying water into the open mouth the front gate. Soon the fire has died downenough for you and the soldiers to start carryingout the more badly burned prisoners on stretchers.",
+            "Someone shouts,\"The prisoners in the dungeonsare all right. Just the upper part of the prison is burning.\"",
+            "\"Where's Marsden?\"you ask.",
+            "\"He has joined his brother the devil in theflames,\" someone replies.",
+            "The three of you work with all your energy forthe next few hours, doing your best to help theburned and wounded prisoners. You are exhausted.It's late afternoon now, but the day is still terriblyhot. You have to take a few minutes to rest. You sitagainst a tree and close your eyes for a moment. Itfeels so good to relax.",
+            "When you open your eyes, the prison is gone.The modern glass house is back in its place. Thethree of you are sitting against a tree on the sideof the road.",
+            "\"That was quite a dream,\" says Ricardo, pulling himself groggily to his feet.\"If that was just a dream,\" says Lisa,\"what isthis Civil War soldier's hat doing over there on theside of the road? And why did we all have the samedream?\"",
+            "\"Dream or not.\"you say,\"at least we're backin our own time. I won't forget this day for a longtime!\"",
+         ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The End")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    50 : Node (id: 50,
+
+            ],
+         ending: Ending(classification: .mediocre, description: "Normal ending")
+    ),
+    Node(id: 50,
+
          paragraphs: [
             "You and the professor decide you'd betterretreat.",
             "Just as the chimpanzeesbreak into thelaboratory, you both disappear into the tunnel inthe wall.",
@@ -775,23 +791,28 @@ let nodes = [
                  prompt: "If you decline respectfully. Turn to page 62")
          ],
          ending: nil
-        ),
-    57 : Node (id: 57,
-         paragraphs: ["\"I will go to your planet, you say, \"as long as my friend, the professor, can go, too.",
-                      "\"Very well, the alien emissary says. Suddenly you see the professor standing next to you. The strangest thing- your body is with him, though your mind is still across the room. Within seconds, you've joined it again.",
-                      "\"Imagine, says the professor as the two of you take your first steps into the alien ship. \" Just imagine that we are the first.. \" Before he can finish, everything goes blank.",
-                      "When you come to, you and the professor are in the midst of a crystalline city where light has never looked so beautiful, and air has never smelled so clean.",
-                      "You spend several years there, learning the secrets of their advanced technology, before you return to planet Earth.",
-                      "THE END"],
+
+    ),
+    Node(id: 57,
+         paragraphs: [
+            "\"I will go to your planet, you say, \"as long as my friend, the professor, can go, too.",
+            "\"Very well, the alien emissary says. Suddenly you see the professor standing next to you. The strangest thing- your body is with him, though your mind is still across the room. Within seconds, you've joined it again.",
+            "\"Imagine, says the professor as the two of you take your first steps into the alien ship. \" Just imagine that we are the first.. \" Before he can finish, everything goes blank.",
+            "When you come to, you and the professor are in the midst of a crystalline city where light has never looked so beautiful, and air has never smelled so clean.",
+            "You spend several years there, learning the secrets of their advanced technology, before you return to planet Earth.",
+         ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    58 : Node (id: 58,
+
+            ],
+         ending: Ending(classification: .favourable, description: "Stay at other planet")
+    ),
+    Node(id: 58,
+
          paragraphs: ["The crashing stones so startle the single guard that you have no trouble giving him shot of knockout-gas full in the face. The guard drops to the floor with a thud. You run across the room and slam the door. Fortunately, it locks from the inside. Just to make sure it stays shut, you push a heavy piece of lab equipment in front of it.",
                       "\"Now!\" cries the professor. \"Get into the chamber over there. No time to waste!\"",
                       "\"Are you sure it's safe?\" you ask.",
@@ -807,24 +828,29 @@ let nodes = [
                  prompt: "If you feel that the chamber is too dangerous and try to escape another way, turn to page 43.")
          ],
          ending: nil
-        ),
-    59 : Node (id: 59,
-         paragraphs: ["The chimpanzee is still unconscious when the zoo workers come and take him off in a big cage.",
-                      "As soon as you tell the officer about the man the house in a patrol car. on the lawn, he and his partner take you back to \"He was right there,\" you insist, pointing at the blank green space. \"But now he's gone.\"",
-                      "\"We can search the woods, the officer suggests, but you're too late. The body is nowhere to be found.",
-                      "\"The house is empty as well,\" the officer's partner says, emerging from the front door. \"Though there's definitely evidence some kind of animal has recently been inside. And the phone's working, which is weird- the phone company has no record of anyone living here.\"",
-                      "The following week, you go out to the zoo to have another look at the chimpanzee. You can tell that he recognizes you from the angry expression on his face when he sees you. Somehow you feel sorry for him, since you know that he can talk and now has no one to talk to -that is, unless he wants to give himself away.",
-                      "You wonder where the rest of the chimpanzees have gone. No doubt they have a new hideout somewhere. You also wonder if they have claimed any new victims, like that poor man on the lawn.",
-                      "The End"],
+
+    ),
+    Node(id: 59,
+         paragraphs: [
+            "The chimpanzee is still unconscious when the zoo workers come and take him off in a big cage.",
+            "As soon as you tell the officer about the man the house in a patrol car. on the lawn, he and his partner take you back to \"He was right there,\" you insist, pointing at the blank green space. \"But now he's gone.\"",
+            "\"We can search the woods, the officer suggests, but you're too late. The body is nowhere to be found.",
+            "\"The house is empty as well,\" the officer's partner says, emerging from the front door. \"Though there's definitely evidence some kind of animal has recently been inside. And the phone's working, which is weird- the phone company has no record of anyone living here.\"",
+            "The following week, you go out to the zoo to have another look at the chimpanzee. You can tell that he recognizes you from the angry expression on his face when he sees you. Somehow you feel sorry for him, since you know that he can talk and now has no one to talk to -that is, unless he wants to give himself away.",
+            "You wonder where the rest of the chimpanzees have gone. No doubt they have a new hideout somewhere. You also wonder if they have claimed any new victims, like that poor man on the lawn.",
+         ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    60 : Node (id: 60,
+
+            ],
+         ending: Ending(classification: .favourable, description: "Chimpanzee has been caught")
+    ),
+    Node(id: 60,
+
          paragraphs: ["\"For a mind-search, \" says the professor. project your consciousness itself, the same way you projected your concentrated enerey against the Force field. Have your mind leave your body. It will return if your body is threatened.",
                       "You leave your body in the care of the professor and begin to travel on mind-energy through the house. He's right-it is just a matter of complete concentration.",
                       "You trace the source of the strong energy to the center of the prison structure. There, you find a large lead-covered vault. Your mind cannot penetrate it. Instead you throw a force field around it.",
@@ -832,28 +858,32 @@ let nodes = [
                       "Suddenly the lead shield falls away to reveal an intricate crystalline structure inside. You recognize it immediately as an alien life form. It communicates with you telepathically in a strange code--which you somehow understand. The alien life form explains its predicament."],
          image: nil,
          edges: [
-            
-            
-            Edge(destinationId: 1,
+
+         
+
+            Edge(destinationId: 0,
                  prompt: "The End")
-         ],
-         ending: nil
-        ),
-    62 : Node (id: 62,
+            ],
+         ending: Ending(classification: .mediocre, description: "The alien life form explains its predicament.")
+    ),
+    Node(id: 62,
          paragraphs: ["\"I would love to visit your world you say, T have too many things to finish on this one night now. \"",
-                      "\"Very well,\" the alien emissary responds. \"I will leave this crystal pendant with you. It is a hyperspace communicator. When you are ready to visit us, you need only activate its core with your mind, and a spaceship will be sent to you. Now, before I go, I must repay 'hospitality' of the creatures that tricked me into coming here. \"",
-                      "You hear a chorus of anguished animal cries throughout the house. Then silence. Your mind-scan tells you that the chimpanzees have been thrown into a hyperspace prison. There they will float in a nameless void until they have served out their sentence.",
-                      "The spaceship vanishes. When you return to your body, you find the crystal pendant hanging around your neck. The prison itself has vanished along with the house that stood over it, and you and the professor find yourselves standing in the center of a broad, empty lawn.",
-                      "THE END"],
+                       "\"Very well,\" the alien emissary responds. \"I will leave this crystal pendant with you. It is a hyperspace communicator. When you are ready to visit us, you need only activate its core with your mind, and a spaceship will be sent to you. Now, before I go, I must repay 'hospitality' of the creatures that tricked me into coming here. \"",
+                       "You hear a chorus of anguished animal cries throughout the house. Then silence. Your mind-scan tells you that the chimpanzees have been thrown into a hyperspace prison. There they will float in a nameless void until they have served out their sentence.",
+                       "The spaceship vanishes. When you return to your body, you find the crystal pendant hanging around your neck. The prison itself has vanished along with the house that stood over it, and you and the professor find yourselves standing in the center of a broad, empty lawn.",
+                     ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    63 : Node (id: 63,
+
+            ],
+         ending: Ending(classification: .mediocre, description: "Standing in the center of a broad, empty lawn.")
+    ),
+    Node(id: 63,
+
          paragraphs: ["You decide you'd better call the police. This could be too much to handle alone.",
                       "You pick up the radio-telephone in your car, dial your friend Sergeant Morrison, and explain briefly what has happened.",
                       "\"I get a lot of complaints about that place, says the sergeant. \"People talk about bright, flashing lights before dawn. loud electronic noises, and weird-looking trucks going in and out at night. Not to mention the chimpanzees acting as guard dogs. We'd always assumed it was the neighbors' imaginations. If what you're telling me is true, we could have a dangerous situation on our hands.",
@@ -914,11 +944,13 @@ let nodes = [
             
             Edge(destinationId: 68,
                  prompt: "Turn to page 68")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    
-    68 : Node (id: 68,
+
+            ],
+         ending: nil
+    ),
+
+    Node(id: 68,
+
          paragraphs: ["Carefully you rise and advance toward him. He stands mute and still, as if paralyzed. He doesn't seem to know that you are there.",
                       "\"Hello?\" you say. There is no response.",
                       "Then vou notice the chains fastened to his feet. You bend down and examine the shackles to see if there is any way to get them off, but they are old and rusty with rather primitive locks. You straighten up, but the man still doesn't seem to notice you. He seems to be in a trance.",
@@ -937,16 +969,18 @@ let nodes = [
          paragraphs: ["You turn your mental powers against the door of the cell. You stand straight but not rigid, and focus your psychic energy on the locking mechanism, You feel the energy flowing from you. Harder now. concentrate! Your mind traces the intricate locking sequence. There! It's open.",
                       "You and the professor start down the corridor toward the garage when ZAP! The two of you are frozen in mid-step by a force far greater than the chimpanzees possess. In their tinkering with the physical and psychic world, the chimpanzees have unleashed an evil force- -a force powerful beyond human understanding.",
                       "As the force intensifies, you fight back with the vast power of your own mind. The corridor begins to glow with a soft orange color. Flashes of artificial lightning play along the walls. Your energy begins to drain. The violence of the conflict between you and this evil force is so great that it begins to destroy the fabric of time and space itself. Slowly you and the professor fade until you disappear into another dimension of the universe.",
-                      "The End"],
+                     ],
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    70 : Node (id: 70,
+
+            ],
+         ending: Ending(classification: .catastrophic, description: "Disappear in the universe")
+    ),
+    Node(id: 70,
+
          paragraphs: ["\"My name is Marsden, Professor Marsden. I was using the chimpanzees in my experiments to create superhumans. Instead I created superchimps.",
                       "\"How did you--?\"",
                       "\" you begin to ask. \"I developed a super-energizing chamber that will give anyone advanced mental powers. And I think I have an idea for how it can help us get out of here.",
@@ -959,8 +993,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 58,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 58")
+            ],
+
          ending: nil
         ),
     72 : Node (id: 72,
@@ -991,24 +1027,30 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 74,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 74")
+            ],
+
          ending: nil
         ),
     74 : Node (id: 74,
          paragraphs: ["\"Thank goodness you're there,\" someone says. It is the voice of Sergeant Morrison. He shouts back behind him, \"Lisa, Ricardo, come quick! I've found our missing detective. \"",
-                      "Ricardo and Lisa come running toward you. You greet each other happily. Ricardo and Lisa, you find out, had been tied up in another part of the underground complex. The police had found them first when they raided the place and arrested the gang.",
-                      "\"You deserve a lot of credit,\" says Sergeant Morrison, \"for alerting us to this place. We have the gang on charges of counterfeiting, homicide we found the body of that man you told us about down here- -kidnapping, and keeping chimpanzees within the city limits without a license.\"",
-                      "THE END"],
+
+                       "Ricardo and Lisa come running toward you. You greet each other happily. Ricardo and Lisa, you find out, had been tied up in another part of the underground complex. The police had found them first when they raided the place and arrested the gang.",
+                       "\"You deserve a lot of credit,\" says Sergeant Morrison, \"for alerting us to this place. We have the gang on charges of counterfeiting, homicide we found the body of that man you told us about down here- -kidnapping, and keeping chimpanzees within the city limits without a license.\"",
+                     ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    75 : Node (id: 75,
+
+            ],
+         ending: Ending(classification: .favourable, description: "Chimpanzee has been caught")
+    ),
+    Node(id: 75,
+
          paragraphs: ["\"Let's get out of here. Come on, follow me, you say to the old man.",
                       "\"I can't move too fast, .\" he protests. \"It might be better if you leave me here and go for help.\"",
                       "\"If I leave you here, you say, \"the counterfeiters might come back and kill you before I can return. This door seems to be unlocked, but it's stuck. Let's see if we can get it open.\"",
@@ -1021,8 +1063,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 81,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 81")
+            ],
+
          ending: nil
         ),
     77 : Node (id: 77,
@@ -1033,8 +1077,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 78,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 78")
+            ],
+
          ending: nil
         ),
     78 : Node (id: 78,
@@ -1047,8 +1093,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 80,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 80")
+            ],
+
          ending: nil
         ),
     79 : Node (id: 79,
@@ -1065,8 +1113,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 84,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 84")
+            ],
+
          ending: nil
         ),
     80 : Node (id: 80,
@@ -1080,8 +1130,9 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 82,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 82")
+
          ending: nil
         ),
     81 : Node (id: 81,
@@ -1091,16 +1142,20 @@ let nodes = [
                       "\"I think you were just feeling the effects of the warm weather, says your father.",
                       "\"It was probably best you were asleep, adds Sergeant Morrison. \"We raided the house and arrested the whole gang. Even recovered a dead body as they were trying to bury it in the basement. Your father came right over when I called him a short time ago. He was worried about you.\"",
                       "\"Don't feel bad about not being in on the action at the end says your father. \"You did your part and the police did theirs. That's the way it should be. We are still mighty proud of you.\"",
-                      "THE END"],
+
+                     ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    82 : Node (id: 82,
+
+            ],
+         ending: Ending(classification: .favourable, description: "We are still mighty proud of you")
+    ),
+    Node(id: 82,
+
          paragraphs: ["\"We are the international Planning Group, a privale organization made up of representatives from different parts of the world. We are dedicated to there conservation and the peaceful developmen of natural resources everywhere.",
                       "\"But why hide out here in this little town?\" you ask.",
                       "\"This is only one of our meeting groups. We have many other places such as this, as well as various research facilities throughout the world. In this location we use the name of Marsden as cover. Our security agents in prison dress, and their trained chimpanzees, scare off most intruders. We would be honored if you would join our organization. We try to recruit the best minds in each of our with fresh viewpoints. operational areas, and we need younger minds with fresh viewpoints."],
@@ -1108,24 +1163,28 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 83,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 83")
+            ],
+
          ending: nil
         ),
     83 : Node (id: 83,
          paragraphs: ["All the faces in the room are looking at you and smiling.",
                       "\"You don't have to make up your mind right now, \" says the man. \"Take your time, and contact us when you have made a decision. Any young friends of yours that you could recommend will also be welcome in our organization.\"",
                       "As you walk back to your car to meet Sergeant Morrison, you still don't know what to believe, but you have a lot to think about.",
-                      "THE END"],
+                     ],
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    84 : Node (id: 84,
+
+            ],
+         ending: Ending(classification: .favourable, description: "Welcome in our organization")
+    ),
+    Node(id: 84,
+
          paragraphs: ["As the chimpanzees get closer, it becomes clear that they are trying to back you up against the basement door. You have no choice but to open the door and go in. It is pitch-black inside. You feel along the side of the door and find a light switch. You flip it.",
                       "The three of you are in a large, modern office with mahogany paneling and steel and glass desks. In the center of the room is a large conference table. On it, spread from one end to the other, is a collection of blueprints. You go over and take a look. One of the papers is labeled: TOP SECRET INVASION PLANS EARTH-WESTERN HEMISPHERE- PHASE ALPHA",
                       "You rifle through more of the papers. They are filled with dates, graphs, and calculations of various sorts--figures for agricultural output, natural resources, and energy production of various power plants.",
@@ -1134,8 +1193,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 85,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 85")
+            ],
+
          ending: nil
         ),
     85 : Node (id: 85,
@@ -1161,8 +1222,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 94,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 94")
+            ],
+
          ending: nil
         ),
     87 : Node (id: 87,
@@ -1185,28 +1248,34 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 90,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 90")
+            ],
+
          ending: nil
         ),
     88 : Node (id: 88,
          paragraphs: ["\"No, thanks, you say. \"We're not interested.\"",
-                      "\"You refuse, do you?\" shouts the creature. \"Well, we have another use for humans. In fact, it is our main use for humans.",
-                      "With that, he takes out a small device from his pocket and aims it at the three of you. A beam of incredibly cold light--its temperature hundreds of degrees below zero- freezes you, Lisa, and Ricardo into solid blocks of ice.",
-                      "Then the man takes out a rubber stamp from his other pocket and stamps your forehead:",
-                      "HUMAN MEAT- GALACTIC PRIME SOURCE-",
-                      "PLANET EARTH",
-                      "GRADE A",
-                      "The End"],
+
+                       "\"You refuse, do you?\" shouts the creature. \"Well, we have another use for humans. In fact, it is our main use for humans.",
+                       "With that, he takes out a small device from his pocket and aims it at the three of you. A beam of incredibly cold light--its temperature hundreds of degrees below zero- freezes you, Lisa, and Ricardo into solid blocks of ice.",
+                       "Then the man takes out a rubber stamp from his other pocket and stamps your forehead:",
+                       "HUMAN MEAT- GALACTIC PRIME SOURCE-",
+                       "PLANET EARTH",
+                       "GRADE A",
+                     ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    90 : Node (id: 90,
+
+            ],
+         ending: Ending(classification: .catastrophic, description: "Eaten by alien")
+    ),
+    Node(id: 90,
+
          paragraphs: ["Detective Murphy sits back in his chair and takes a few puffs on his pipe. For a moment, he looks deep in thought.",
                       "\"What I want you three to do is to keep a watch on that place- -from a safe distance, and only during the day. Is that understood?\" he says.",
                       "The three of you leave the police station. You're hooked. This is your kind of adventure.",
@@ -1231,8 +1300,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 92,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 92")
+            ],
+
          ending: nil
         ),
     92 : Node (id: 92,
@@ -1261,23 +1332,29 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 102,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 102")
+            ],
+
          ending: nil
         ),
     94 : Node (id: 94,
          paragraphs: ["As he is talking, the man walks over and opens the outside door. He beckons to you to go out. As you step out, you realize that you are in big trouble. The sky is almost covered by an enormous space vehicle. It is bright gold in color and it hovers overhead with a low humming sound.",
                       "You wonder if you will enjoy your new life.",
-                      "THE END"],
+
+         ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    96 : Node (id: 96,
+
+            ],
+         ending: Ending(classification: .disappointing, description: "Caught by aliens")
+    ),
+    Node(id: 96,
+
          paragraphs: ["\"You can be anyone, anyone in history the figure says. \"All you have to do is choose.",
                       
                       "\"I'll give it a try, you say. \"Can I come back when I want to, like before?\"",
@@ -1289,8 +1366,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 101,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 101")
+            ],
+
          ending: nil
         ),
     97 : Node (id: 97,
@@ -1301,8 +1380,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 33,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 33")
+            ],
+
          ending: nil
         ),
     99 : Node (id: 99,
@@ -1312,8 +1393,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 100,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 100")
+            ],
+
          ending: nil
         ),
     100 : Node (id: 100,
@@ -1341,10 +1424,12 @@ let nodes = [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    102 : Node (id: 102,
+
+            ],
+         ending: Ending(classification: .disappointing, description: "Become Genghis Khan")
+    ),
+    Node(id: 102,
+
          paragraphs: ["\"I need your help. My spirit is condemned to haunt this godforsaken prison until my soul is released. You can help me.",
                       "\"Who, me?\" you ask.",
                       "\"Yes. I beg you to release my soul. I ask forgiveness. If you only say you forgive me, I will be released. Say it. Please say it.\""],
@@ -1352,8 +1437,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 103,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 103")
+            ],
+
          ending: nil
         ),
     103 : Node (id: 103,
@@ -1369,8 +1456,10 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 106,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 106")
+            ],
+
          ending: nil
         ),
     104 : Node (id: 104,
@@ -1382,38 +1471,48 @@ let nodes = [
          edges: [
             
             Edge(destinationId: 105,
-                 prompt: "")
-         ],
+
+                 prompt: "Turn to page 105")
+            ],
+
          ending: nil
         ),
     105 : Node (id: 105,
          paragraphs: ["Why did you choose old age? Curiosity, you quess. At least you know you'll live a long, long time. You see that you have cracked and very wrinkled hands. Your body trembles slightly. Your eyesight seems good, but you can't hear very well. You search your mind for memories of the years since you were a teenager. Funny, you can't seem to remember anything. They have all faded away.","You are so tired. You will just sleep for a while. Thinking takes so much energy.",
-                      "You drop off into a light sleep. Your heart slows, skips a beat or so, then stops. It is all over.",
-                      "THE END"],
+
+            "You drop off into a light sleep. Your heart slows, skips a beat or so, then stops. It is all over.",
+         ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    106 : Node (id: 106,
+
+            ],
+         ending: Ending(classification: .mediocre, description: "Normal life")
+    ),
+    Node(id: 106,
+
          paragraphs: ["There is a blinding flash of light. You shade your eyes from it.",
                       "You hear, \"Thank you, thank yoooo..\"",
                       "The image of Marsden is gone. You run up the stone stairway and through the door at the top, But as you do, you find yourself running outside. smack into Ricardo, Lisa, and Detective Murphy. You almost knock them down.",
                       "\"I thought I told you just to watch the house from a safe distance.'says Detective Murphy, very sternly, 'but anyway, I'm glad you're all right. You are all right, aren't you?\"",
                       "\"I sure am,'you say,'and I don't think we'll be seeing any weird lights from this place from now on.\"",
-                      "THE END"],
+
+                     ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        ),
-    108 : Node (id: 108,
+
+            ],
+         ending: Ending(classification: .mediocre, description: "Nothing wrong happened")
+    ),
+    Node(id: 108,
+
          paragraphs: ["You remember that Ricardo and Lisa are waiting outside. You callthem on your radio.",
                       "\"Hello, Ricardo... Lisa.. are you there?\"",
                       "\"We hear you. Everything all right in there?\"",
@@ -1423,13 +1522,18 @@ let nodes = [
                       "\"I said you could leave, but I didn't say with whom.\"",
                       "As he says this, Marsden's head grows larger and larger, until it turns into an enormous disc shaped object. It begins to glow with a unique brightness. Then the room disappears, and the disc expands to huge size. Portholes appear around its middle. A hatch swings open. Music comes from inside-electronic music. You enter this machine, and in a millisecond you are whisked away to other galaxies.",
                       "You don't know if you are going to like this lesson or not.",
-                      "THE END"],
+
+         ],
+
          image: nil,
          edges: [
             
             Edge(destinationId: 0,
                  prompt: "The END")
-         ],
-         ending: Ending(classification: .favourable, description: "")
-        )
-]
+
+            ],
+         ending: Ending(classification: .mediocre, description: "Go to another galaxiy")
+    )
+ ]
+
+
