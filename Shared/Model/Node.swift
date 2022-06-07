@@ -293,7 +293,7 @@ let nodes = [
             Edge(destinationId: 0, prompt: "The End")
             
             ],
-         ending: Ending(classification: .favourable, description: "")
+         ending: Ending(classification: .favourable, description: "Police came and solved the case.")
     ),
     Node(id: 18,
          paragraphs: [
@@ -366,7 +366,7 @@ let nodes = [
             Edge(destinationId: 1, prompt: "The End")
             
             ],
-         ending: nil
+         ending: Ending(classification: .catastrophic, description: "Got caught and.")
     ),
     Node(id: 24,
          paragraphs: [

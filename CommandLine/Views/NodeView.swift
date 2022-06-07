@@ -33,18 +33,32 @@ struct NodeView: View {
             VStack(alignment: .leading) {
                 
                 // Page number
-                Text("\(node.id)")
-                    .padding()
-                    .foregroundColor(.white)
-                    .retroFont(size: 19.0)
                 
-                 // Iterate over all the paragraphs
-//                ForEach(node.paragraphs, id: \.self) { currentParagraph in
-//                    TypedText(currentParagraph)
-//                        .padding()
-//                        .foregroundColor(.white)
-//                        .retroFont(.pixelEmulator)
-//                }
+                HStack{
+                    Button(action: {
+                        activeNode = 0
+                    }) {
+                        Text("Back to the home page")
+                            .padding()
+                            .foregroundColor(.white)
+                            .retroFont(size: 15.0)
+                        
+                    }
+                    
+                    Text("\(node.id)")
+                        .padding()
+                        .foregroundColor(.white)
+                        .retroFont(size: 19.0)
+                    
+                     // Iterate over all the paragraphs
+    //                ForEach(node.paragraphs, id: \.self) { currentParagraph in
+    //                    TypedText(currentParagraph)
+    //                        .padding()
+    //                        .foregroundColor(.white)
+    //                        .retroFont(.pixelEmulator)
+    //                }
+                    
+                }
                 
                 ForEach(page, id: \.self) { page in
                     TypedText(page)
@@ -92,6 +106,6 @@ struct NodeView: View {
 
 //struct NodeView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        NodeView(currentNode: testNode)
+//        NodeView(node: Node, activeNode: )
 //    }
 //}
