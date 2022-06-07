@@ -22,8 +22,16 @@ struct NodeView: View {
     
     // MARK: Computed properties
     
+    // The currently active actual node
+    var currentNode: Node {
+        // Return the active node
+        // If we cannot do so, return an empty node
+        // (we use the nil coalescing operator ?? to do this)
+        return nodes[activeNode] ?? emptyNode
+    }
+    
     var page: [String] {
-        let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
+        let allParagraphs = currentNode.paragraphs.joined(separator: "")
         var pageText: [String] = []
         pageText.append(allParagraphs)
         return pageText
@@ -80,7 +88,10 @@ struct NodeView: View {
                                 .multilineTextAlignment(.trailing)
                                 .onTapGesture {
                                     // Advance to whatever node this prompt is for
-                                    activeNode = currentEdge.destinationId
+                                    activeNode = currentEdge.destinationId 
+                                    //reset flags that control state of paragrpah and text
+                                    typingHasFinished = false
+                                    skipToEnd = false
                                 }
                                 .foregroundColor(.gray)
                                 .retroFont(size: 18.0)
