@@ -14,13 +14,24 @@ struct NodeView: View {
     let node: Node
     @Binding var activeNode: Int
     
+    @State var typingHasFinished = false
+    
+    @State var skipToEnd = false
+    
+    var displayed = false
+    
     // MARK: Computed properties
-    var image: String {
-        return node.image ?? ""
+    
+    // The currently active actual node
+    var currentNode: Node {
+        // Return the active node
+        // If we cannot do so, return an empty node
+        // (we use the nil coalescing operator ?? to do this)
+        return nodes[activeNode] ?? emptyNode
     }
     
     var page: [String] {
-        let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
+        let allParagraphs = currentNode.paragraphs.joined(separator: "")
         var pageText: [String] = []
         pageText.append(allParagraphs)
         return pageText
@@ -61,35 +72,48 @@ struct NodeView: View {
                 }
                 
                 ForEach(page, id: \.self) { page in
-                    TypedText(page)
+                    TypedText(page, typingHasFinished: $typingHasFinished, skipToEnd: $skipToEnd)
                         .padding()
                         .foregroundColor(.white)
                         .retroFont(.pixelEmulator, size: 18.0)
-                        
+                        .onTapGesture {
+                            print("Has typing finished? \(typingHasFinished)")
+                            skipToEnd = true
+                            print("Has typing finished? \(typingHasFinished)")
+                        }
                 
                 }
 
                 
                 // Show the image, if there is one
-                Image(image)
-                    .resizable()
-                    .scaledToFit()
+                if let image = node.image {
+                    Image(image)
+                        .resizable()
+                        .scaledToFit()
+                }
                 
                 // Show choices, when they exist
-                ForEach(node.edges, id: \.self) { currentEdge in
-                    HStack {
-                        Text(currentEdge.prompt)
-                            .padding()
-                            .multilineTextAlignment(.trailing)
-                            .onTapGesture {
-                                // Advance to whatever node this prompt is for
-                                activeNode = currentEdge.destinationId
-                            }
-                            .foregroundColor(.gray)
-                            .retroFont(size: 18.0)
+                if typingHasFinished == true {
+                    
+                    ForEach(node.edges, id: \.self) { currentEdge in
+                        HStack {
+                            Text(currentEdge.prompt)
+                                .padding()
+                                .multilineTextAlignment(.trailing)
+                                .onTapGesture {
+                                    // Advance to whatever node this prompt is for
+                                    activeNode = currentEdge.destinationId 
+                                    //reset flags that control state of paragrpah and text
+                                    typingHasFinished = false
+                                    skipToEnd = false
+                                }
+                                .foregroundColor(.gray)
+                                .retroFont(size: 18.0)
+                        }
                     }
+                   
                 }
-               
+                
             }
             
         }

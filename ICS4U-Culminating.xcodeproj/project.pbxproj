@@ -10,13 +10,16 @@
 		0F2CA1AF283E6AA70089586D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1AE283E6AA70089586D /* main.swift */; };
 		0F2CA1B9283E6EBE0089586D /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
 		0F4C095E2847ABF70040B992 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4C095D2847ABF70040B992 /* NodeView.swift */; };
+		0F9FD644284E582500436493 /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = 0F9FD643284E582500436493 /* RetroText */; };
+		0F9FD646284E582A00436493 /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = 0F9FD645284E582A00436493 /* RetroText */; };
 		0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C862845263B00FAE19E /* iOSApp.swift */; };
 		0FE25C892845263B00FAE19E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE25C882845263B00FAE19E /* ContentView.swift */; };
 		0FE25C8B2845263C00FAE19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8A2845263C00FAE19E /* Assets.xcassets */; };
 		0FE25C8E2845263C00FAE19E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8D2845263C00FAE19E /* Preview Assets.xcassets */; };
 		0FE25C932845267C00FAE19E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
-		3C5A4080284FCDC400EB144E /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = 3C5A407F284FCDC400EB144E /* RetroText */; };
-		3C5A4082284FCDCA00EB144E /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = 3C5A4081284FCDCA00EB144E /* RetroText */; };
+
+		FBFB042D284FCE6E00D0BA6B /* RetroText in Frameworks */ = {isa = PBXBuildFile; productRef = FBFB042C284FCE6E00D0BA6B /* RetroText */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,7 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C5A4082284FCDCA00EB144E /* RetroText in Frameworks */,
+
+				0F9FD644284E582500436493 /* RetroText in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +62,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C5A4080284FCDC400EB144E /* RetroText in Frameworks */,
+
+
+				0F9FD646284E582A00436493 /* RetroText in Frameworks */,
+
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +179,9 @@
 			);
 			name = CommandLine;
 			packageProductDependencies = (
-				3C5A4081284FCDCA00EB144E /* RetroText */,
+
+				0F9FD643284E582500436493 /* RetroText */,
+
 			);
 			productName = "ICS4U-Culminating";
 			productReference = 0F2CA1AB283E6AA70089586D /* CommandLine */;
@@ -190,7 +201,10 @@
 			);
 			name = iOS;
 			packageProductDependencies = (
-				3C5A407F284FCDC400EB144E /* RetroText */,
+
+
+				0F9FD645284E582A00436493 /* RetroText */,
+
 			);
 			productName = "ICS4U-CYOA";
 			productReference = 0FE25C842845263B00FAE19E /* iOS.app */;
@@ -389,7 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -400,7 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -415,7 +429,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -446,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7LW5X6636W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -514,12 +528,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3C5A407F284FCDC400EB144E /* RetroText */ = {
+
+
+		0F9FD643284E582500436493 /* RetroText */ = {
+
 			isa = XCSwiftPackageProductDependency;
 			package = 0F9FD63E284E514D00436493 /* XCRemoteSwiftPackageReference "RetroText" */;
 			productName = RetroText;
 		};
-		3C5A4081284FCDCA00EB144E /* RetroText */ = {
+
+		0F9FD645284E582A00436493 /* RetroText */ = {
+
+
 			isa = XCSwiftPackageProductDependency;
 			package = 0F9FD63E284E514D00436493 /* XCRemoteSwiftPackageReference "RetroText" */;
 			productName = RetroText;
