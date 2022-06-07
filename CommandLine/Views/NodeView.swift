@@ -14,10 +14,13 @@ struct NodeView: View {
     let node: Node
     @Binding var activeNode: Int
     
+    @State var typingHasFinished = false
+    
+    @State var skipToEnd = false
+    
+    var displayed = false
+    
     // MARK: Computed properties
-    var image: String {
-        return node.image ?? ""
-    }
     
     var page: [String] {
         let allParagraphs = nodes[activeNode].paragraphs.joined(separator: "")
@@ -47,35 +50,45 @@ struct NodeView: View {
 //                }
                 
                 ForEach(page, id: \.self) { page in
-                    TypedText(page)
+                    TypedText(page, typingHasFinished: $typingHasFinished, skipToEnd: $skipToEnd)
                         .padding()
                         .foregroundColor(.white)
                         .retroFont(.pixelEmulator, size: 18.0)
-                        
+                        .onTapGesture {
+                            print("Has typing finished? \(typingHasFinished)")
+                            skipToEnd = true
+                            print("Has typing finished? \(typingHasFinished)")
+                        }
                 
                 }
 
                 
                 // Show the image, if there is one
-                Image(image)
-                    .resizable()
-                    .scaledToFit()
+                if let image = node.image {
+                    Image(image)
+                        .resizable()
+                        .scaledToFit()
+                }
                 
                 // Show choices, when they exist
-                ForEach(node.edges, id: \.self) { currentEdge in
-                    HStack {
-                        Text(currentEdge.prompt)
-                            .padding()
-                            .multilineTextAlignment(.trailing)
-                            .onTapGesture {
-                                // Advance to whatever node this prompt is for
-                                activeNode = currentEdge.destinationId
-                            }
-                            .foregroundColor(.gray)
-                            .retroFont(size: 18.0)
+                if typingHasFinished == true {
+                    
+                    ForEach(node.edges, id: \.self) { currentEdge in
+                        HStack {
+                            Text(currentEdge.prompt)
+                                .padding()
+                                .multilineTextAlignment(.trailing)
+                                .onTapGesture {
+                                    // Advance to whatever node this prompt is for
+                                    activeNode = currentEdge.destinationId
+                                }
+                                .foregroundColor(.gray)
+                                .retroFont(size: 18.0)
+                        }
                     }
+                   
                 }
-               
+                
             }
             
         }
