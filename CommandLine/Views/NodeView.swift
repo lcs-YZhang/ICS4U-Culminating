@@ -22,6 +22,16 @@ struct NodeView: View {
     
     // MARK: Computed properties
     
+//    var history: [Int] {
+//        var historyNodes: [Int] = []
+//        if currentNode.ending != nil {
+//            historyNodes.append(currentNode.id)
+//        }
+//        return historyNodes
+//    }
+    
+    @State var outcomes: [Outcome] = []
+    
     // The currently active actual node
     var currentNode: Node {
         // Return the active node
@@ -61,6 +71,13 @@ struct NodeView: View {
                         .foregroundColor(.white)
                         .retroFont(size: 19.0)
                     
+                    Button("View History", action: {
+                        NavigationLink("View History", destination: HistoryView(history: outcomes))
+                    })
+                    .padding()
+                    .foregroundColor(.white)
+                    .retroFont(size: 15.0)
+                    
                      // Iterate over all the paragraphs
     //                ForEach(node.paragraphs, id: \.self) { currentParagraph in
     //                    TypedText(currentParagraph)
@@ -68,6 +85,8 @@ struct NodeView: View {
     //                        .foregroundColor(.white)
     //                        .retroFont(.pixelEmulator)
     //                }
+                    
+
                     
                 }
                 
@@ -118,6 +137,13 @@ struct NodeView: View {
             
         }
         .background(Color.black)
+        .onAppear {
+            // When im at an ending record the outcome
+            if currentNode.ending != nil {
+                let newOutcome = Outcome(pageNumber: currentNode.id, outcomeDesc: currentNode.ending?.description ?? "")
+                outcomes.append(newOutcome)
+            }
+        }
 //        if nodes[activeNode].ending == false {
 //            .background(Color.black)
 //
@@ -126,6 +152,8 @@ struct NodeView: View {
 //        }
 //
     }
+
+    
 }
 
 //struct NodeView_Previews: PreviewProvider {
