@@ -128,7 +128,7 @@ let nodes = [
                 "You glance again at the house. The front of it is constructed largely of glass. A short distance to one metal sculpture rising out of a number of huge blackened hunks of shattered concrete. A shudder goes through you as you realize that these forms of twisted metal might actually be the remnants of the old burned-out prison. Suddenly a man dashes out of the house",
               ],
               
-              image: nil,
+              image: "Page5",
               edges: [
                 
                 Edge(destinationId: 9, prompt: "Turn to page 9")
@@ -184,7 +184,7 @@ let nodes = [
                 "What are they? you wonder. Can they be hugechimpanzees? They look mean and angry. For amoment, you are frozen to the spot.",
                 "The man on the lawn can't move and needsvour help. But what good to him will you be ifyou're mauled by the angry chimps?",
               ],
-              image: nil,
+              image: "Page8",
               edges: [
                 
                 Edge(destinationId: 3, prompt: "If you decide that the chippanzees are not as dangerous as they look and rush to give aid to the man. Turn to page 3"),
@@ -231,7 +231,7 @@ let nodes = [
                 "Then back to the Marsden place. You plantyourself in a clump of bushes across the street. Fromhere you can see the house, but no one can see you.",
                 "You scan the lawn with your binoculars. Thebody of the man has disappeared. All seems quiet.",
                ],
-               image: nil,
+               image: "Page12",
                edges: [
                 
                 Edge(destinationId: 24, prompt: "Turn to page 24")
@@ -288,7 +288,7 @@ let nodes = [
                 "The next day the lead story in the NothwinTimes is:",
                 "On a tip from a well-known local detective,whosesuspicionswerearousedbystrangeoccurrences around the Hedge Brook Prison ruins,police raided a nearby house yesterday, exposinga counterfeiting operation. Seized were a numberof bogus printing plates and a large quantity ofcounterteit money.Three men were arrested andcharged with homicide as well as counterfeitingafter the body of another, as yet unidentified, manwas found in the basement of the house.",
                ],
-               image: nil,
+               image: "Page17",
                edges: [
                 
                 Edge(destinationId: 0, prompt: "The End")
@@ -339,7 +339,7 @@ let nodes = [
                 "\"I see youare admiring my babies,thewoman says.\"These are my Venus flytraps overhere. Are they not beautiful? We are all so happyhere.She picks up a trowel and tenderly starts totransplant one of them. A faint buzzing comes fromsomewhere in the room.",
                 "\"Ah, I see we have yet another visitor,\"says thewoman. Her face lights up with a kind of ecstasy.\"Come... come to my plants, little fly.",
                ],
-               image: nil,
+               image: "Page20",
                edges: [
                 
                 Edge(destinationId: 22, prompt: "Turn to the next page")
@@ -380,7 +380,7 @@ let nodes = [
                 "Just then a long blacklimousine drives up to thegatehouse. Two tough-looking men get out andwalk toward the house.When they are almostthere, the chimps appear.The men just ignore themand go into the house.Then the chimps vanishagain into thin air.",
                 "That's it! The chimpsare not real. 1hey mustbe filmed and projectedholograms-three-dimensional picturesmade with laser lightprogrammed to turnon and off wheneversomeone approachesthe house.Minutes later, thetwo men leave, carryingseveral small packages.",
                ],
-               image: nil,
+               image: "Page25",
                edges: [
                 
                 Edge(destinationId: 11, prompt: "Turn to page 11")
@@ -464,7 +464,7 @@ let nodes = [
                 "You can telepathically \"hear\" and \"feel\" theanger of the chimpanzees as they break open thedoor to the laboratory. But when they charge in,they are immediately frozen by your projectedforce field.",
                 "\"Wow! Did I do that?\"you ask.\"That is only the beginning of your new powers,says the professor.Your new mind immediately probes out throughthe underground complex.\"This way, Professor,you say.\"I know the way out.\"",
                ],
-               image: nil,
+               image: "Page30",
                edges: [
                 
                 Edge(destinationId: 40,
