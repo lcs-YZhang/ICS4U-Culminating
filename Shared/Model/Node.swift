@@ -39,6 +39,9 @@ struct Outcome: Hashable {
     let outcomeDesc: String
 }
 
+let testOutcome = Outcome(pageNumber: 1, outcomeDesc: "Testing")
+let testOutcome2 = Outcome(pageNumber: 2, outcomeDesc: "Testing2")
+
 struct StoryInformation {
     let title: String
     let authorOrAuthors: String

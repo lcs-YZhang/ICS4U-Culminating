@@ -17,7 +17,6 @@
 		0FE25C8B2845263C00FAE19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8A2845263C00FAE19E /* Assets.xcassets */; };
 		0FE25C8E2845263C00FAE19E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE25C8D2845263C00FAE19E /* Preview Assets.xcassets */; };
 		0FE25C932845267C00FAE19E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2CA1B8283E6EBE0089586D /* Node.swift */; };
-		B84FE18F2850F921007AE4E8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84FE18E2850F921007AE4E8 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +42,6 @@
 		0FE25C882845263B00FAE19E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0FE25C8A2845263C00FAE19E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE25C8D2845263C00FAE19E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B84FE18E2850F921007AE4E8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 			children = (
 				0FE25C882845263B00FAE19E /* ContentView.swift */,
 				0F4C095D2847ABF70040B992 /* NodeView.swift */,
-				B84FE18E2850F921007AE4E8 /* HistoryView.swift */,
 			);
 			name = Views;
 			path = ../CommandLine/Views;
@@ -267,7 +264,6 @@
 			files = (
 				0FE25C932845267C00FAE19E /* Node.swift in Sources */,
 				0FE25C892845263B00FAE19E /* ContentView.swift in Sources */,
-				B84FE18F2850F921007AE4E8 /* HistoryView.swift in Sources */,
 				0F4C095E2847ABF70040B992 /* NodeView.swift in Sources */,
 				0FE25C872845263B00FAE19E /* iOSApp.swift in Sources */,
 			);
