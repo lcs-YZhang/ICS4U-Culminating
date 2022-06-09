@@ -11,6 +11,8 @@ struct ContentView: View {
     
     // MARK: Stored properties (store things)
     
+    @Binding  var outcomes: [Outcome]
+    
     // What page are we on?
     @State var activeNode = 0
     
@@ -36,37 +38,47 @@ struct ContentView: View {
                 
         if gameIsOn == false {
             
-            VStack {
-                            
-                Text("House")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
+            ZStack {
                 
-                Text("Of")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
+                Image("Black").resizable()
+                    .frame(width: .infinity, height: .infinity)
                 
-                Text("Danger")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
+                VStack {
+                                
+                    Text("House")
+                        .foregroundColor(.white)
+                        .retroFont()
+                        .padding(.vertical)
+                    
+                    Text("Of")
+                        .foregroundColor(.white)
+                        .retroFont()
+                        .padding(.vertical)
+                    
+                    Text("Danger")
+                        .foregroundColor(.white)
+                        .retroFont()
+                        .padding(.vertical)
+                    
+                    // Welcome screen
+                    Image("HouseOfDanger-1")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.top)
+                        .padding(.trailing)
+                        .onTapGesture {
+                            startGame()
+                        }
+                }
+
                 
-                // Welcome screen
-                Image("HouseOfDanger-1")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.bottom)
-                    .padding(.trailing)
-                    .onTapGesture {
-                        startGame()
-                    }
-            }
-            .background(Color.black)
+            }.background(Color.black)
             
         } else {
             
             // Game is being played
             // Show the node
-            NodeView(node: currentNode, activeNode: $activeNode)
+            NodeView(node: currentNode, activeNode: $activeNode, outcomes: $outcomes)
             
         }
         
@@ -82,8 +94,8 @@ struct ContentView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

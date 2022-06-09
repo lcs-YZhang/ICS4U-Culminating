@@ -11,13 +11,16 @@ import RetroText
 @main
 struct iOSApp: App {
     
-    init() {
-            RetroText.registerFonts()
-        }
+    @State private var outcomes: [Outcome] = []
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(outcomes: $outcomes)
         }
     }
+    
+    init() {
+        RetroText.registerFonts()
+    }
+
 }

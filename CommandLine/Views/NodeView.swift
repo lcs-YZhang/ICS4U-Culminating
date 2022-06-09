@@ -20,7 +20,19 @@ struct NodeView: View {
     
     var displayed = false
     
+    @State var historyDisplay = false
+    
     // MARK: Computed properties
+    
+//    var history: [Int] {
+//        var historyNodes: [Int] = []
+//        if currentNode.ending != nil {
+//            historyNodes.append(currentNode.id)
+//        }
+//        return historyNodes
+//    }
+    
+    @Binding var outcomes: [Outcome]
     
     // The currently active actual node
     var currentNode: Node {
@@ -41,79 +53,140 @@ struct NodeView: View {
         
         ScrollView {
             
-            VStack(alignment: .leading) {
+            if historyDisplay {
                 
-                // Page number
+                ZStack {
+                    
+                    Image("Black").resizable()
+                        .frame(width: .infinity, height: .infinity)
+                    
+                    VStack {
+                        
+                        Text("History")
+                            .foregroundColor(.gray)
+                            .retroFont()
+                            .padding(.all)
+                                            
+                        ForEach(outcomes, id: \.self) { outcome in
+                                Text("Page \(outcome.pageNumber)")
+                                    .foregroundColor(.gray)
+                                    .retroFont(size: 10.0)
+                                    .padding(.all)
+                            
+                                Text(outcome.outcomeDesc)
+                                    .foregroundColor(.gray)
+                                    .retroFont(size: 10.0)
+                                    .padding(.bottom)
+
+                        }
+                        
+                        Button(action: {
+                            activeNode = 0
+                        }) {
+                            Text("Return")
+                                .foregroundColor(.white)
+                                .retroFont()
+                                .padding(.top)
+                        }
+                        
+                    }
+                }.background(Color.black)
+
+            } else {
                 
-                HStack{
-                    Button(action: {
-                        activeNode = 0
-                    }) {
-                        Text("Back to the home page")
+                VStack(alignment: .leading) {
+                    
+                    // Page number
+                    
+                    HStack{
+                        
+                        Button(action: {
+                            activeNode = 0
+                        }) {
+                            Text("Back to the home page")
+                                .padding()
+                                .foregroundColor(.white)
+                                .retroFont(size: 15.0)
+                            
+                        }
+                        
+                        Text("\(node.id)")
                             .padding()
                             .foregroundColor(.white)
-                            .retroFont(size: 15.0)
+                            .retroFont(size: 19.0)
+                        
+                        Button("View History", action: {
+                            historyDisplay = true
+                        })
+                        .padding()
+                        .foregroundColor(.white)
+                        .retroFont(size: 15.0)
+                        
+                         // Iterate over all the paragraphs
+        //                ForEach(node.paragraphs, id: \.self) { currentParagraph in
+        //                    TypedText(currentParagraph)
+        //                        .padding()
+        //                        .foregroundColor(.white)
+        //                        .retroFont(.pixelEmulator)
+        //                }
+                        
+
                         
                     }
                     
-                    Text("\(node.id)")
-                        .padding()
-                        .foregroundColor(.white)
-                        .retroFont(size: 19.0)
+                    ForEach(page, id: \.self) { page in
+                        TypedText(page, typingHasFinished: $typingHasFinished, skipToEnd: $skipToEnd)
+                            .padding()
+                            .foregroundColor(.white)
+                            .retroFont(.pixelEmulator, size: 18.0)
+                            .onTapGesture {
+                                print("Has typing finished? \(typingHasFinished)")
+                                skipToEnd = true
+                                print("Has typing finished? \(typingHasFinished)")
+                            }
                     
-                     // Iterate over all the paragraphs
-    //                ForEach(node.paragraphs, id: \.self) { currentParagraph in
-    //                    TypedText(currentParagraph)
-    //                        .padding()
-    //                        .foregroundColor(.white)
-    //                        .retroFont(.pixelEmulator)
-    //                }
-                    
-                }
-                
-                ForEach(page, id: \.self) { page in
-                    TypedText(page, typingHasFinished: $typingHasFinished, skipToEnd: $skipToEnd)
-                        .padding()
-                        .foregroundColor(.white)
-                        .retroFont(.pixelEmulator, size: 18.0)
-                        .onTapGesture {
-                            print("Has typing finished? \(typingHasFinished)")
-                            skipToEnd = true
-                            print("Has typing finished? \(typingHasFinished)")
-                        }
-                
-                }
-
-                
-                // Show the image, if there is one
-                if let image = node.image {
-                    Image(image)
-                        .resizable()
-                        .scaledToFit()
-                }
-                
-                // Show choices, when they exist
-                if typingHasFinished == true {
-                    
-                    ForEach(node.edges, id: \.self) { currentEdge in
-                        HStack {
-                            Text(currentEdge.prompt)
-                                .padding()
-                                .multilineTextAlignment(.trailing)
-                                .onTapGesture {
-                                    // Advance to whatever node this prompt is for
-                                    activeNode = currentEdge.destinationId 
-                                    //reset flags that control state of paragrpah and text
-                                    typingHasFinished = false
-                                    skipToEnd = false
-                                }
-                                .foregroundColor(.gray)
-                                .retroFont(size: 18.0)
-                        }
                     }
-                   
+
+                    
+                    // Show the image, if there is one
+                    if let image = node.image {
+                        Image(image)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    
+                    // Show choices, when they exist
+                    if typingHasFinished == true {
+                        
+                        ForEach(node.edges, id: \.self) { currentEdge in
+                            HStack {
+                                Text(currentEdge.prompt)
+                                    .padding()
+                                    .multilineTextAlignment(.trailing)
+                                    .onTapGesture {
+                                        // Advance to whatever node this prompt is for
+                                        activeNode = currentEdge.destinationId
+                                        //reset flags that control state of paragrpah and text
+                                        typingHasFinished = false
+                                        skipToEnd = false
+                                    }
+                                    .foregroundColor(.gray)
+                                    .retroFont(size: 18.0)
+                            }.onAppear {
+                                print("Seeing if ending")
+                                if currentNode.ending != nil {
+                                    if outcomes.contains(Outcome(pageNumber: nodes[activeNode]?.id ?? 0, outcomeDesc: currentNode.ending?.description ?? "")) == false {
+                                        outcomes.append(Outcome(pageNumber: nodes[activeNode]?.id ?? 0, outcomeDesc: currentNode.ending?.description ?? ""))
+                                    }
+                                } else {
+                                    print("NO END")
+                                }
+                            }
+                        }
+                       
+                    }
+                    
                 }
-                
             }
             
         }
@@ -126,6 +199,8 @@ struct NodeView: View {
 //        }
 //
     }
+
+    
 }
 
 //struct NodeView_Previews: PreviewProvider {

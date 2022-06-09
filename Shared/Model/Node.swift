@@ -34,6 +34,14 @@ struct Ending {
     }
 }
 
+struct Outcome: Hashable {
+    let pageNumber: Int
+    let outcomeDesc: String
+}
+
+let testOutcome = Outcome(pageNumber: 1, outcomeDesc: "Testing")
+let testOutcome2 = Outcome(pageNumber: 2, outcomeDesc: "Testing2")
+
 struct StoryInformation {
     let title: String
     let authorOrAuthors: String
