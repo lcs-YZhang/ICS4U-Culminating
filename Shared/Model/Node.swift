@@ -136,7 +136,7 @@ let nodes = [
                 "You glance again at the house. The front of it is constructed largely of glass. A short distance to one metal sculpture rising out of a number of huge blackened hunks of shattered concrete. A shudder goes through you as you realize that these forms of twisted metal might actually be the remnants of the old burned-out prison. Suddenly a man dashes out of the house",
               ],
               
-              image: nil,
+              image: "Page5",
               edges: [
                 
                 Edge(destinationId: 9, prompt: "Turn to page 9")
@@ -192,7 +192,7 @@ let nodes = [
                 "What are they? you wonder. Can they be hugechimpanzees? They look mean and angry. For amoment, you are frozen to the spot.",
                 "The man on the lawn can't move and needsvour help. But what good to him will you be ifyou're mauled by the angry chimps?",
               ],
-              image: nil,
+              image: "Page8",
               edges: [
                 
                 Edge(destinationId: 3, prompt: "If you decide that the chippanzees are not as dangerous as they look and rush to give aid to the man. Turn to page 3"),
@@ -239,7 +239,7 @@ let nodes = [
                 "Then back to the Marsden place. You plantyourself in a clump of bushes across the street. Fromhere you can see the house, but no one can see you.",
                 "You scan the lawn with your binoculars. Thebody of the man has disappeared. All seems quiet.",
                ],
-               image: nil,
+               image: "Page12",
                edges: [
                 
                 Edge(destinationId: 24, prompt: "Turn to page 24")
@@ -296,7 +296,7 @@ let nodes = [
                 "The next day the lead story in the NothwinTimes is:",
                 "On a tip from a well-known local detective,whosesuspicionswerearousedbystrangeoccurrences around the Hedge Brook Prison ruins,police raided a nearby house yesterday, exposinga counterfeiting operation. Seized were a numberof bogus printing plates and a large quantity ofcounterteit money.Three men were arrested andcharged with homicide as well as counterfeitingafter the body of another, as yet unidentified, manwas found in the basement of the house.",
                ],
-               image: nil,
+               image: "Page17",
                edges: [
                 
                 Edge(destinationId: 0, prompt: "The End")
@@ -347,7 +347,7 @@ let nodes = [
                 "\"I see youare admiring my babies,thewoman says.\"These are my Venus flytraps overhere. Are they not beautiful? We are all so happyhere.She picks up a trowel and tenderly starts totransplant one of them. A faint buzzing comes fromsomewhere in the room.",
                 "\"Ah, I see we have yet another visitor,\"says thewoman. Her face lights up with a kind of ecstasy.\"Come... come to my plants, little fly.",
                ],
-               image: nil,
+               image: "Page20",
                edges: [
                 
                 Edge(destinationId: 22, prompt: "Turn to the next page")
@@ -388,7 +388,7 @@ let nodes = [
                 "Just then a long blacklimousine drives up to thegatehouse. Two tough-looking men get out andwalk toward the house.When they are almostthere, the chimps appear.The men just ignore themand go into the house.Then the chimps vanishagain into thin air.",
                 "That's it! The chimpsare not real. 1hey mustbe filmed and projectedholograms-three-dimensional picturesmade with laser lightprogrammed to turnon and off wheneversomeone approachesthe house.Minutes later, thetwo men leave, carryingseveral small packages.",
                ],
-               image: nil,
+               image: "Page25",
                edges: [
                 
                 Edge(destinationId: 11, prompt: "Turn to page 11")
@@ -472,7 +472,7 @@ let nodes = [
                 "You can telepathically \"hear\" and \"feel\" theanger of the chimpanzees as they break open thedoor to the laboratory. But when they charge in,they are immediately frozen by your projectedforce field.",
                 "\"Wow! Did I do that?\"you ask.\"That is only the beginning of your new powers,says the professor.Your new mind immediately probes out throughthe underground complex.\"This way, Professor,you say.\"I know the way out.\"",
                ],
-               image: nil,
+               image: "Page30",
                edges: [
                 
                 Edge(destinationId: 40,
@@ -523,7 +523,7 @@ let nodes = [
                 "\"All right,now, out, \"commands thevoice behind you,above your head. \"and keep your hands \" You see your captor forthe first time. No wonder his voice soundedodd. He is one of the chimpanzees.",
                 "You are led to a door on the far side of the garage.The chimpanzee inserts a plastic card in* slot. There is a slight electronic whine as thedoor slides back on silent hinges. Before you is along corridor. It is lit by what look like fluorescent bulbs--but the light from them makes your skin look purple. The corridor ends abruptly at a metal door. Again the chimpanzee uses the plastic card. Thedoor opens. The chimpanzee pushes you roughly inside, but stays outside while the door closes.",
                ],
-               image: nil,
+               image: "Page35",
                edges: [
                 
                 Edge(destinationId: 36,
@@ -579,7 +579,7 @@ let nodes = [
                 "The struggle to escapeyour force field hasdestroyed all the chimps' special powers. Now they'renothing more than just ordinary chimpanzees.",
                 "But you will keep your heightened powers forsome time.",
                ],
-               image: nil,
+               image: "Page38",
                
                edges: [
                 
@@ -635,7 +635,7 @@ let nodes = [
                 "You and the professor run down the corridortoward the garage when suddenly several doorsopening off the corridor open, and a small army of chimpanzees swarm out of them, all carrying laserruns. You are surrounded.",
                 "\"Wait, stop!\"you shout, but the chimps fire. You and the professor are instantly vaporized.",
                ],
-               image: nil,
+               image: "Page42",
                edges: [
                 
                 Edge(destinationId: 0,
@@ -650,7 +650,7 @@ let nodes = [
             "From a safe distance, the three of you watch thesoldiers break open the front gate of the prison andthe firefighters spray water on the flames. Badlyburned prisoners are carried out and taken awayto the hospital in horse-drawn wagons, which passyou on the road. The sun is setting.",
             "You find your way into town, which, in thepresent year of 1887, is two miles away. You wereborn in the late twentieth century, but you will finishout your life almost a hundred years earlier. Youwill have the distinction of being your own great-great-grandfather with knowledge that no one elsepossesses.",
          ],
-         image: nil,
+         image: "Page44",
          edges: [
             
             Edge(destinationId: 0,
@@ -707,7 +707,7 @@ let nodes = [
             "\"Dream or not.\"you say,\"at least we're backin our own time. I won't forget this day for a longtime!\"",
          ],
          
-         image: nil,
+         image: "Page49",
          edges: [
             
             Edge(destinationId: 0,
@@ -744,7 +744,7 @@ let nodes = [
                 "\"I can see it.\" you say,\"a brilliant white disc. It'salmost blinding, even though I know it's not real.\"",
                 "\"That's good.\" says the professor.\"You arestarting off well. The disc acts like an electricalgenerator, but it generates mental energy insteadof. electrical energy. Now let the energy build up.Okay, now, aim it at the force field the chimps arecreating around us. Steady now. Ease in the power.Careful! Concentrate even more.\"",
                ],
-               image: nil,
+               image: "Page51",
                edges: [
                 
                 Edge(destinationId: 54,
@@ -760,7 +760,7 @@ let nodes = [
                 "Then black smoke obscures the whole front of the prison.",
                 "In the distance, down the road, you see a troopof mounted soldiers galloping toward you. Behindthem is a team of horses pulling an old-fashionedfire engine.",
                ],
-               image: nil,
+               image: "Page52",
                edges: [
                 
                 Edge(destinationId: 44,
@@ -814,7 +814,7 @@ let nodes = [
             "You spend several years there, learning the secrets of their advanced technology, before you return to planet Earth.",
          ],
          
-         image: nil,
+         image: "Page56",
          edges: [
             
             Edge(destinationId: 0,
@@ -868,7 +868,7 @@ let nodes = [
                       "You trace the source of the strong energy to the center of the prison structure. There, you find a large lead-covered vault. Your mind cannot penetrate it. Instead you throw a force field around it.",
                       "A wave of anguish comes from the vault. The vault almost seems to be pleading for mercy. You release your force field. As you do, you feel a surge of even greater energy inside of you.",
                       "Suddenly the lead shield falls away to reveal an intricate crystalline structure inside. You recognize it immediately as an alien life form. It communicates with you telepathically in a strange code--which you somehow understand. The alien life form explains its predicament."],
-         image: nil,
+         image: "Page61",
          edges: [
             
             
@@ -967,7 +967,7 @@ let nodes = [
                       "\"Hello?\" you say. There is no response.",
                       "Then vou notice the chains fastened to his feet. You bend down and examine the shackles to see if there is any way to get them off, but they are old and rusty with rather primitive locks. You straighten up, but the man still doesn't seem to notice you. He seems to be in a trance.",
                       "If you try to wake him, he may help you figure out where you are and what is going on. But what are you going to do about his chains? It might be faster to leave him alone and come back later with help."],
-         image: nil,
+         image: "Page66",
          edges: [
             
             Edge(destinationId: 72,
@@ -1001,7 +1001,7 @@ let nodes = [
                       "You go tirst, crawling on your hands and knees and feeling your way along the tunnel. Soon you come to the inside of a loosely constructed stone wall. You can see into the brightly lit laboratory through the small cracks in the wall.",
                       "\"I only see one chimp in there, \" you whisper. \"If I can get in there, I can get him with my knockout-gas gun.\"",
                       "\"One good push,\" the professor whispers back, \"and this part of the wall will fall outward." ],
-         image: nil,
+         image: "Page71",
          edges: [
             
             Edge(destinationId: 58,
@@ -1085,7 +1085,7 @@ let nodes = [
                paragraphs: ["You're too tense to wait for Sergeant Morrison. You leave a note on your windshield for him and go back to the fence around the house. You creep along the outside of the fence. After a few hundred feet, the fence leads into dense woods. Not far into the woods, you come to another gate- a small one in the fence. An overgrown road leads to the estate through this gate. You are trying to decide if you should follow the road in when a man with a broad scar across his face steps from behind a tree. He's wearing an old-fashioned prison uniform, but the laser pistol he has in his hand certainly looks modern enough.",
                             "\"Okay, now turn around and go through that gate, and around to the back of the house, \" orders the man, \"and no funny business. I'm behind you all the way with this gun. \"",
                             "You have no choice but to do as he says. Even your karate training will not help you here. He has you covered",],
-               image: nil,
+               image: "Page76",
                edges: [
                 
                 Edge(destinationId: 78,
@@ -1188,7 +1188,7 @@ let nodes = [
                                         "\"You don't have to make up your mind right now, \" says the man. \"Take your time, and contact us when you have made a decision. Any young friends of yours that you could recommend will also be welcome in our organization.\"",
                                         "As you walk back to your car to meet Sergeant Morrison, you still don't know what to believe, but you have a lot to think about.",
                                        ],
-                           image: nil,
+                           image: "Page82",
                            edges: [
                             
                             Edge(destinationId: 0,
@@ -1279,7 +1279,7 @@ let nodes = [
                                         "GRADE A",
                                        ],
                            
-                           image: nil,
+                           image: "Page89",
                            edges: [
                             
                             Edge(destinationId: 0,
@@ -1296,7 +1296,7 @@ let nodes = [
                                   "First you go back to your house to pick up your two-way radio-communicator. Each is small enough to be hidden inside a pocket, and they have a range of over seven miles.",
                                   "Then you drive over to the Marsden house. As you drive by slowly, you see that it is a large, modern house set back from the main road.",
                                   "\"I thought only old houses could look spooky. you say."],
-                     image: nil,
+                     image: "Page90",
                      edges: [
                         
                         Edge(destinationId: 91,
@@ -1358,7 +1358,7 @@ let nodes = [
                                         
                                        ],
                            
-                           image: nil,
+                           image: "Page94",
                            edges: [
                             
                             Edge(destinationId: 0,
@@ -1403,7 +1403,7 @@ let nodes = [
                 99 : Node (id: 99,
                            paragraphs: ["You run down the dimly lit hallway and come to a large windowless room. Darn! Why doesn't this place have any windows? You saw enough of them from the outside. There is a deep alcove set in the wall on one side of the room. A light in the alcove flicks on, revealing the figure of a man. You can see only his head and face, which are horribly burned The rest of the figure is shrouded in a dark cape.",
                                         "\"I am the ghost of Henry Marsden. Here on this site, where my evil actions cost so many their lives, I have been given a machine by the spirits machine that defies time: past, present, and future. To atone for my sins, I must forever act as a teacher, to lead whoever comes here to greater wisdom and humility than my own. Turn and look behind you. \""],
-                           image: nil,
+                           image: "Page98",
                            edges: [
                             
                             Edge(destinationId: 100,
@@ -1433,7 +1433,7 @@ let nodes = [
                 101 : Node (id: 101,
                             paragraphs: ["But once the wish is formed, the process begins. No! You want to take it back. You don't really want to be Genghis Khan.",
                                          "THE END"],
-                            image: nil,
+                            image: "Page101",
                             edges: [
                                 
                                 Edge(destinationId: 0,
@@ -1481,7 +1481,7 @@ let nodes = [
                                          "You are filled with a sense of energy. You can do anything! You use that energy to remember that you are not a baby…And somewhere in your mind you remember. You are not a baby. -I've got to get back. \" \"I'm a detective you say to yourself.",
                                          "ZAP! You renter your own age. It feels like an electric shock. You are a bit stiff after the staring at you again. experience. You look up. The figure in the cape is staring at you again.",
                                          "\"You did that well, \" he says. \"Now you can leave. Or, if you are feeling adventurous, how would you like the experience of being another person?\""],
-                            image: nil,
+                            image: "Page104",
                             edges: [
                                 
                                 Edge(destinationId: 105,
@@ -1516,7 +1516,7 @@ let nodes = [
                                   
                                  ],
                      
-                     image: nil,
+                     image: "Page107",
                      edges: [
                         
                         Edge(destinationId: 0,
@@ -1539,7 +1539,7 @@ let nodes = [
                                   
                                  ],
                      
-                     image: nil,
+                     image: "Page108",
                      edges: [
                         
                         Edge(destinationId: 0,
